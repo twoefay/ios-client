@@ -1,1 +1,10 @@
+#exclude OS generated files
 .DS_Store
+
+#exclude temporary files
+*~
+
+#exclude Xcode user files
+*.xcuserdata
+xcuserdata/
+*/xcuserdata/
