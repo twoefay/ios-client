@@ -1,0 +1,429 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78AD1CC8036F0043686A /* AppDelegate.swift */; };
+		2E8B78B31CC8036F0043686A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B11CC8036F0043686A /* Main.storyboard */; };
+		2E8B78B51CC803700043686A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B41CC803700043686A /* Assets.xcassets */; };
+		2E8B78B81CC803700043686A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B61CC803700043686A /* LaunchScreen.storyboard */; };
+		2E8B78C31CC803700043686A /* TwoefayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78C21CC803700043686A /* TwoefayTests.swift */; };
+		2E8B78D11CC803B70043686A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78CE1CC803B70043686A /* ViewController.swift */; };
+		2E8B78D21CC803C70043686A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78CE1CC803B70043686A /* ViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E8B78BF1CC803700043686A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E8B78A21CC8036F0043686A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E8B78A91CC8036F0043686A;
+			remoteInfo = Twoefay;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E8B78AA1CC8036F0043686A /* Twoefay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twoefay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8B78AD1CC8036F0043686A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E8B78B21CC8036F0043686A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E8B78B41CC803700043686A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E8B78B71CC803700043686A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E8B78B91CC803700043686A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8B78BE1CC803700043686A /* TwoefayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoefayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E8B78C21CC803700043686A /* TwoefayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoefayTests.swift; sourceTree = "<group>"; };
+		2E8B78C41CC803700043686A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E8B78CE1CC803B70043686A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E8B78A71CC8036F0043686A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8B78BB1CC803700043686A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E8B78A11CC8036F0043686A = {
+			isa = PBXGroup;
+			children = (
+				2E8B78AC1CC8036F0043686A /* Twoefay */,
+				2E8B78C11CC803700043686A /* TwoefayTests */,
+				2E8B78AB1CC8036F0043686A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E8B78AB1CC8036F0043686A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B78AA1CC8036F0043686A /* Twoefay.app */,
+				2E8B78BE1CC803700043686A /* TwoefayTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E8B78AC1CC8036F0043686A /* Twoefay */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B78CD1CC803B70043686A /* Controller */,
+				2E8B78CF1CC803B70043686A /* View */,
+				2E8B78D01CC803B70043686A /* Model */,
+				2E8B78AD1CC8036F0043686A /* AppDelegate.swift */,
+				2E8B78B11CC8036F0043686A /* Main.storyboard */,
+				2E8B78B41CC803700043686A /* Assets.xcassets */,
+				2E8B78B61CC803700043686A /* LaunchScreen.storyboard */,
+				2E8B78B91CC803700043686A /* Info.plist */,
+			);
+			path = Twoefay;
+			sourceTree = "<group>";
+		};
+		2E8B78C11CC803700043686A /* TwoefayTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B78C21CC803700043686A /* TwoefayTests.swift */,
+				2E8B78C41CC803700043686A /* Info.plist */,
+			);
+			path = TwoefayTests;
+			sourceTree = "<group>";
+		};
+		2E8B78CD1CC803B70043686A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2E8B78CE1CC803B70043686A /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2E8B78CF1CC803B70043686A /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2E8B78D01CC803B70043686A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E8B78A91CC8036F0043686A /* Twoefay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8B78C71CC803700043686A /* Build configuration list for PBXNativeTarget "Twoefay" */;
+			buildPhases = (
+				2E8B78A61CC8036F0043686A /* Sources */,
+				2E8B78A71CC8036F0043686A /* Frameworks */,
+				2E8B78A81CC8036F0043686A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Twoefay;
+			productName = Twoefay;
+			productReference = 2E8B78AA1CC8036F0043686A /* Twoefay.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E8B78BD1CC803700043686A /* TwoefayTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E8B78CA1CC803700043686A /* Build configuration list for PBXNativeTarget "TwoefayTests" */;
+			buildPhases = (
+				2E8B78BA1CC803700043686A /* Sources */,
+				2E8B78BB1CC803700043686A /* Frameworks */,
+				2E8B78BC1CC803700043686A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E8B78C01CC803700043686A /* PBXTargetDependency */,
+			);
+			name = TwoefayTests;
+			productName = TwoefayTests;
+			productReference = 2E8B78BE1CC803700043686A /* TwoefayTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E8B78A21CC8036F0043686A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = Twoefay;
+				TargetAttributes = {
+					2E8B78A91CC8036F0043686A = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					2E8B78BD1CC803700043686A = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 2E8B78A91CC8036F0043686A;
+					};
+				};
+			};
+			buildConfigurationList = 2E8B78A51CC8036F0043686A /* Build configuration list for PBXProject "Twoefay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E8B78A11CC8036F0043686A;
+			productRefGroup = 2E8B78AB1CC8036F0043686A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E8B78A91CC8036F0043686A /* Twoefay */,
+				2E8B78BD1CC803700043686A /* TwoefayTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E8B78A81CC8036F0043686A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8B78B81CC803700043686A /* LaunchScreen.storyboard in Resources */,
+				2E8B78B51CC803700043686A /* Assets.xcassets in Resources */,
+				2E8B78B31CC8036F0043686A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8B78BC1CC803700043686A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E8B78A61CC8036F0043686A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8B78D11CC803B70043686A /* ViewController.swift in Sources */,
+				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E8B78BA1CC803700043686A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E8B78D21CC803C70043686A /* ViewController.swift in Sources */,
+				2E8B78C31CC803700043686A /* TwoefayTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E8B78C01CC803700043686A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E8B78A91CC8036F0043686A /* Twoefay */;
+			targetProxy = 2E8B78BF1CC803700043686A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E8B78B11CC8036F0043686A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E8B78B21CC8036F0043686A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E8B78B61CC803700043686A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E8B78B71CC803700043686A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E8B78C51CC803700043686A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E8B78C61CC803700043686A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E8B78C81CC803700043686A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Twoefay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2E8B78C91CC803700043686A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Twoefay/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2E8B78CB1CC803700043686A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TwoefayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.TwoefayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twoefay.app/Twoefay";
+			};
+			name = Debug;
+		};
+		2E8B78CC1CC803700043686A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TwoefayTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.TwoefayTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Twoefay.app/Twoefay";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E8B78A51CC8036F0043686A /* Build configuration list for PBXProject "Twoefay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8B78C51CC803700043686A /* Debug */,
+				2E8B78C61CC803700043686A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E8B78C71CC803700043686A /* Build configuration list for PBXNativeTarget "Twoefay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8B78C81CC803700043686A /* Debug */,
+				2E8B78C91CC803700043686A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2E8B78CA1CC803700043686A /* Build configuration list for PBXNativeTarget "TwoefayTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E8B78CB1CC803700043686A /* Debug */,
+				2E8B78CC1CC803700043686A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2E8B78A21CC8036F0043686A /* Project object */;
+}
