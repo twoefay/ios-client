@@ -72,31 +72,56 @@
             </objects>
             <point key="canvasLocation" x="2059" y="422"/>
         </scene>
-        <!--Table View Controller-->
-        <scene sceneID="ehK-MP-Iy5">
+        <!--View Controller-->
+        <scene sceneID="E4X-mU-byy">
             <objects>
-                <tableViewController id="GTi-Zt-Xks" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xI9-Pp-utw">
+                <viewController id="4YZ-LR-veq" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="r9C-hi-Yom"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z0U-em-N3S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HKj-qe-QGq">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome, (username)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLD-oA-A5a">
+                                <rect key="frame" x="20" y="120" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waiting for 2 Factor Request..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jQk-mz-ard">
+                                <rect key="frame" x="20" y="217" width="560" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IfJ-ee-eyp">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IfJ-ee-eyp" id="9lE-z0-GSr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GTi-Zt-Xks" id="4MM-u4-9qp"/>
-                            <outlet property="delegate" destination="GTi-Zt-Xks" id="Iqg-q3-ue5"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YtE-9s-YqI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="TLD-oA-A5a" firstAttribute="leading" secondItem="HKj-qe-QGq" secondAttribute="leadingMargin" id="JzZ-Ua-zzI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jQk-mz-ard" secondAttribute="trailing" id="QQW-sz-ss8"/>
+                            <constraint firstItem="jQk-mz-ard" firstAttribute="top" secondItem="TLD-oA-A5a" secondAttribute="top" id="RFx-bs-KWU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jQk-mz-ard" secondAttribute="trailing" constant="151" id="bIJ-td-u0S"/>
+                            <constraint firstItem="Z0U-em-N3S" firstAttribute="top" secondItem="TLD-oA-A5a" secondAttribute="bottom" constant="450" id="boT-dB-nUY"/>
+                            <constraint firstItem="jQk-mz-ard" firstAttribute="trailing" secondItem="TLD-oA-A5a" secondAttribute="trailing" id="gc0-KE-2cZ"/>
+                            <constraint firstItem="jQk-mz-ard" firstAttribute="top" secondItem="TLD-oA-A5a" secondAttribute="bottom" constant="67" id="oP3-bo-3NE"/>
+                            <constraint firstItem="jQk-mz-ard" firstAttribute="top" secondItem="TLD-oA-A5a" secondAttribute="bottom" constant="67" id="pgh-9j-fsC"/>
+                            <constraint firstItem="jQk-mz-ard" firstAttribute="leading" secondItem="HKj-qe-QGq" secondAttribute="leadingMargin" id="r8W-Qs-OEp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="TLD-oA-A5a" secondAttribute="trailing" id="rhc-yR-jlt"/>
+                            <constraint firstItem="TLD-oA-A5a" firstAttribute="top" secondItem="r9C-hi-Yom" secondAttribute="bottom" constant="100" id="tkq-fL-knz"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RFx-bs-KWU"/>
+                                <exclude reference="bIJ-td-u0S"/>
+                                <exclude reference="gc0-KE-2cZ"/>
+                                <exclude reference="oP3-bo-3NE"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdH-IM-btc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2059" y="1103"/>
         </scene>
@@ -111,12 +136,31 @@
                     <view key="view" contentMode="scaleToFill" id="QKV-Nt-Dmf">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q0d-aA-vsL">
+                                <rect key="frame" x="290" y="290" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="4cV-tk-7jr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Q0d-aA-vsL" secondAttribute="trailing" constant="281" id="GHo-ek-lgh"/>
+                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="centerY" secondItem="QKV-Nt-Dmf" secondAttribute="centerY" id="KVZ-X0-ZZr"/>
+                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="top" secondItem="Idd-wm-fXq" secondAttribute="bottom" constant="226" id="Njz-in-NlV"/>
+                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="leading" secondItem="QKV-Nt-Dmf" secondAttribute="leadingMargin" constant="259" id="qob-Rc-wGB"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="GHo-ek-lgh"/>
+                                <exclude reference="Njz-in-NlV"/>
+                                <exclude reference="qob-Rc-wGB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="LWS-4o-Wvu"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="presentation" id="Rjl-WD-QIc"/>
-                        <segue destination="GTi-Zt-Xks" kind="presentation" id="xdn-a4-Ea9"/>
+                        <segue destination="4YZ-LR-veq" kind="presentation" id="hes-Fl-NNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i03-fc-QQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
