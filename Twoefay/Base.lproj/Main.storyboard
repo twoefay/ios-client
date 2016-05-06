@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="2059" y="422"/>
         </scene>
-        <!--View Controller-->
+        <!--Home Page View Controller-->
         <scene sceneID="E4X-mU-byy">
             <objects>
-                <viewController id="4YZ-LR-veq" sceneMemberID="viewController">
+                <viewController id="4YZ-LR-veq" customClass="HomePageViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r9C-hi-Yom"/>
                         <viewControllerLayoutGuide type="bottom" id="Z0U-em-N3S"/>
@@ -125,10 +125,10 @@
             </objects>
             <point key="canvasLocation" x="2059" y="1103"/>
         </scene>
-        <!--View Controller-->
+        <!--Loading Screen View Controller-->
         <scene sceneID="QHC-Yz-nry">
             <objects>
-                <viewController id="boP-PD-eNO" sceneMemberID="viewController">
+                <viewController id="boP-PD-eNO" customClass="LoadingScreenViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Idd-wm-fXq"/>
                         <viewControllerLayoutGuide type="bottom" id="b2n-bz-6x9"/>
@@ -137,30 +137,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Q0d-aA-vsL">
-                                <rect key="frame" x="290" y="290" width="20" height="20"/>
-                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="otO-6V-R7A">
+                                <rect key="frame" x="212" y="308" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="boP-PD-eNO" eventType="touchDown" id="muM-aZ-vGL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8RT-dw-xoH">
+                                <rect key="frame" x="212" y="393" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="homepageButtonTapped:" destination="boP-PD-eNO" eventType="touchDown" id="AU7-Sv-Ry8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="4cV-tk-7jr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Q0d-aA-vsL" secondAttribute="trailing" constant="281" id="GHo-ek-lgh"/>
-                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="centerY" secondItem="QKV-Nt-Dmf" secondAttribute="centerY" id="KVZ-X0-ZZr"/>
-                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="top" secondItem="Idd-wm-fXq" secondAttribute="bottom" constant="226" id="Njz-in-NlV"/>
-                            <constraint firstItem="Q0d-aA-vsL" firstAttribute="leading" secondItem="QKV-Nt-Dmf" secondAttribute="leadingMargin" constant="259" id="qob-Rc-wGB"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="GHo-ek-lgh"/>
-                                <exclude reference="Njz-in-NlV"/>
-                                <exclude reference="qob-Rc-wGB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="LWS-4o-Wvu"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="presentation" id="Rjl-WD-QIc"/>
-                        <segue destination="4YZ-LR-veq" kind="presentation" id="hes-Fl-NNN"/>
+                        <outlet property="homepageButton" destination="8RT-dw-xoH" id="XxG-3r-hk7"/>
+                        <outlet property="loginButton" destination="otO-6V-R7A" id="XXi-da-BrO"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginSegue" id="Rjl-WD-QIc"/>
+                        <segue destination="4YZ-LR-veq" kind="presentation" identifier="homepageSegue" id="hes-Fl-NNN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i03-fc-QQp" userLabel="First Responder" sceneMemberID="firstResponder"/>

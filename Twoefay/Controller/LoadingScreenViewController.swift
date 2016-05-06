@@ -7,13 +7,28 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class LoadingScreenViewController: UIViewController {
 
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var homepageButton: UIButton!
+    
+    @IBAction func loginButtonTapped(sender: UIButton) {
+        performSegueWithIdentifier("loginSegue", sender: "loginButton")
+    }
+    
+    @IBAction func homepageButtonTapped(sender: UIButton) {
+        performSegueWithIdentifier("homepageSegue", sender: "homepageButton")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // uncomment this line to see the loading screen
+        //SwiftSpinner.show("Welcome to 2FA!")
 
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
