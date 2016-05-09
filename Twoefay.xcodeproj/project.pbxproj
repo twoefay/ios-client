@@ -12,8 +12,10 @@
 		2E8B78B51CC803700043686A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B41CC803700043686A /* Assets.xcassets */; };
 		2E8B78B81CC803700043686A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B61CC803700043686A /* LaunchScreen.storyboard */; };
 		2E8B78C31CC803700043686A /* TwoefayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78C21CC803700043686A /* TwoefayTests.swift */; };
-		2E8B78D11CC803B70043686A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78CE1CC803B70043686A /* ViewController.swift */; };
-		2E8B78D21CC803C70043686A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78CE1CC803B70043686A /* ViewController.swift */; };
+		85F7F73AA42E7BECD260F1FA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE9CE4E22883B9D7CA0436FA /* Pods.framework */; };
+		9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */; };
+		9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */; };
+		9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,12 @@
 		2E8B78BE1CC803700043686A /* TwoefayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoefayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E8B78C21CC803700043686A /* TwoefayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoefayTests.swift; sourceTree = "<group>"; };
 		2E8B78C41CC803700043686A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E8B78CE1CC803B70043686A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4F5E9D9FD3E7E0BD86C0829B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
+		9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
+		9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		EE9CE4E22883B9D7CA0436FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2916834DA7AC6280C085C31 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85F7F73AA42E7BECD260F1FA /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +71,8 @@
 				2E8B78AC1CC8036F0043686A /* Twoefay */,
 				2E8B78C11CC803700043686A /* TwoefayTests */,
 				2E8B78AB1CC8036F0043686A /* Products */,
+				8E3AAAD14C86F86EB11FC3B3 /* Pods */,
+				546D17CF5C24D7598A07F0EB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +112,9 @@
 		2E8B78CD1CC803B70043686A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				2E8B78CE1CC803B70043686A /* ViewController.swift */,
+				9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */,
+				9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */,
+				9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -121,6 +133,23 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		546D17CF5C24D7598A07F0EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE9CE4E22883B9D7CA0436FA /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E3AAAD14C86F86EB11FC3B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4F5E9D9FD3E7E0BD86C0829B /* Pods.debug.xcconfig */,
+				F2916834DA7AC6280C085C31 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -128,9 +157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2E8B78C71CC803700043686A /* Build configuration list for PBXNativeTarget "Twoefay" */;
 			buildPhases = (
+				6814A38A3376866C828FCAA3 /* Check Pods Manifest.lock */,
 				2E8B78A61CC8036F0043686A /* Sources */,
 				2E8B78A71CC8036F0043686A /* Frameworks */,
 				2E8B78A81CC8036F0043686A /* Resources */,
+				16A492E2DEEEF3BD7E2D0DF6 /* Embed Pods Frameworks */,
+				4DD8A02663E0DBF599EB4DBB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -165,7 +197,7 @@
 		2E8B78A21CC8036F0043686A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = Twoefay;
 				TargetAttributes = {
@@ -217,13 +249,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		16A492E2DEEEF3BD7E2D0DF6 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4DD8A02663E0DBF599EB4DBB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6814A38A3376866C828FCAA3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2E8B78A61CC8036F0043686A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8B78D11CC803B70043686A /* ViewController.swift in Sources */,
+				9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
+				9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */,
+				9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,7 +313,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E8B78D21CC803C70043686A /* ViewController.swift in Sources */,
 				2E8B78C31CC803700043686A /* TwoefayTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,19 +432,24 @@
 		};
 		2E8B78C81CC803700043686A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4F5E9D9FD3E7E0BD86C0829B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Twoefay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		2E8B78C91CC803700043686A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2916834DA7AC6280C085C31 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Twoefay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
@@ -414,6 +500,7 @@
 				2E8B78C91CC803700043686A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2E8B78CA1CC803700043686A /* Build configuration list for PBXNativeTarget "TwoefayTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +509,7 @@
 				2E8B78CC1CC803700043686A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
