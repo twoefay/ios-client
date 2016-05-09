@@ -12,15 +12,11 @@ import SwiftSpinner
 class LoadingScreenViewController: UIViewController {
 
     @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var homepageButton: UIButton!
     
     @IBAction func loginButtonTapped(sender: UIButton) {
         performSegueWithIdentifier("loginSegue", sender: "loginButton")
     }
     
-    @IBAction func homepageButtonTapped(sender: UIButton) {
-        performSegueWithIdentifier("homepageSegue", sender: "homepageButton")
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

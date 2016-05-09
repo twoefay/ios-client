@@ -7,29 +7,45 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class HomePageViewController: UIViewController {
 
+    
+    @IBOutlet weak var statusLabel: UILabel!
+    
+    let context = LAContext()
+    let policy = LAPolicy.DeviceOwnerAuthenticationWithBiometrics
+    let error: NSErrorPointer = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        statusLabel.text = ""
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func touchIDNotAvailable(){
+        statusLabel.text = "TouchID not available on this device."
     }
-    */
-
+    
+    func authenticationSucceeded(){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.statusLabel.text = "Authentication successful"
+        }
+    }
+    
+    func authenticationFailed(error: NSError){
+        dispatch_async(dispatch_get_main_queue()) {
+            self.statusLabel.text = "Error occurred: \(error.localizedDescription)"
+        }
+    }
+    
+    @IBAction func buttonTapped(sender: AnyObject) {
+        if context.canEvaluatePolicy(policy, error: error){
+            context.evaluatePolicy(policy, localizedReason: "Pleace authenticate using TouchID"){ status, error in
+                status ? self.authenticationSucceeded() : self.authenticationFailed(error!)
+            }
+        } else {
+            touchIDNotAvailable()
+        }
+    }
 }
