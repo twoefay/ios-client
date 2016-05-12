@@ -16,6 +16,8 @@
 		9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */; };
 		9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */; };
 		9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */; };
+		A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */; };
+		A2BFC63A1CE430D900652436 /* RegistrationStatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFC6391CE430D900652436 /* RegistrationStatusViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +44,8 @@
 		9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
 		9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
 		9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewController.swift; sourceTree = "<group>"; };
+		A2BFC6391CE430D900652436 /* RegistrationStatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationStatusViewController.swift; sourceTree = "<group>"; };
 		EE9CE4E22883B9D7CA0436FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2916834DA7AC6280C085C31 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,6 +119,8 @@
 				9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */,
 				9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */,
 				9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */,
+				A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */,
+				A2BFC6391CE430D900652436 /* RegistrationStatusViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -303,7 +309,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */,
+				A2BFC63A1CE430D900652436 /* RegistrationStatusViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
+				A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */,
 				9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */,
 				9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */,
 			);
