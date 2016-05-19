@@ -17,6 +17,7 @@
 		9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */; };
 		A2367DB11CE547FA008EDD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2367DAF1CE547FA008EDD25 /* Main.storyboard */; };
 		A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */; };
+		CC6C89141CED765100B253AC /* MyOneTimePassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6C89131CED765100B253AC /* MyOneTimePassword.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		A2367DB01CE547FA008EDD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewController.swift; sourceTree = "<group>"; };
+		CC6C89131CED765100B253AC /* MyOneTimePassword.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyOneTimePassword.swift; sourceTree = "<group>"; };
 		EE9CE4E22883B9D7CA0436FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2916834DA7AC6280C085C31 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,6 +134,7 @@
 		2E8B78D01CC803B70043686A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC6C89131CED765100B253AC /* MyOneTimePassword.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -305,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC6C89141CED765100B253AC /* MyOneTimePassword.swift in Sources */,
 				9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
 				A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */,
