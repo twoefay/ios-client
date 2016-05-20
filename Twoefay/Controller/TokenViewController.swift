@@ -13,31 +13,23 @@ class TokenViewController: UIViewController {
     
     @IBOutlet weak var tokenLabel: UILabel!
     
-    let keychain = Keychain.sharedInstance
+    var tokenIdentifier: NSData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // this is a comment
+        // Uses the get_token function in the file MyOneTimePassword.swift
+        let current_token = get_token(self.tokenIdentifier!)
+        let current_password = get_password(current_token!)
+        self.tokenLabel.text = current_password!
         
-        // Do any additional setup after loading the view.
+        // update label every 30 seconds
+        
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func printToken() {
-        do {
-            let persistentToken = try keychain.allPersistentTokens();
-            // TRY TO PRINT TOKEN HERE
-            // tokenLabel.text = TOKEN_TEXT
-        }
-        catch {
-            tokenLabel.text = "Keychain error";
-        }
-    }
-    
     
  }
