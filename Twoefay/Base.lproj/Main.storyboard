@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="d2L-ZC-bbp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="d2L-ZC-bbp">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -104,7 +104,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="otO-6V-R7A">
-                                <rect key="frame" x="114" y="462" width="93" height="30"/>
+                                <rect key="frame" x="114" y="404" width="93" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Log-in to 2FA"/>
                                 <connections>
@@ -112,15 +112,23 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2fa" id="rBV-wk-tYg">
-                                <rect key="frame" x="40" y="120" width="240" height="328"/>
+                                <rect key="frame" x="40" y="68" width="240" height="328"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jef-jZ-vsR">
-                                <rect key="frame" x="132" y="500" width="57" height="30"/>
+                                <rect key="frame" x="132" y="442" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <segue destination="OZd-0t-UaS" kind="modal" id="jj0-sX-Jl5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="iyI-NK-qSt">
+                                <rect key="frame" x="145" y="480" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="OTP"/>
+                                <connections>
+                                    <segue destination="B9v-vD-OjH" kind="modal" id="Vle-X7-QWx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -132,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="681" y="1044"/>
         </scene>
-        <!--Registration Page View Controller Scene-->
+        <!--Registration Page View Controller-->
         <scene sceneID="UPW-go-eDc">
             <objects>
-                <viewController title="Registration Page View Controller Scene" id="OZd-0t-UaS" customClass="RegistrationPageViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Registration Page View Controller" id="OZd-0t-UaS" customClass="RegistrationPageViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPt-kR-atH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +152,7 @@
                                 <rect key="frame" x="91" y="20" width="139" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" id="rC7-8z-1OE">
@@ -208,6 +216,88 @@
             </objects>
             <point key="canvasLocation" x="1098" y="1052"/>
         </scene>
+        <!--Generator View Controller-->
+        <scene sceneID="Eqv-7p-VLX">
+            <objects>
+                <viewController title="Generator View Controller" id="B9v-vD-OjH" customClass="GeneratorViewController" customModule="Twoefay" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="itb-1F-kMM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" id="Uv0-hW-NFk">
+                                <rect key="frame" x="20" y="51" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Issuer" textAlignment="natural" minimumFontSize="17" id="kHE-oh-clK">
+                                <rect key="frame" x="20" y="89" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret" textAlignment="natural" minimumFontSize="17" id="3Ya-zp-NaL">
+                                <rect key="frame" x="20" y="127" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="a4N-mW-bVk">
+                                <rect key="frame" x="144" y="165" width="32" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="submitSecret:" destination="B9v-vD-OjH" eventType="touchUpInside" id="fna-fO-Ru5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="NVb-zj-Xk1">
+                                <rect key="frame" x="103" y="197" width="114" height="74"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="QR Code Scan"/>
+                                <connections>
+                                    <action selector="scanAction:" destination="B9v-vD-OjH" eventType="touchUpInside" id="cNC-we-oK5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="issuerField" destination="kHE-oh-clK" id="voy-aR-hT7"/>
+                        <outlet property="nameField" destination="Uv0-hW-NFk" id="4Lt-8J-aVK"/>
+                        <outlet property="secretField" destination="3Ya-zp-NaL" id="qLh-oS-JFM"/>
+                        <segue destination="T9E-RX-hjC" kind="modal" identifier="verifiedTokenSegue" id="icx-Wy-Pws"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nyy-Fb-Ebb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="681" y="1788"/>
+        </scene>
+        <!--Token View Controller-->
+        <scene sceneID="bwf-bA-II6">
+            <objects>
+                <viewController title="Token View Controller" id="T9E-RX-hjC" customClass="TokenViewController" customModule="Twoefay" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UwA-nH-xD5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="69W-es-oxK">
+                                <rect key="frame" x="112" y="273" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tokenLabel" destination="69W-es-oxK" id="S36-H3-aS6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JDU-cj-c15" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1438" y="1788"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="RfK-JK-dZd">
             <objects>
@@ -231,6 +321,6 @@
         <image name="2fa" width="292" height="433"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7Cd-W9-TDZ"/>
+        <segue reference="cug-Kr-lrI"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,7 +9,7 @@
 import Foundation
 import OneTimePassword
 
-func do_stuff_with_user_input (name: String, issuer: String, secretString: String) -> Token? {
+func storeToken(name: String, issuer: String, secretString: String) -> NSData? {
     
     //setup
     guard let secretData = NSData(base32String: secretString)
@@ -30,17 +30,20 @@ func do_stuff_with_user_input (name: String, issuer: String, secretString: Strin
     //get token
     let token = Token(name: name, issuer: issuer, generator: generator)
     
+    
     //prepare keychain to store token
     let keychain = Keychain.sharedInstance
+    var tokenIdentifier: NSData?
     //store token
     do {
         let persistentToken = try keychain.addToken(token)
+        tokenIdentifier = persistentToken.identifier
         print("Saved to keychain with identifier: \(persistentToken.identifier)")
     } catch {
         print("Keychain error: \(error)")
     }
     
-    return token
+    return tokenIdentifier
     
 }
 
