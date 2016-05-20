@@ -82,7 +82,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
                 message: String (format:"%@ (of type %@)", result.value, result.metadataType),
                 preferredStyle: .Alert
             )
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: handleQRCode))
             
             self?.presentViewController(alert, animated: true, completion: nil)
             })
@@ -141,6 +141,12 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     func alertActionHandler(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Can now Segue.")
+        performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
+    }
+    
+    func handleQRCode(alertAction: UIAlertAction!) -> Void {
+        print("User Pressed OK. Take input from QR code and save it.")
+        tokenIdentifier = storeToken(name!,issuer: issuer!,secretString: secret!)
         performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
     }
     
