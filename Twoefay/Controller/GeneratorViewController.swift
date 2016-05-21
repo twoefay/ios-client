@@ -93,9 +93,6 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     }
     
     
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -120,7 +117,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         }
         
         
-        tokenIdentifier = storeToken(name!,issuer: issuer!,secretString: secret!)
+        tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
         
         
         // Confirm submission
@@ -146,7 +143,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     func handleQRCode(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Take input from QR code and save it.")
-        tokenIdentifier = storeToken(name!,issuer: issuer!,secretString: secret!)
+        tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
         performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
     }
     
