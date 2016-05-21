@@ -14,7 +14,28 @@ class TokenViewController: UIViewController {
     @IBOutlet weak var tokenLabel: UILabel!
     
     var tokenIdentifier: NSData?
-    
+	
+	var countdown=0
+	var myTimer: NSTimer? = nil
+
+    override func viewDidAppear(animated: Bool) {     
+		countdown = 5
+		myTimer = NSTimer(timeInterval: 5.0, target: self, selector:"countDownTick", userInfo: nil, repeats: true)
+		countdownLabel.text = "\(countdown)"
+	}
+
+	func countDownTick() {
+		countdown--
+
+		if (countdown == 0) {
+		   myTimer!.invalidate()
+		   myTimer=nil
+		}
+
+		countdownLabel.text = "\(countdown)"
+	}
+
+	
     override func viewDidLoad() {
         super.viewDidLoad()
         
