@@ -12,45 +12,31 @@ import OneTimePassword
 class TokenViewController: UIViewController {
     
     @IBOutlet weak var tokenLabel: UILabel!
-    
+    @IBOutlet var countDownLabel: UILabel!
     var tokenIdentifier: NSData?
-	
-	var countdown=0
-	var myTimer: NSTimer? = nil
-
-    override func viewDidAppear(animated: Bool) {     
-		countdown = 5
-		myTimer = NSTimer(timeInterval: 5.0, target: self, selector:"countDownTick", userInfo: nil, repeats: true)
-		countdownLabel.text = "\(countdown)"
-	}
-
-	func countDownTick() {
-		countdown--
-
-		if (countdown == 0) {
-		   myTimer!.invalidate()
-		   myTimer=nil
-		}
-
-		countdownLabel.text = "\(countdown)"
-	}
+    var count = 30
+    
+    
+    func updateLabels() {
+        if(count > 0) {
+            count = count - 1
+            countDownLabel.text = "\(count)"
+        }
+        else if (count == 0) {
+            let current_password = OTP.getPassword(tokenIdentifier!)
+            self.tokenLabel.text = current_password!
+            count = 30
+        }
+    }
 
 	
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Uses the get_token function in the file MyOneTimePassword.swift
-        let current_token = get_token(self.tokenIdentifier!)
-        let current_password = get_password(current_token!)
+        let current_password = OTP.getPassword(tokenIdentifier!)
         self.tokenLabel.text = current_password!
-        
         // update label every 30 seconds
-        
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(TokenViewController.updateLabels), userInfo: nil, repeats: true)
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
  }

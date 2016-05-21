@@ -9,8 +9,9 @@
 import Foundation
 import OneTimePassword
 
-class OTP() {
-	func storeToken(name: String, issuer: String, secretString: String) -> NSData? {
+class OTP {
+    
+	class func storeToken(name: String, issuer: String, secretString: String) -> NSData? {
 		
 		//setup
 		guard let secretData = NSData(base32String: secretString)
@@ -48,21 +49,21 @@ class OTP() {
 		
 	}
 
-	func get_password(identifier: NSData) -> String? {
+    class func getPassword(identifier: NSData) -> String? {
 		let keychain = Keychain.sharedInstance
-		var token: Token
+		var token: Token?
 		do {
 			let persistentToken = try keychain.persistentTokenWithIdentifier(identifier)
 			print("Retrieved token: \(persistentToken!.token)")
 			// Or...
 			//let persistentTokens = try keychain.allPersistentTokens()
-			token = persistentToken?.token
+			token = (persistentToken?.token)!            
+            let password = token!.currentPassword
+            return password
 		} catch {
 			print("Keychain error: \(error)")
-			token = nil
+			return nil
 		}
-		let password = token.currentPassword
-		return password
 	}
 
 		

@@ -96,18 +96,6 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     @IBAction func submitSecret(sender: AnyObject) {
         // Get textfield data
         let name = nameField.text;
@@ -119,15 +107,11 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
             displayAlert("All fields required")
             return;
         }
-        
-        
+
         tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
         
-        
         // Confirm submission
-        // I WILL FIX THIS ALERT
         displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
