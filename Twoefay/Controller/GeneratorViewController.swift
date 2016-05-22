@@ -109,30 +109,23 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         }
 
         tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
+        if (tokenIdentifier == nil) {
+            displayAlert("Token generation failed")
+        }
         
         // Confirm submission
         displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "verifiedTokenSegue") {
-            print("\nSegue: \(segue.identifier)")
-            let sendToThisController = (segue.destinationViewController as! TokenViewController)
-            sendToThisController.tokenIdentifier = tokenIdentifier
-        }
-    }
-    
-    
     func alertActionHandler(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Can now Segue.")
-        performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
+        performSegueWithIdentifier("unwindToAccounts", sender: tokenIdentifier);
     }
     
     func handleQRCode(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Take input from QR code and save it.")
         tokenIdentifier = OTP.storeToken(arrayContainingParsedQRStuff[0],issuer: arrayContainingParsedQRStuff[1],secretString: arrayContainingParsedQRStuff[2])
-        performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
+        performSegueWithIdentifier("unwindToAccounts", sender: tokenIdentifier);
     }
     
     // Display alert with message userMessage
@@ -161,28 +154,50 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         // $0 == DELIMITER
         // QRstring format: %3Aemail%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
         
-        let firstSplit = QRstring.characters.split {$0 == "A"}.map(String.init); // split ^ with A as delimiter and take the right half
-        let everythingFromEmailToEnd = firstSplit[1]; // email%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
-        let secondSplit = everythingFromEmailToEnd.characters.split {$0 == "%"}.map(String.init); // split ^ with % as delimiter and take the left half
-        let email = secondSplit[0]; // email
-        let everythingFrom40ToEnd = secondSplit[1]; // 40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
-        let thirdSplit = everythingFrom40ToEnd.characters.split {$0 == "0"}.map(String.init); // split ^ with 0 as delimiter and take the right half
-        let everythingFromCarrierToEnd = thirdSplit[1]; // gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
-        let fourthSplit = everythingFromCarrierToEnd.characters.split {$0 == "?"}.map(String.init); // split ^ with ? as delimiter
-        let carrier = fourthSplit[0]; // gmail.com
-        let everythingFromSecretToEnd = fourthSplit[1]; // secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
-        let fifthSplit = everythingFromSecretToEnd.characters.split {$0 == "&"}.map(String.init); // split ^ with & as delimiter
-        let secretHalf = fifthSplit[0]; // secret=s3cr3t
-        let secretSplit = secretHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
-        let secret = secretSplit[1]; // s3cr3t
-        let issuerHalf = fifthSplit[1]; // issuer=Google (of type org.iso.QRCode)
-        let issuerSplit = issuerHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
-        let issuerToEnd = issuerSplit[1]; // Google (of type org.iso.QRCode)
-        let remainingSplit = issuerToEnd.characters.split {$0 == " "}.map(String.init); // split ^ with space as delimiter and take the left half
-        let issuer = remainingSplit[0]; // Google
+        var fullEmail = "";
+        var issuer = "";
+        var secret = "";
         
-        let fullEmail = email + "@" + carrier;
-    
+        let parts = QRstring.componentsSeparatedByString(":");
+        
+        if (parts.count >= 3) {
+            let emailToEnd = parts[2];
+            let firstSplit = emailToEnd.characters.split {$0 == "?"}.map(String.init);
+            fullEmail = firstSplit[0];
+            let everythingFromSecretToEnd = firstSplit[1];
+            let fifthSplit = everythingFromSecretToEnd.characters.split {$0 == "&"}.map(String.init); // split ^ with & as delimiter
+            let secretHalf = fifthSplit[0]; // secret=s3cr3t
+            let secretSplit = secretHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+            secret = secretSplit[1]; // s3cr3t
+            let issuerHalf = fifthSplit[1]; // issuer=Google (of type org.iso.QRCode)
+            let issuerSplit = issuerHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+            let issuerToEnd = issuerSplit[1]; // Google (of type org.iso.QRCode)
+            let remainingSplit = issuerToEnd.characters.split {$0 == " "}.map(String.init); // split ^ with space as delimiter and take the left half
+            issuer = remainingSplit[0]; // Google
+        }
+        else {
+            let firstSplit = QRstring.characters.split {$0 == "%"}.map(String.init); // split ^ with % as delimiter and take the right half
+            let _3Aemail = firstSplit[1]; // 3Aemail
+            let secondSplit = _3Aemail.characters.split {$0 == "A"}.map(String.init); // split ^ with A as delimiter
+            let email = secondSplit[1]; // email
+            let everythingFrom40ToEnd = firstSplit[2]; // 40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+            let thirdSplit = everythingFrom40ToEnd.characters.split {$0 == "0"}.map(String.init); // split ^ with 0 as delimiter and take the right half
+            let everythingFromCarrierToEnd = thirdSplit[1]; // gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+            let fourthSplit = everythingFromCarrierToEnd.characters.split {$0 == "?"}.map(String.init); // split ^ with ? as delimiter
+            let carrier = fourthSplit[0]; // gmail.com
+            let everythingFromSecretToEnd = fourthSplit[1]; // secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+            let fifthSplit = everythingFromSecretToEnd.characters.split {$0 == "&"}.map(String.init); // split ^ with & as delimiter
+            let secretHalf = fifthSplit[0]; // secret=s3cr3t
+            let secretSplit = secretHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+            secret = secretSplit[1]; // s3cr3t
+            let issuerHalf = fifthSplit[1]; // issuer=Google (of type org.iso.QRCode)
+            let issuerSplit = issuerHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+            let issuerToEnd = issuerSplit[1]; // Google (of type org.iso.QRCode)
+            let remainingSplit = issuerToEnd.characters.split {$0 == " "}.map(String.init); // split ^ with space as delimiter and take the left half
+            issuer = remainingSplit[0]; // Google
+            fullEmail = email + "@" + carrier;
+        }
+        
         // Store parsed data into array
         arrayContainingParsedQRStuff.insert(fullEmail, atIndex: 0);
         arrayContainingParsedQRStuff.insert(issuer, atIndex: 1);

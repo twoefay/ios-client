@@ -21,6 +21,8 @@
 		A25DDC8E1CEDA2000009114D /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DDC8D1CEDA2000009114D /* TokenViewController.swift */; };
 		A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */; };
 		CC4B4B141CF058BA002840F4 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4B131CF058BA002840F4 /* OTP.swift */; };
+		CC7104FD1CF1C1A400174D81 /* TokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */; };
+		CC7104FF1CF1C1FB00174D81 /* TokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */; };
 		CDB1B75E26781C564BDD0176 /* Pods_TwoefayTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB1BB76A43D3A5DFB3EB7E78 /* Pods_TwoefayTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +58,8 @@
 		A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewController.swift; sourceTree = "<group>"; };
 		BB1BB76A43D3A5DFB3EB7E78 /* Pods_TwoefayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoefayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC4B4B131CF058BA002840F4 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
+		CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTableViewController.swift; sourceTree = "<group>"; };
+		CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCell.swift; sourceTree = "<group>"; };
 		DB185966A8608FFB84FCA682 /* Pods-TwoefayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoefayTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoefayTests/Pods-TwoefayTests.release.xcconfig"; sourceTree = "<group>"; };
 		EE9CE4E22883B9D7CA0436FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBC79685E20005A7BC2C0BAC /* Pods-Twoefay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twoefay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twoefay/Pods-Twoefay.debug.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +138,7 @@
 				A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */,
 				A25DDC8B1CED9A130009114D /* GeneratorViewController.swift */,
 				A25DDC8D1CEDA2000009114D /* TokenViewController.swift */,
+				CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			children = (
 				CC4B4B131CF058BA002840F4 /* OTP.swift */,
 				9D68E3671CEEDF1B0004975C /* Alerts.swift */,
+				CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -379,7 +385,9 @@
 				9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
 				A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */,
+				CC7104FD1CF1C1A400174D81 /* TokenTableViewController.swift in Sources */,
 				CC4B4B141CF058BA002840F4 /* OTP.swift in Sources */,
+				CC7104FF1CF1C1FB00174D81 /* TokenCell.swift in Sources */,
 				A25DDC8E1CEDA2000009114D /* TokenViewController.swift in Sources */,
 				9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */,
 				A25DDC8C1CED9A130009114D /* GeneratorViewController.swift in Sources */,
@@ -519,7 +527,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twoefay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twoefay.twoefay.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -536,7 +544,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Twoefay/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.orcudy.Twoefay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.twoefay.twoefay.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 			};

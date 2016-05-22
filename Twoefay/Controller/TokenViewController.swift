@@ -32,6 +32,8 @@ class TokenViewController: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Get all tokens 
+        OTP.getAllTokens()
         
         // Uses the get_token function in the file MyOneTimePassword.swift
         let current_password = OTP.getPassword(tokenIdentifier!)
