@@ -161,11 +161,11 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         // $0 == DELIMITER
         // QRstring format: %3Aemail%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
         
-        let firstSplit = QRstring.characters.split {$0 == "A"}.map(String.init); // split ^ with A as delimiter and take the right half
-        let everythingFromEmailToEnd = firstSplit[1]; // email%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
-        let secondSplit = everythingFromEmailToEnd.characters.split {$0 == "%"}.map(String.init); // split ^ with % as delimiter and take the left half
-        let email = secondSplit[0]; // email
-        let everythingFrom40ToEnd = secondSplit[1]; // 40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        let firstSplit = QRstring.characters.split {$0 == "%"}.map(String.init); // split ^ with % as delimiter and take the right half
+        let _3Aemail = firstSplit[1]; // 3Aemail
+        let secondSplit = _3Aemail.characters.split {$0 == "A"}.map(String.init); // split ^ with A as delimiter
+        let email = secondSplit[1]; // email
+        let everythingFrom40ToEnd = firstSplit[2]; // 40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
         let thirdSplit = everythingFrom40ToEnd.characters.split {$0 == "0"}.map(String.init); // split ^ with 0 as delimiter and take the right half
         let everythingFromCarrierToEnd = thirdSplit[1]; // gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
         let fourthSplit = everythingFromCarrierToEnd.characters.split {$0 == "?"}.map(String.init); // split ^ with ? as delimiter
