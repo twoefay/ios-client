@@ -42,6 +42,8 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     @IBOutlet weak var secretField: UITextField!
     
     var tokenIdentifier: NSData?
+    var QRstring = String()
+    var arrayContainingParsedQRStuff = [String](); // create an empty string array
     
     lazy var reader: QRCodeReaderViewController = {
         let builder = QRCodeViewControllerBuilder { builder in
@@ -82,7 +84,9 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
                 message: String (format:"%@ (of type %@)", result.value, result.metadataType),
                 preferredStyle: .Alert
             )
-            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: handleQRCode))
+            let QRstring = result.value;
+            self!.parseQR(QRstring);
+            alert.addAction(UIAlertAction(title: "OK", style: .Cancel, handler: self!.handleQRCode))
             
             self?.presentViewController(alert, animated: true, completion: nil)
             })
@@ -90,18 +94,6 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     func readerDidCancel(reader: QRCodeReaderViewController) {
         self.dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func submitSecret(sender: AnyObject) {
@@ -115,15 +107,11 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
             displayAlert("All fields required")
             return;
         }
-        
-        
+
         tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
         
-        
         // Confirm submission
-        // I WILL FIX THIS ALERT
         displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
-        
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -143,7 +131,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     func handleQRCode(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Take input from QR code and save it.")
-        tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
+        tokenIdentifier = OTP.storeToken(arrayContainingParsedQRStuff[0],issuer: arrayContainingParsedQRStuff[1],secretString: arrayContainingParsedQRStuff[2])
         performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
     }
     
@@ -166,6 +154,39 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         Alert.addAction(OK);
         
         self.presentViewController(Alert, animated:true, completion:nil);
+    }
+    
+    // Parse QRstring
+    func parseQR(QRstring:String) {
+        // $0 == DELIMITER
+        // QRstring format: %3Aemail%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        
+        let firstSplit = QRstring.characters.split {$0 == "A"}.map(String.init); // split ^ with A as delimiter and take the right half
+        let everythingFromEmailToEnd = firstSplit[1]; // email%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        let secondSplit = everythingFromEmailToEnd.characters.split {$0 == "%"}.map(String.init); // split ^ with % as delimiter and take the left half
+        let email = secondSplit[0]; // email
+        let everythingFrom40ToEnd = secondSplit[1]; // 40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        let thirdSplit = everythingFrom40ToEnd.characters.split {$0 == "0"}.map(String.init); // split ^ with 0 as delimiter and take the right half
+        let everythingFromCarrierToEnd = thirdSplit[1]; // gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        let fourthSplit = everythingFromCarrierToEnd.characters.split {$0 == "?"}.map(String.init); // split ^ with ? as delimiter
+        let carrier = fourthSplit[0]; // gmail.com
+        let everythingFromSecretToEnd = fourthSplit[1]; // secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
+        let fifthSplit = everythingFromSecretToEnd.characters.split {$0 == "&"}.map(String.init); // split ^ with & as delimiter
+        let secretHalf = fifthSplit[0]; // secret=s3cr3t
+        let secretSplit = secretHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+        let secret = secretSplit[1]; // s3cr3t
+        let issuerHalf = fifthSplit[1]; // issuer=Google (of type org.iso.QRCode)
+        let issuerSplit = issuerHalf.characters.split {$0 == "="}.map(String.init); // split ^ with = as delimiter and take the right half
+        let issuerToEnd = issuerSplit[1]; // Google (of type org.iso.QRCode)
+        let remainingSplit = issuerToEnd.characters.split {$0 == " "}.map(String.init); // split ^ with space as delimiter and take the left half
+        let issuer = remainingSplit[0]; // Google
+        
+        let fullEmail = email + "@" + carrier;
+    
+        // Store parsed data into array
+        arrayContainingParsedQRStuff.insert(fullEmail, atIndex: 0);
+        arrayContainingParsedQRStuff.insert(issuer, atIndex: 1);
+        arrayContainingParsedQRStuff.insert(secret, atIndex: 2);
     }
 
 }
