@@ -119,7 +119,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
-        if (segue.identifier == "verifiedTokenSegue") {
+        if (segue.identifier == "unwindToAccounts") {
             print("\nSegue: \(segue.identifier)")
             let sendToThisController = (segue.destinationViewController as! TokenViewController)
             sendToThisController.tokenIdentifier = tokenIdentifier
@@ -129,7 +129,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     
     func alertActionHandler(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Can now Segue.")
-        performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
+        performSegueWithIdentifier("unwindToAccounts", sender: tokenIdentifier);
     }
     
     func handleQRCode(alertAction: UIAlertAction!) -> Void {

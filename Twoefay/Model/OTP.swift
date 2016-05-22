@@ -55,7 +55,9 @@ class OTP {
         do {
             // Or...
             persistentTokens = try keychain.allPersistentTokens()
-            print(persistentTokens)
+            for token in persistentTokens! {
+                print(token)
+            }
             return persistentTokens!
         } catch {
             print("Keychain error: \(error)")
