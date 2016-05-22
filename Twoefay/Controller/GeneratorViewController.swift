@@ -117,16 +117,6 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if (segue.identifier == "unwindToAccounts") {
-            print("\nSegue: \(segue.identifier)")
-            let sendToThisController = (segue.destinationViewController as! TokenViewController)
-            sendToThisController.tokenIdentifier = tokenIdentifier
-        }
-    }
-    
-    
     func alertActionHandler(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Can now Segue.")
         performSegueWithIdentifier("unwindToAccounts", sender: tokenIdentifier);
@@ -135,7 +125,7 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
     func handleQRCode(alertAction: UIAlertAction!) -> Void {
         print("User Pressed OK. Take input from QR code and save it.")
         tokenIdentifier = OTP.storeToken(arrayContainingParsedQRStuff[0],issuer: arrayContainingParsedQRStuff[1],secretString: arrayContainingParsedQRStuff[2])
-        performSegueWithIdentifier("verifiedTokenSegue", sender: tokenIdentifier);
+        performSegueWithIdentifier("unwindToAccounts", sender: tokenIdentifier);
     }
     
     // Display alert with message userMessage
