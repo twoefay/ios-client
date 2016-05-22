@@ -12,9 +12,12 @@ import OneTimePassword
 class TokenTableViewController: UITableViewController {
     
     var tokens: Set<PersistentToken>?
+    var tokensArray = [PersistentToken]()
     var count = 30
+    var numRows = 0
     
     func updateLabels() {
+        print(count)
         if(count > 0) {
             count = count - 1
             //countDownLabel.text = "\(count)"
@@ -24,17 +27,28 @@ class TokenTableViewController: UITableViewController {
             count = 30
         }
     }
-
+    
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
         // Get all tokens
         tokens = OTP.getAllTokens()
-        
+        print(tokens)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Get all tokens
         tokens = OTP.getAllTokens()
+        for token in tokens! {
+            tokensArray.append(token)
+        }
+        if let gotTokens = tokens {
+            numRows = gotTokens.count
+            print("There are \(numRows) accounts saved.")
+        }
+        else {
+            "Problem!"
+        }
         
         // Refresh the table every 30 seconds
         _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(TokenViewController.updateLabels), userInfo: nil, repeats: true)
@@ -49,14 +63,6 @@ class TokenTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows
-        var numRows = 0
-        if let gotTokens = self.tokens {
-            numRows = gotTokens.count
-            print("There are \(numRows) accounts saved.")
-        }
-        else {
-            print("Error")
-        }
         return numRows
     }
 
@@ -69,13 +75,15 @@ class TokenTableViewController: UITableViewController {
         print("cell in row")
         let row = indexPath.row
         print(row)
-        let currentToken = tokens?.popFirst()
-        let username = currentToken!.token.name
-        let issuer = currentToken!.token.issuer
-        let tokenID = currentToken?.identifier
-        let OneTimePass = OTP.getPassword(tokenID!)
+        let currentToken = tokensArray.removeFirst()
+        let username = currentToken.token.name
+        let issuer = currentToken.token.issuer
+        let tokenID = currentToken.identifier
+        let OneTimePass = OTP.getPassword(tokenID)
         cell.issuerLabel.text = "\(issuer):\(username)"
         cell.tokenLabel.text = OneTimePass
+        
+        tokensArray.append(currentToken)
 
         return cell
     }
