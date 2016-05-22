@@ -109,6 +109,9 @@ class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDeleg
         }
 
         tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
+        if (tokenIdentifier == nil) {
+            displayAlert("Token generation failed")
+        }
         
         // Confirm submission
         displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
