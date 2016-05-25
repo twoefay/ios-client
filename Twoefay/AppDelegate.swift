@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //request token from APN
     UIApplication.sharedApplication().registerForRemoteNotifications()
+
+    
     return true
   }
   
@@ -35,5 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     print("error: \(error)")
     //TODO: take appropriate error action on failure
   }
+    
 }
 

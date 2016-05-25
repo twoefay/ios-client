@@ -7,7 +7,6 @@
 //
 
 import SwiftyJSON
-import Alamofire
 import UIKit
 
 class IDTokenViewController: UIViewController {
@@ -18,20 +17,7 @@ class IDTokenViewController: UIViewController {
     // POST parameters
     let headers = [ "Content-Type": "application/json" ]
     let parameters = [ "token": "23472" ]
-    let serverTrustPolicies: [String: ServerTrustPolicy] = [
-        "45.55.160.135": .PinCertificates(
-            certificates: ServerTrustPolicy.certificatesInBundle(),
-            validateCertificateChain: true,
-            validateHost: true
-        ),
-        "insecure.expired-apis.com": .DisableEvaluation
-    ]
-    
-    // Uncommenting this wont work for some reason?
-    /* let manager = Manager(
-        serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-    ) */
-    var manager: Manager?
+    let verifyParameters = [ "id_token": "23472", "dev_token": "TEST" ]
     var request: NSURLRequest?
     var response: NSHTTPURLResponse?
     var data: NSData?
@@ -55,8 +41,6 @@ class IDTokenViewController: UIViewController {
         print("Current id_token: 23472")
         
         // Initialize variables
-        manager = Manager(
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies))
         getURL = NSURL(string: getAddress)!
         acceptURL = NSURL(string: acceptAddress)!
         declineURL = NSURL(string: declineAddress)!
@@ -69,17 +53,21 @@ class IDTokenViewController: UIViewController {
     }
     
     @IBAction func pressGet(sender: AnyObject) {
-        Alamofire.request(.GET, getURL)
-            .response { responseRequest, responseResponse, responseData, responseError in
-                self.request = responseRequest
-                self.response = responseResponse
-                self.data = responseData
-                self.error = responseError
+        // Make get request
+        NetworkManager.sharedInstance.defaultManager.request(.GET, getURL)
+            .responseJSON { response in
+                print(response.response)
+                print(response.data)
+                print(response.result)
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
         }
     }
     
     @IBAction func pressAccept(sender: AnyObject) {
-        Alamofire.request(.POST, acceptURL, parameters: parameters, headers: headers)
+        NetworkManager.sharedInstance.defaultManager.request(.POST, acceptURL, parameters: parameters, headers: headers)
             .responseJSON { response in
                 print(response.response)
                 print(response.data)
@@ -92,7 +80,7 @@ class IDTokenViewController: UIViewController {
     }
     
     @IBAction func pressDecline(sender: AnyObject) {
-        Alamofire.request(.POST, declineURL, parameters: parameters, headers: headers)
+        NetworkManager.sharedInstance.defaultManager.request(.POST, declineURL, parameters: parameters, headers: headers)
             .responseJSON { response in
                 print(response.response)
                 print(response.data)
@@ -106,7 +94,7 @@ class IDTokenViewController: UIViewController {
     }
     
     @IBAction func pressVerify(sender: AnyObject) {
-        Alamofire.request(.POST, verifyURL, parameters: parameters, headers: headers)
+        NetworkManager.sharedInstance.defaultManager.request(.POST, verifyURL, parameters: verifyParameters, headers: headers)
             .responseJSON { response in
                 print(response.response)
                 print(response.data)
