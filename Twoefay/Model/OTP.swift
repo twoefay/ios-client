@@ -48,6 +48,22 @@ class OTP {
 		return tokenIdentifier
 		
 	}
+    
+    class func getAllTokens() -> Set<PersistentToken>? {
+        let keychain = Keychain.sharedInstance
+        var persistentTokens: Set<PersistentToken>?
+        do {
+            // Or...
+            persistentTokens = try keychain.allPersistentTokens()
+            for token in persistentTokens! {
+                print(token)
+            }
+            return persistentTokens!
+        } catch {
+            print("Keychain error: \(error)")
+            return nil
+        }
+    }
 
     class func getPassword(identifier: NSData) -> String? {
 		let keychain = Keychain.sharedInstance
