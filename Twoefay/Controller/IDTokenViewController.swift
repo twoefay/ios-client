@@ -25,7 +25,7 @@ class IDTokenViewController: UIViewController {
     
     // Address stuff
     var serverAddress = "https://45.55.160.135:8080"
-    var getAddress = "https://45.55.160.135:8080/user/sexy"
+    var getAddress = "https://twoefay.xyz:8080/user/sexy"
     var getURL = NSURL()
     var acceptAddress = "https://45.55.160.135:8080/success"
     var acceptURL = NSURL()
