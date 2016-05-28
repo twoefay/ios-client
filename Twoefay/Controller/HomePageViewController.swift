@@ -12,7 +12,13 @@ import LocalAuthentication
 class HomePageViewController: UIViewController {
 
     
+    @IBOutlet weak var clientLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    @IBOutlet weak var ipLabel: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
+    
     
     let context = LAContext()
     let policy = LAPolicy.DeviceOwnerAuthenticationWithBiometrics
