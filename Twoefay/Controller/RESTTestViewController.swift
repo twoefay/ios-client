@@ -6,7 +6,6 @@
 //  Copyright © 2016 Twoefay. All rights reserved.
 //
 
-import SwiftyJSON
 import UIKit
 import Alamofire
 
