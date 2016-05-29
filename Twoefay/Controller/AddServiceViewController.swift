@@ -1,5 +1,5 @@
 //
-//  GeneratorViewController.swift
+//  AddServiceViewController.swift
 //  Twoefay
 //
 //  Created by Jonathan Woong on 5/19/16.
@@ -35,7 +35,7 @@ import UIKit
 import AVFoundation
 import QRCodeReader
 
-class GeneratorViewController: UIViewController, QRCodeReaderViewControllerDelegate {
+class AddServiceViewController: UIViewController, QRCodeReaderViewControllerDelegate {
     
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var issuerField: UITextField!

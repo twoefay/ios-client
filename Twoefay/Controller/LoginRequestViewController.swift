@@ -59,37 +59,41 @@ class LoginRequestViewController: UIViewController {
     func touchIDNotAvailable(){
         statusLabel.text = "TouchID not available on this device."
         print("TouchID not on this device.")
+        completeServerRequest("https://twoefay.xyz/failure")
     }
     
     func authenticationSucceeded(sender: UIButton){
         dispatch_async(dispatch_get_main_queue()) {
             self.statusLabel.text = "Authentication successful"
-            
-            let prefs = NSUserDefaults.standardUserDefaults()
-            if let my_id_token = prefs.stringForKey("my_id_token") {
-                
-                var url: String
-                if sender.tag == 0 {
-                    url = "https://twoefay.xyz:8080/success"
-                }
-                else {
-                    url = "https://twoefay.xyz:8080/failure"
-                }
-                
-                Alamofire.request(.POST, url, parameters: ["id_token": my_id_token])
-                    .responseJSON { response in
-                        print(response.request)  // original URL request
-                        print(response.response) // URL response
-                        print(response.data)     // server data
-                        print(response.result)   // result of response serialization
-                        
-                        if let JSON = response.result.value {
-                            print("JSON: \(JSON)")
-                        }
-                }
+            var url: String
+            if sender.tag == 0 {
+                url = "https://twoefay.xyz/success"
             }
-
+            else {
+                url = "https://twoefay.xyz/failure"
+            }
+            self.completeServerRequest(url)
         }
+    }
+    
+    func completeServerRequest(url: String) {
+        let prefs = NSUserDefaults.standardUserDefaults()
+        if let my_id_token = prefs.stringForKey("my_id_token") {
+            print(my_id_token)
+            
+            Alamofire.request(.POST, url, parameters: ["token": my_id_token], encoding: .JSON)
+                .responseJSON { response in
+                    print(response.request)  // original URL request
+                    print(response.response) // URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
+                    
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+            }
+        }
+
     }
     
     func authenticationFailed(error: NSError){
