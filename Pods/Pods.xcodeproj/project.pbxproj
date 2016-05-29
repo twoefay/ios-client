@@ -7,76 +7,66 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05007F55792DF51485DE34D6E3C01F0C /* Base32-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 91582DEE55907531435929EC734CAED9 /* Base32-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365451A984051A42BBD2DABD2E6B40B4 /* Error.swift */; };
+		05007F55792DF51485DE34D6E3C01F0C /* Base32-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2804A700B1C5B1E8039A00147EAB595E /* Base32-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		095406039B4D371E48D08B38A2975AC8 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D8F13A412BABC46F18B8F60AEEB984 /* Error.swift */; };
 		0CE3F68BEE1B0E9D5C9BB0A23E18AD13 /* Pods-TwoefayTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD362B99DF3A4206F1C1A8E88BC5170 /* Pods-TwoefayTests-dummy.m */; };
-		0E348D11E75043F76DD248C24D3025D4 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58354569A79F77C3343D4C0600B7C435 /* ToggleTorchButton.swift */; };
-		125B2834FE855B0C5037EC67CE8A3118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		150175F0E59D73AFF68BFB87F226EE86 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E53761DBCE43849B886D50E0DB43730 /* QRCodeReaderResult.swift */; };
-		1564EB2CE2B0F8C08D1AFB85057B076C /* SwiftSpinner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A4F3009B02A7DB26CD1A8A002E7DC8 /* SwiftSpinner-dummy.m */; };
-		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44440FBC90CEFB6D5423002DFFEAA2C3 /* Timeline.swift */; };
-		1917D2B9D4EA7A7E8ED725FD3043BE0B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		1CFCE6FFFE0A6D6BCE5BE13F54E8D9F0 /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4372253C069E5BBB1EB9A9C7E979B9 /* MF_Base32Additions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1E5CD347C9180A87332E67C655F171A9 /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E0E6043B7C8245B523C2E4F745A555A /* QRCodeReader.swift-dummy.m */; };
-		21F574FB45610ADDCB9C7ACD1FF36543 /* PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9F8BEA15EDDC1EEA834C3083F700EEB /* PersistentToken.swift */; };
-		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38EEA1EA2991C960323BD55D8462B552 /* Validation.swift */; };
-		302467E3E8D7A62BEE0B8FD346707C04 /* Pods-Twoefay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CD8FD55B54E0A600FC592EDCF7FFE33 /* Pods-Twoefay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30521022EE065689A6732E788E60970F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BAD62AE73815F38E3A9503885BA61A1 /* UIKit.framework */; };
-		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B8CC306612E8C09223F7764C2F168F /* NetworkReachabilityManager.swift */; };
-		3A5E0844816FEFED3643B5BC4E6DE147 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413F786124EF62ED1B1B246B01896A61 /* Token.swift */; };
-		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 166B58A9F2066A552B6AAE8E8D367CD1 /* ResponseSerialization.swift */; };
-		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96904FAE2E2300880AE6EF767BC621F4 /* Manager.swift */; };
-		4536ECC55BE0AD12D51B0124772C3585 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F651B2C921665E8E740AA8334688C108 /* Generator.swift */; };
-		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1CF1F55BFD8D906AB6DAEFE462413E7 /* Upload.swift */; };
-		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EF9152B058E99FB4E5D15F5709D432 /* Download.swift */; };
-		627C60BBD934014588A12673BBD39A02 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B926AEEBB6F92ACC74C28525BE52B8 /* Response.swift */; };
-		65607D54EB9DC94BC3C5DF93E0557CF2 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5F451F651F0F0C3C74F7EF66958164 /* SwitchCameraButton.swift */; };
-		6D47BAA6E71D1D73B3822899F9B041E1 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B65AFF3E46F503763E0EE3CB50E87BB3 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EBDE16F1499652F31BD2DD4CEA0DC0C /* SwiftyJSON-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 55FC33F867634DA7BCD26AA330EFBD8C /* SwiftyJSON-dummy.m */; };
-		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CB56515E815377D2F598A9F1049B91 /* ServerTrustPolicy.swift */; };
-		866AE33B05FBA7495A8CCAA3DCF20A2B /* Pods-Twoefay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4FB1A9DC10C3C8CD8BD22EE5A26C47 /* Pods-Twoefay-dummy.m */; };
-		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E6781F9E12FD40E2ED89D9FCCF16F02 /* Alamofire.swift */; };
-		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB66B81EEC5E87A0E7F18DE48E6054C9 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B5F6CA703B8DDD2DA0B17BF8700DD62 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788B8AD5AC3E4AD3E2CB4484DF68811C /* SwiftSpinner.swift */; };
-		9E0F09EAD754570E5BF6E106F83EE878 /* SwiftyJSON-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 70B350A2E7B3FB091E04377E2D52E9B4 /* SwiftyJSON-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AA0DD68A45EB3933C1FE16308E81DE00 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2566FFDA106126B79CB999DE5C46A2D3 /* ReaderOverlayView.swift */; };
-		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB91256002D6D9F9CEE78805EBF1B7B7 /* Result.swift */; };
-		AC289E059AC934AED89AB2CBCB18D0F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A9D24CDA6EF1CEA1AFE3386934848BF /* Alamofire-dummy.m */; };
-		ADF225AA167AA6E7B382A869E85C0B64 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D4D5F87F0B1BACDBCDF4C351B2BDAB /* Stream.swift */; };
-		B0547FEB1127451CF0BF152F740038C1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A24B35EEE6CC7E842F222EA80545988 /* AVFoundation.framework */; };
-		B3FA3A1ED409D2AA2F5DBE076FFAD3C2 /* SwiftSpinner.h in Headers */ = {isa = PBXBuildFile; fileRef = 337DE1286C2A53CB2EE309BFFB2A9D18 /* SwiftSpinner.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B700D89683099DBBFA12E73B7B8F6BC5 /* QRCodeViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349394BE6A6CD877CC8C90C9F442C490 /* QRCodeViewControllerBuilder.swift */; };
-		BB50EC21D48E5CE6166DDD89FED2B45C /* SwiftSpinner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 92245DEC7B36797BA7E8670E95EA1506 /* SwiftSpinner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDCA1FF7435C8BB1990FE5DB843E6182 /* MF_Base32Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2618F4D27A6091383AAC110D27582E4D /* MF_Base32Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5A129DB74E30B860C76C90FF776D3 /* Notifications.swift */; };
-		BE9CD37E7AB34692F1AB3D51FDDE3045 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25FEED26CE9461DC6EF59F4AB72549E /* Keychain.swift */; };
-		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41559BE0F6E8278667AB758FD1DADF8 /* ParameterEncoding.swift */; };
-		C5A1AB9E5B4AE384B69281F86AA00A75 /* OneTimePassword-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 62752B9A4510117DFB4426AB5E974B86 /* OneTimePassword-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7271D5D43011BE9F8F7442BE5C6962 /* MultipartFormData.swift */; };
-		CF3DBF29CAFE6A6448B1BEBFA6934941 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC75913C6F143F0509B42AE5154B55B6 /* SwiftyJSON.swift */; };
-		D461B41A4FD41B8262552045F5ABCAE1 /* Base32-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EBA60911D3433AEDAE891B6C9D95FC /* Base32-dummy.m */; };
-		D82BC880EEC24F469D3F7CCB56B91E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		DE7DBB0318E7C10157C45FC83F0D5A82 /* OneTimePassword-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6843D1E6BDB95F8E3406153CFC335393 /* OneTimePassword-dummy.m */; };
-		E25E0FCA1887E29B860C73F204DB51E9 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EF865DB7AA90254B8E8080F49AAD182 /* QRCodeViewController.swift */; };
+		125B2834FE855B0C5037EC67CE8A3118 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		16102E4E35FAA0FC4161282FECE56469 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3033AE0671CCEB799987E52EE3BF20D /* Timeline.swift */; };
+		169F411BD45B5A731C1316E87DDC3C92 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67BC30EC395111E72FA8C340BC67200F /* QRCodeReader.swift */; };
+		1CFCE6FFFE0A6D6BCE5BE13F54E8D9F0 /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 342303FEDA15BF7679BE8DB4A200D633 /* MF_Base32Additions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		21F574FB45610ADDCB9C7ACD1FF36543 /* PersistentToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA36D5981ABEBF039DE4CF2356B3C07A /* PersistentToken.swift */; };
+		2D3405986FC586FA6C0A5E0B6BA7E64E /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CC8FA6343165FAFD21DB10A528BDD6D /* Validation.swift */; };
+		34CCDCA848A701466256BC2927DA8856 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24B28AC5B5A7D78919D96E550670EEE3 /* NetworkReachabilityManager.swift */; };
+		3A5E0844816FEFED3643B5BC4E6DE147 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1602E97EA523E078440B9126840F0406 /* Token.swift */; };
+		3D636FA5B1B814FB33D7ABDA7A8D9200 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D6F92E09D0F34BBCFF4CDE7B22DE578 /* AVFoundation.framework */; };
+		3EA8F215C9C1432D74E5CCA4834AA8C0 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ACED28A8A4F356CDB948141A7A66077 /* ResponseSerialization.swift */; };
+		4081EA628AF0B73AC51FFB9D7AB3B89E /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6A6B61B641F259609A90218B97552E /* Manager.swift */; };
+		4536ECC55BE0AD12D51B0124772C3585 /* Generator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B925C66425235A6997F4612BC52F52C /* Generator.swift */; };
+		4EB28551525E911122354FF085F85886 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		514D79E3C19C793EA552645A42A981B9 /* QRCodeViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE01694A337EFFB548FB2DA456285975 /* QRCodeViewControllerBuilder.swift */; };
+		56BCA3E1F6C1F323571E4D4C1AB0076B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		5BC19E6E0F199276003F0AF96838BCE5 /* Upload.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18BAFF57E99F020A6D918E94DC4A9A4 /* Upload.swift */; };
+		5BE005EDFA9F78B059E0C22AEDA13915 /* ReaderOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9012695568734B6A11BBFA184513088 /* ReaderOverlayView.swift */; };
+		5CB05FBCB32D21E194B5ECF680CB6AE0 /* Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BADDFC5309820C3733C7014C11B6CD /* Download.swift */; };
+		62E8346F03C03E7F4D631361F325689E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B49648573BFE601084D900E59874DF44 /* Response.swift */; };
+		7771752879C7F207A40E5386C9A1569F /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7586AC6FF788DD615D342376DF3FA267 /* QRCodeViewController.swift */; };
+		7B48852C4D848FA2DA416A98F6425869 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4976F5D17F8365DF561A41B55851D37E /* ServerTrustPolicy.swift */; };
+		7D20C527C1BFBA4C006F8C29AD2213A6 /* QRCodeReader.swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C460E257F67A476D12286B63E4A96187 /* QRCodeReader.swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		82E25F1CC209F5564B6BF1B47DCE14A2 /* Pods-Twoefay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B4FB1A9DC10C3C8CD8BD22EE5A26C47 /* Pods-Twoefay-dummy.m */; };
+		8EB11202167FCDDF1257AAAB1D1FB244 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C69A8B2D1BE3C160E48570C059C7A7 /* Alamofire.swift */; };
+		91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		9469DF81ECB494E84675969B5E13374C /* Alamofire-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EC5D0129CB2709ECAF0A326FE73421C2 /* Alamofire-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B7C3D8F73954C02B7167C9BFB9D24B1 /* QRCodeReader.swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB56E8F5AD256EEAAE32463418914 /* QRCodeReader.swift-dummy.m */; };
+		A4F984A42034B76EACFABB3C30633D59 /* ToggleTorchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A504F13C394740DC100A5DCC51B117 /* ToggleTorchButton.swift */; };
+		AA314156AC500125F4078EE968DB14C6 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20F843DB3E6374FB04585B89FA090603 /* Result.swift */; };
+		ADF19C953CE2A7D0B72EC93A81FCCC26 /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E2E0D2788A554282E8DBA82408B8E3 /* Alamofire-dummy.m */; };
+		AE4CF87C02C042DF13ED5B21C4FDC1E0 /* Stream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 209EAECB3A3A35B214457E596EB62C5F /* Stream.swift */; };
+		BDCA1FF7435C8BB1990FE5DB843E6182 /* MF_Base32Additions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21F1D37CCA7E43E4A24E0F2A439A7C63 /* MF_Base32Additions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE41196F6A3903E59C3306FE3F8B43FE /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D98CD004275DDF67C14E33391BC251C /* Notifications.swift */; };
+		BE9CD37E7AB34692F1AB3D51FDDE3045 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03147F39C568B751AF3B78FF11CF1969 /* Keychain.swift */; };
+		C0DB70AB368765DC64BFB5FEA75E0696 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BCC50BF872279F836E56A3C7EC5095 /* ParameterEncoding.swift */; };
+		C5A1AB9E5B4AE384B69281F86AA00A75 /* OneTimePassword-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0170D23137C88B5ABFDB334058322C /* OneTimePassword-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7B6DD7C0456C50289A2C381DFE9FA3F /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06CE9DB13BD0F24AFD57CC7911290A1 /* MultipartFormData.swift */; };
+		CB16A32995FCDAD865B4A81529D99F03 /* SwitchCameraButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE0562BC60EB0ACD31C50D8C45AF1DD /* SwitchCameraButton.swift */; };
+		CF92E19F624F15E8032CB0F331059B17 /* Pods-Twoefay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CD8FD55B54E0A600FC592EDCF7FFE33 /* Pods-Twoefay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D461B41A4FD41B8262552045F5ABCAE1 /* Base32-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C02B56334D79C7E075511921CFC422A1 /* Base32-dummy.m */; };
+		D82BC880EEC24F469D3F7CCB56B91E28 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		DE7DBB0318E7C10157C45FC83F0D5A82 /* OneTimePassword-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 339E650F20EECE430C97F5527D5F7745 /* OneTimePassword-dummy.m */; };
 		E468C671D6AF19E008DF11E1980F2C55 /* Pods-TwoefayTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC7000E1CDE3E1AF10A2FF46D5FCA781 /* Pods-TwoefayTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E7CFE3D4B14FDD75ED6EEF4ECEC7F823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */; };
-		EC17B3CAA19DEA7B86EDDC35C446E229 /* QRCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6424BADB887C0C4488B47C42924DE90 /* QRCodeReader.swift */; };
-		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4E17D9AE7C48F8C6FC2C4893FC1784 /* Request.swift */; };
-		F52BD2D492F3AC8C7BD88E2BBFE29CA6 /* Token+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 675B217835CB1D476F8E0111A3CCEB71 /* Token+URL.swift */; };
-		FF270EA95B65AFCA512739D6E55E5653 /* Base32.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F13EAA8E24367909758259A02BEB836C /* Base32.framework */; };
+		E67CF18EFD10541E01984709EE004A76 /* QRCodeReaderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25DAB90EA9A2891E136189CB80E2CEFB /* QRCodeReaderResult.swift */; };
+		E7CFE3D4B14FDD75ED6EEF4ECEC7F823 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */; };
+		EFE92E8D3813DD26E78E93EEAF6D7E7E /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B358942CB7210A4186F4D80DE3C026EE /* Request.swift */; };
+		F52BD2D492F3AC8C7BD88E2BBFE29CA6 /* Token+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 688693A5C14A725D313776305A3EEE26 /* Token+URL.swift */; };
+		FF270EA95B65AFCA512739D6E55E5653 /* Base32.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D6F13D54B153C475B203B5F56204F6 /* Base32.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		313FAEABE5AE2ADABA4E6119D7ADC495 /* PBXContainerItemProxy */ = {
+		24A4909C699B0B1C980B7DA70F912D5F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2F56BC506CD2A48077F603DC81302B4D;
-			remoteInfo = SwiftyJSON;
+			remoteGlobalIDString = E845352D7E823B896FD77248443C7548;
+			remoteInfo = OneTimePassword;
 		};
 		4A61D76E15F1AEA18F4EB4AD795E564F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -85,145 +75,113 @@
 			remoteGlobalIDString = 3084AAEB2AD406B39819C325D2D859D6;
 			remoteInfo = Base32;
 		};
-		7314A5B8038D57F4327C1915E0238F0A /* PBXContainerItemProxy */ = {
+		6268C6C15586F7CB08E576EEBCB51D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0A91CF31DA62C116BB2077EBED1D9D5;
+			remoteInfo = QRCodeReader.swift;
+		};
+		EF780F3269144B7386434B83F68B3648 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 3084AAEB2AD406B39819C325D2D859D6;
 			remoteInfo = Base32;
 		};
-		9415BA650FD49EB16DFFDAE6A8569D2A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 95E8CB5377732183933AB9E1F0099D6F;
-			remoteInfo = SwiftSpinner;
-		};
-		9FC2572AEAD613BE529D81EC47A95A57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E845352D7E823B896FD77248443C7548;
-			remoteInfo = OneTimePassword;
-		};
-		CA981141F77304AA7E55E31439250654 /* PBXContainerItemProxy */ = {
+		FD7FCE7AEBAA03404F1E3315FD0A4D70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 79C040AFDDCE1BCBF6D8B5EB0B85887F;
 			remoteInfo = Alamofire;
 		};
-		F3323A0842C9A18EAB6581F57E203824 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B861F6F35062B3F70D209A04E22B132D;
-			remoteInfo = QRCodeReader.swift;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00E4F86C4ACB253E0F116F8A0A1FC835 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		02E81FC86A8724AD1B621E54AF838A01 /* Pods-Twoefay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twoefay.release.xcconfig"; sourceTree = "<group>"; };
-		037CC1B2C46966D1598F8DE03A97D9EA /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		03147F39C568B751AF3B78FF11CF1969 /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OneTimePassword/Keychain.swift; sourceTree = "<group>"; };
+		048BDF7532859C3AD453CE12ADEEBB37 /* OneTimePassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OneTimePassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		04E5ACC63069B3F4F2FEEACF561E6696 /* Pods-Twoefay-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Twoefay-acknowledgements.markdown"; sourceTree = "<group>"; };
+		05420865BAEC0D22FBDD1B45B26A4738 /* Alamofire-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-prefix.pch"; sourceTree = "<group>"; };
+		06D8F13A412BABC46F18B8F60AEEB984 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
 		0803784BCB0E73247CBFA2B18645BB4D /* Pods-Twoefay-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Twoefay-acknowledgements.plist"; sourceTree = "<group>"; };
+		0B0170D23137C88B5ABFDB334058322C /* OneTimePassword-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OneTimePassword-umbrella.h"; sourceTree = "<group>"; };
 		0CD8FD55B54E0A600FC592EDCF7FFE33 /* Pods-Twoefay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Twoefay-umbrella.h"; sourceTree = "<group>"; };
-		0D907690BB5F3C413A5C8F6E614F2F95 /* SwiftSpinner.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftSpinner.xcconfig; sourceTree = "<group>"; };
+		0EC81565C36542F6CCFE45D274604D7A /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
 		11741E86C6962AB2AEBF0AADCC702F80 /* Pods-TwoefayTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoefayTests.release.xcconfig"; sourceTree = "<group>"; };
-		14C5A129DB74E30B860C76C90FF776D3 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
-		15295F35A2F9814FBABE7ECD9855F334 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
-		166B58A9F2066A552B6AAE8E8D367CD1 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
-		179F9707DD2F69AF917D18F129E3E3DB /* OneTimePassword.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OneTimePassword.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1369531FBC0E2298E971C86F28F8E002 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1602E97EA523E078440B9126840F0406 /* Token.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Token.swift; path = OneTimePassword/Token.swift; sourceTree = "<group>"; };
 		191D8F1E2DEBF10082E93AABDAED06D1 /* Pods-TwoefayTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-TwoefayTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1E0E6043B7C8245B523C2E4F745A555A /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
-		1EF865DB7AA90254B8E8080F49AAD182 /* QRCodeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = QRCodeReader/QRCodeViewController.swift; sourceTree = "<group>"; };
-		1F0527FFB352A6E140CE0A71565C040A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		20CB56515E815377D2F598A9F1049B91 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		220226702E3CA80DFB35D05365289968 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ACED28A8A4F356CDB948141A7A66077 /* ResponseSerialization.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResponseSerialization.swift; path = Source/ResponseSerialization.swift; sourceTree = "<group>"; };
+		209EAECB3A3A35B214457E596EB62C5F /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
+		20F843DB3E6374FB04585B89FA090603 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		21F1D37CCA7E43E4A24E0F2A439A7C63 /* MF_Base32Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MF_Base32Additions.h; path = Base32/MF_Base32Additions.h; sourceTree = "<group>"; };
+		24B28AC5B5A7D78919D96E550670EEE3 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
 		24CD7E8D672409D7F5EFBC29AC61EADA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2566FFDA106126B79CB999DE5C46A2D3 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = QRCodeReader/ReaderOverlayView.swift; sourceTree = "<group>"; };
-		2618F4D27A6091383AAC110D27582E4D /* MF_Base32Additions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MF_Base32Additions.h; path = Base32/MF_Base32Additions.h; sourceTree = "<group>"; };
-		27B70BE93D76B048DD17A1CFE73A4B8B /* SwiftyJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftyJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29E35DACFC5D1D6E9955C51813E00D63 /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		25DAB90EA9A2891E136189CB80E2CEFB /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = QRCodeReader/QRCodeReaderResult.swift; sourceTree = "<group>"; };
+		25EA6ED76D5826A866A125DDA8BD2A9B /* OneTimePassword.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OneTimePassword.modulemap; sourceTree = "<group>"; };
+		2804A700B1C5B1E8039A00147EAB595E /* Base32-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Base32-umbrella.h"; sourceTree = "<group>"; };
 		2B4FB1A9DC10C3C8CD8BD22EE5A26C47 /* Pods-Twoefay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Twoefay-dummy.m"; sourceTree = "<group>"; };
-		2D49969D06FE4EB1EEFB62B51C7E39ED /* OneTimePassword.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneTimePassword.xcconfig; sourceTree = "<group>"; };
-		2E53761DBCE43849B886D50E0DB43730 /* QRCodeReaderResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReaderResult.swift; path = QRCodeReader/QRCodeReaderResult.swift; sourceTree = "<group>"; };
-		337DE1286C2A53CB2EE309BFFB2A9D18 /* SwiftSpinner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftSpinner.h; path = SwiftSpinner/SwiftSpinner.h; sourceTree = "<group>"; };
-		349394BE6A6CD877CC8C90C9F442C490 /* QRCodeViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeViewControllerBuilder.swift; path = QRCodeReader/QRCodeViewControllerBuilder.swift; sourceTree = "<group>"; };
-		365451A984051A42BBD2DABD2E6B40B4 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Source/Error.swift; sourceTree = "<group>"; };
-		38EEA1EA2991C960323BD55D8462B552 /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		2C6A6B61B641F259609A90218B97552E /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
+		331C9F705335736323DDFAF069174A57 /* OneTimePassword.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = OneTimePassword.xcconfig; sourceTree = "<group>"; };
+		339E650F20EECE430C97F5527D5F7745 /* OneTimePassword-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OneTimePassword-dummy.m"; sourceTree = "<group>"; };
+		342303FEDA15BF7679BE8DB4A200D633 /* MF_Base32Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MF_Base32Additions.m; path = Base32/MF_Base32Additions.m; sourceTree = "<group>"; };
+		3B2B6FD23C5F2C464FF98A34996EBFC3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C1672CAD761580BB40A99946DE1996C /* Pods-Twoefay-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Twoefay-resources.sh"; sourceTree = "<group>"; };
-		3D87134D05C4FDA0A2C6E7F298F9EB78 /* Pods_TwoefayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoefayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3C2A4145C1A2C963327747847DE4FDB5 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3CC8FA6343165FAFD21DB10A528BDD6D /* Validation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Validation.swift; path = Source/Validation.swift; sourceTree = "<group>"; };
+		3D6F92E09D0F34BBCFF4CDE7B22DE578 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		3D98CD004275DDF67C14E33391BC251C /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		3FD362B99DF3A4206F1C1A8E88BC5170 /* Pods-TwoefayTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TwoefayTests-dummy.m"; sourceTree = "<group>"; };
 		402601ECE40E5E3DAB294B186019BEBF /* Pods-TwoefayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TwoefayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		40FC23FB155FE1538A78E5048ACAD427 /* Pods-Twoefay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Twoefay.modulemap"; sourceTree = "<group>"; };
-		413F786124EF62ED1B1B246B01896A61 /* Token.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Token.swift; path = OneTimePassword/Token.swift; sourceTree = "<group>"; };
-		44440FBC90CEFB6D5423002DFFEAA2C3 /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
-		452EE14E0B273B073D5C1635B337EF97 /* OneTimePassword.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = OneTimePassword.modulemap; sourceTree = "<group>"; };
-		4A9C7E74AB97D01B92241266BFBEFBFB /* SwiftyJSON-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-prefix.pch"; sourceTree = "<group>"; };
-		4FBD7603474123AF106441D304BD1CFA /* SwiftyJSON.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftyJSON.modulemap; sourceTree = "<group>"; };
-		503D1E36F665D82FAF94A8D006F4CE82 /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
-		50C6DA2781AF7ED36B34ACC05D5C786C /* Base32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		52A4F3009B02A7DB26CD1A8A002E7DC8 /* SwiftSpinner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftSpinner-dummy.m"; sourceTree = "<group>"; };
-		55FC33F867634DA7BCD26AA330EFBD8C /* SwiftyJSON-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyJSON-dummy.m"; sourceTree = "<group>"; };
+		435AB56E8F5AD256EEAAE32463418914 /* QRCodeReader.swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReader.swift-dummy.m"; sourceTree = "<group>"; };
+		47A93D04F2418D7A573D0B58DE127E98 /* Base32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4976F5D17F8365DF561A41B55851D37E /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		53E588D5E00048D5F130446131780660 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
 		561834219FD346C0A2C8EAD34A2011BA /* Pods-Twoefay-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Twoefay-frameworks.sh"; sourceTree = "<group>"; };
-		58354569A79F77C3343D4C0600B7C435 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = QRCodeReader/ToggleTorchButton.swift; sourceTree = "<group>"; };
-		5D358E7FA7650D4DAB9CF09D62E15DB2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57BADDFC5309820C3733C7014C11B6CD /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
 		5E954E7CFE63E416917A6A403E69DA2A /* Pods-TwoefayTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TwoefayTests-resources.sh"; sourceTree = "<group>"; };
-		62752B9A4510117DFB4426AB5E974B86 /* OneTimePassword-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OneTimePassword-umbrella.h"; sourceTree = "<group>"; };
-		675B217835CB1D476F8E0111A3CCEB71 /* Token+URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Token+URL.swift"; path = "OneTimePassword/Token+URL.swift"; sourceTree = "<group>"; };
-		6843D1E6BDB95F8E3406153CFC335393 /* OneTimePassword-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "OneTimePassword-dummy.m"; sourceTree = "<group>"; };
-		6B7271D5D43011BE9F8F7442BE5C6962 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
-		6BAD62AE73815F38E3A9503885BA61A1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6E219423867EB566BC2FD1A2D0C1947C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6E6781F9E12FD40E2ED89D9FCCF16F02 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
-		70B350A2E7B3FB091E04377E2D52E9B4 /* SwiftyJSON-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyJSON-umbrella.h"; sourceTree = "<group>"; };
-		741EDBE87CA7AD4DBD69D9A23DD22E37 /* SwiftSpinner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftSpinner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		75D4D5F87F0B1BACDBCDF4C351B2BDAB /* Stream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stream.swift; path = Source/Stream.swift; sourceTree = "<group>"; };
-		788B8AD5AC3E4AD3E2CB4484DF68811C /* SwiftSpinner.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftSpinner.swift; path = SwiftSpinner/SwiftSpinner.swift; sourceTree = "<group>"; };
-		83EF9152B058E99FB4E5D15F5709D432 /* Download.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Download.swift; path = Source/Download.swift; sourceTree = "<group>"; };
-		8ABA524081F43871A5A40B0A99004AA0 /* Base32.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Base32.xcconfig; sourceTree = "<group>"; };
-		8D4E17D9AE7C48F8C6FC2C4893FC1784 /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
-		91582DEE55907531435929EC734CAED9 /* Base32-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Base32-umbrella.h"; sourceTree = "<group>"; };
-		92245DEC7B36797BA7E8670E95EA1506 /* SwiftSpinner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-umbrella.h"; sourceTree = "<group>"; };
+		65B8F9AFADDAB76BEBED5B1BC02C0410 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D6F13D54B153C475B203B5F56204F6 /* Base32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		67BC30EC395111E72FA8C340BC67200F /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = QRCodeReader/QRCodeReader.swift; sourceTree = "<group>"; };
+		688693A5C14A725D313776305A3EEE26 /* Token+URL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Token+URL.swift"; path = "OneTimePassword/Token+URL.swift"; sourceTree = "<group>"; };
+		6B925C66425235A6997F4612BC52F52C /* Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generator.swift; path = OneTimePassword/Generator.swift; sourceTree = "<group>"; };
+		72BCC50BF872279F836E56A3C7EC5095 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
+		7586AC6FF788DD615D342376DF3FA267 /* QRCodeViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeViewController.swift; path = QRCodeReader/QRCodeViewController.swift; sourceTree = "<group>"; };
+		7CE0562BC60EB0ACD31C50D8C45AF1DD /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = QRCodeReader/SwitchCameraButton.swift; sourceTree = "<group>"; };
+		7D7ADFC35814DC57EDC3047E6D414E0F /* OneTimePassword-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OneTimePassword-prefix.pch"; sourceTree = "<group>"; };
+		896A8B500B1BE8169F31E041A3AFDF90 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9048C603B29882FE052E21767DD3585F /* QRCodeReader.swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = QRCodeReader.swift.modulemap; sourceTree = "<group>"; };
+		93A190FCCF8A906789A5ED7D5F89BC2D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96904FAE2E2300880AE6EF767BC621F4 /* Manager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Manager.swift; path = Source/Manager.swift; sourceTree = "<group>"; };
-		9A24B35EEE6CC7E842F222EA80545988 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		9A9D24CDA6EF1CEA1AFE3386934848BF /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
-		9DCA13EA4244F06E66F236E0CDD9EED6 /* SwiftSpinner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SwiftSpinner.modulemap; sourceTree = "<group>"; };
-		9EAEF7C125E38CED6FD20180253D7F0C /* Pods_Twoefay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twoefay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9C208ED691C8F5D7D552201172C46701 /* QRCodeReader.swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-prefix.pch"; sourceTree = "<group>"; };
+		A06CE9DB13BD0F24AFD57CC7911290A1 /* MultipartFormData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MultipartFormData.swift; path = Source/MultipartFormData.swift; sourceTree = "<group>"; };
+		A18BAFF57E99F020A6D918E94DC4A9A4 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
+		A2E2E0D2788A554282E8DBA82408B8E3 /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		A5C430C23B717A2DBB9B900D397F009E /* Pods-Twoefay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Twoefay.debug.xcconfig"; sourceTree = "<group>"; };
-		A6168FC4B7CB171BEFB922A2FD7A9A85 /* QRCodeReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QRCodeReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7C38E1ACD5288E08C499D5BF45BF87B /* Base32-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Base32-prefix.pch"; sourceTree = "<group>"; };
 		A7F90699E2C354BFAB0D2654D5F6288A /* Pods-TwoefayTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-TwoefayTests.modulemap"; sourceTree = "<group>"; };
-		AC6E1507A2481AB99893E78D0AA31AE0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA36D5981ABEBF039DE4CF2356B3C07A /* PersistentToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistentToken.swift; path = OneTimePassword/PersistentToken.swift; sourceTree = "<group>"; };
 		B086764FA8957230D2D64DB72D521477 /* Pods-TwoefayTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-TwoefayTests-frameworks.sh"; sourceTree = "<group>"; };
-		B184FB6F7025B0739638985B57CE4BD3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B42581E54383D5150622D640F1B104C5 /* SwiftyJSON.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyJSON.xcconfig; sourceTree = "<group>"; };
-		B65AFF3E46F503763E0EE3CB50E87BB3 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
-		BE6FC6C7BFCBA4CF47E03F2D1985C321 /* Base32-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Base32-prefix.pch"; sourceTree = "<group>"; };
-		C1B74DE997261F0C35956C327E255FF2 /* Base32.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Base32.modulemap; sourceTree = "<group>"; };
-		C25FEED26CE9461DC6EF59F4AB72549E /* Keychain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keychain.swift; path = OneTimePassword/Keychain.swift; sourceTree = "<group>"; };
-		C2B926AEEBB6F92ACC74C28525BE52B8 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
-		C41559BE0F6E8278667AB758FD1DADF8 /* ParameterEncoding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParameterEncoding.swift; path = Source/ParameterEncoding.swift; sourceTree = "<group>"; };
-		C57555AC9771D778ABF217880D3CBF9C /* OneTimePassword-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "OneTimePassword-prefix.pch"; sourceTree = "<group>"; };
-		C6424BADB887C0C4488B47C42924DE90 /* QRCodeReader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeReader.swift; path = QRCodeReader/QRCodeReader.swift; sourceTree = "<group>"; };
+		B358942CB7210A4186F4D80DE3C026EE /* Request.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Request.swift; path = Source/Request.swift; sourceTree = "<group>"; };
+		B49648573BFE601084D900E59874DF44 /* Response.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Response.swift; path = Source/Response.swift; sourceTree = "<group>"; };
+		B7537A9A000F45BB4E6735477CB3CBAD /* Pods_Twoefay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twoefay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C02B56334D79C7E075511921CFC422A1 /* Base32-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Base32-dummy.m"; sourceTree = "<group>"; };
+		C460E257F67A476D12286B63E4A96187 /* QRCodeReader.swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReader.swift-umbrella.h"; sourceTree = "<group>"; };
+		C5A504F13C394740DC100A5DCC51B117 /* ToggleTorchButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ToggleTorchButton.swift; path = QRCodeReader/ToggleTorchButton.swift; sourceTree = "<group>"; };
 		C98BE7C04D979F7FD4F480A899EA0F06 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CB66B81EEC5E87A0E7F18DE48E6054C9 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
-		D514B5850399AB8D5507A06E82A4147D /* SwiftSpinner-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftSpinner-prefix.pch"; sourceTree = "<group>"; };
-		D9F8BEA15EDDC1EEA834C3083F700EEB /* PersistentToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PersistentToken.swift; path = OneTimePassword/PersistentToken.swift; sourceTree = "<group>"; };
-		DB4372253C069E5BBB1EB9A9C7E979B9 /* MF_Base32Additions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MF_Base32Additions.m; path = Base32/MF_Base32Additions.m; sourceTree = "<group>"; };
-		DC75913C6F143F0509B42AE5154B55B6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyJSON.swift; path = Source/SwiftyJSON.swift; sourceTree = "<group>"; };
-		E1B8CC306612E8C09223F7764C2F168F /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NetworkReachabilityManager.swift; path = Source/NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		E1CF1F55BFD8D906AB6DAEFE462413E7 /* Upload.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Upload.swift; path = Source/Upload.swift; sourceTree = "<group>"; };
-		E2B83516DD43D1AECE7494DB4E56B439 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E2EBA60911D3433AEDAE891B6C9D95FC /* Base32-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Base32-dummy.m"; sourceTree = "<group>"; };
-		EF5F451F651F0F0C3C74F7EF66958164 /* SwitchCameraButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwitchCameraButton.swift; path = QRCodeReader/SwitchCameraButton.swift; sourceTree = "<group>"; };
-		F13EAA8E24367909758259A02BEB836C /* Base32.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Base32.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F651B2C921665E8E740AA8334688C108 /* Generator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generator.swift; path = OneTimePassword/Generator.swift; sourceTree = "<group>"; };
-		F8F8567F90724EA5024332D02865E672 /* QRCodeReader.swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReader.swift.xcconfig; sourceTree = "<group>"; };
-		F96ABC332DA5306183D532456F990100 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Alamofire.modulemap; sourceTree = "<group>"; };
-		FB91256002D6D9F9CEE78805EBF1B7B7 /* Result.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Result.swift; path = Source/Result.swift; sourceTree = "<group>"; };
+		CE01694A337EFFB548FB2DA456285975 /* QRCodeViewControllerBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QRCodeViewControllerBuilder.swift; path = QRCodeReader/QRCodeViewControllerBuilder.swift; sourceTree = "<group>"; };
+		D3033AE0671CCEB799987E52EE3BF20D /* Timeline.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Timeline.swift; path = Source/Timeline.swift; sourceTree = "<group>"; };
+		D7C69A8B2D1BE3C160E48570C059C7A7 /* Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alamofire.swift; path = Source/Alamofire.swift; sourceTree = "<group>"; };
+		D8FEF879BCEA4FDF783DDFE3DC281A71 /* Pods_TwoefayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoefayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E722F5442B994D65777A57211B7215D6 /* Base32.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Base32.modulemap; sourceTree = "<group>"; };
+		E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E88C002DBF41CBD7D3710437D102D750 /* Base32.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Base32.xcconfig; sourceTree = "<group>"; };
+		E9012695568734B6A11BBFA184513088 /* ReaderOverlayView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReaderOverlayView.swift; path = QRCodeReader/ReaderOverlayView.swift; sourceTree = "<group>"; };
+		EC5D0129CB2709ECAF0A326FE73421C2 /* Alamofire-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Alamofire-umbrella.h"; sourceTree = "<group>"; };
 		FC7000E1CDE3E1AF10A2FF46D5FCA781 /* Pods-TwoefayTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TwoefayTests-umbrella.h"; sourceTree = "<group>"; };
 		FFC578134C9B79348DBD8CA6BA259B7F /* Pods-TwoefayTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TwoefayTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -238,20 +196,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1C93E77DF327EB6CCB4922E380843C21 /* Frameworks */ = {
+		18D8E74739D9A28266B37084262DACD3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				627C60BBD934014588A12673BBD39A02 /* Foundation.framework in Frameworks */,
-				30521022EE065689A6732E788E60970F /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		597E8E27994A8E99AB9C216616599C3A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AC289E059AC934AED89AB2CBCB18D0F7 /* Foundation.framework in Frameworks */,
+				3D636FA5B1B814FB33D7ABDA7A8D9200 /* AVFoundation.framework in Frameworks */,
+				56BCA3E1F6C1F323571E4D4C1AB0076B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,28 +213,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		734B103BF0A1F8AB054CAC58A4174B01 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1917D2B9D4EA7A7E8ED725FD3043BE0B /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		893B4D4BA3B0B0BD6820EC98CA0BC0EE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B0547FEB1127451CF0BF152F740038C1 /* AVFoundation.framework in Frameworks */,
-				ADF225AA167AA6E7B382A869E85C0B64 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B1729F851F648EC60EE93CDB3C8BAEAD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				91C09AC2A52ED69A27C8D923139A006F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC895D9642527BDE4090C5AFCF599646 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EB28551525E911122354FF085F85886 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,56 +240,70 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		20E35A1E5694395EF64DD081BA24E719 /* Support Files */ = {
+		1A8F02CB6E05C6923ECA450332008D5F /* QRCodeReader.swift */ = {
 			isa = PBXGroup;
 			children = (
-				220226702E3CA80DFB35D05365289968 /* Info.plist */,
-				4FBD7603474123AF106441D304BD1CFA /* SwiftyJSON.modulemap */,
-				B42581E54383D5150622D640F1B104C5 /* SwiftyJSON.xcconfig */,
-				55FC33F867634DA7BCD26AA330EFBD8C /* SwiftyJSON-dummy.m */,
-				4A9C7E74AB97D01B92241266BFBEFBFB /* SwiftyJSON-prefix.pch */,
-				70B350A2E7B3FB091E04377E2D52E9B4 /* SwiftyJSON-umbrella.h */,
+				67BC30EC395111E72FA8C340BC67200F /* QRCodeReader.swift */,
+				25DAB90EA9A2891E136189CB80E2CEFB /* QRCodeReaderResult.swift */,
+				7586AC6FF788DD615D342376DF3FA267 /* QRCodeViewController.swift */,
+				CE01694A337EFFB548FB2DA456285975 /* QRCodeViewControllerBuilder.swift */,
+				E9012695568734B6A11BBFA184513088 /* ReaderOverlayView.swift */,
+				7CE0562BC60EB0ACD31C50D8C45AF1DD /* SwitchCameraButton.swift */,
+				C5A504F13C394740DC100A5DCC51B117 /* ToggleTorchButton.swift */,
+				6C1F854DDC8603FA5AD00EE72AD1B4E0 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyJSON";
+			path = QRCodeReader.swift;
 			sourceTree = "<group>";
 		};
-		2130166332C0464F3CD8BB2FD7C9AB2A /* Support Files */ = {
+		1E0194FBBFD36697E394834F7FB724FA /* OneTimePassword */ = {
 			isa = PBXGroup;
 			children = (
-				F96ABC332DA5306183D532456F990100 /* Alamofire.modulemap */,
-				15295F35A2F9814FBABE7ECD9855F334 /* Alamofire.xcconfig */,
-				9A9D24CDA6EF1CEA1AFE3386934848BF /* Alamofire-dummy.m */,
-				037CC1B2C46966D1598F8DE03A97D9EA /* Alamofire-prefix.pch */,
-				CB66B81EEC5E87A0E7F18DE48E6054C9 /* Alamofire-umbrella.h */,
-				6E219423867EB566BC2FD1A2D0C1947C /* Info.plist */,
+				6B925C66425235A6997F4612BC52F52C /* Generator.swift */,
+				03147F39C568B751AF3B78FF11CF1969 /* Keychain.swift */,
+				AA36D5981ABEBF039DE4CF2356B3C07A /* PersistentToken.swift */,
+				1602E97EA523E078440B9126840F0406 /* Token.swift */,
+				688693A5C14A725D313776305A3EEE26 /* Token+URL.swift */,
+				ACFBB229F9F8BC0DDAF84588DDED41B5 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Alamofire";
+			path = OneTimePassword;
 			sourceTree = "<group>";
 		};
-		21E7D2BDC18E33AF3DFBA83F88D6C4C1 /* Support Files */ = {
+		1E1DE9D918ADD7612E0BA50C0310C9B1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AC6E1507A2481AB99893E78D0AA31AE0 /* Info.plist */,
-				452EE14E0B273B073D5C1635B337EF97 /* OneTimePassword.modulemap */,
-				2D49969D06FE4EB1EEFB62B51C7E39ED /* OneTimePassword.xcconfig */,
-				6843D1E6BDB95F8E3406153CFC335393 /* OneTimePassword-dummy.m */,
-				C57555AC9771D778ABF217880D3CBF9C /* OneTimePassword-prefix.pch */,
-				62752B9A4510117DFB4426AB5E974B86 /* OneTimePassword-umbrella.h */,
+				3B2B6FD23C5F2C464FF98A34996EBFC3 /* Alamofire.framework */,
+				47A93D04F2418D7A573D0B58DE127E98 /* Base32.framework */,
+				048BDF7532859C3AD453CE12ADEEBB37 /* OneTimePassword.framework */,
+				B7537A9A000F45BB4E6735477CB3CBAD /* Pods_Twoefay.framework */,
+				D8FEF879BCEA4FDF783DDFE3DC281A71 /* Pods_TwoefayTests.framework */,
+				65B8F9AFADDAB76BEBED5B1BC02C0410 /* QRCodeReader.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/OneTimePassword";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		379D3D78062265241DAC9170FA824853 /* SwiftSpinner */ = {
+		3B0A41CB4F5DA15BD81A560791821F5A /* Alamofire */ = {
 			isa = PBXGroup;
 			children = (
-				337DE1286C2A53CB2EE309BFFB2A9D18 /* SwiftSpinner.h */,
-				788B8AD5AC3E4AD3E2CB4484DF68811C /* SwiftSpinner.swift */,
-				79C1B687C84CEE8F3CA33BD3AE7A63AF /* Support Files */,
+				D7C69A8B2D1BE3C160E48570C059C7A7 /* Alamofire.swift */,
+				57BADDFC5309820C3733C7014C11B6CD /* Download.swift */,
+				06D8F13A412BABC46F18B8F60AEEB984 /* Error.swift */,
+				2C6A6B61B641F259609A90218B97552E /* Manager.swift */,
+				A06CE9DB13BD0F24AFD57CC7911290A1 /* MultipartFormData.swift */,
+				24B28AC5B5A7D78919D96E550670EEE3 /* NetworkReachabilityManager.swift */,
+				3D98CD004275DDF67C14E33391BC251C /* Notifications.swift */,
+				72BCC50BF872279F836E56A3C7EC5095 /* ParameterEncoding.swift */,
+				B358942CB7210A4186F4D80DE3C026EE /* Request.swift */,
+				B49648573BFE601084D900E59874DF44 /* Response.swift */,
+				1ACED28A8A4F356CDB948141A7A66077 /* ResponseSerialization.swift */,
+				20F843DB3E6374FB04585B89FA090603 /* Result.swift */,
+				4976F5D17F8365DF561A41B55851D37E /* ServerTrustPolicy.swift */,
+				209EAECB3A3A35B214457E596EB62C5F /* Stream.swift */,
+				D3033AE0671CCEB799987E52EE3BF20D /* Timeline.swift */,
+				A18BAFF57E99F020A6D918E94DC4A9A4 /* Upload.swift */,
+				3CC8FA6343165FAFD21DB10A528BDD6D /* Validation.swift */,
+				B9461F875B910DE7D6191C6B5529F4AE /* Support Files */,
 			);
-			path = SwiftSpinner;
+			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		3B99DE8DB10A2C383AD94AD5DF051151 /* Pods-TwoefayTests */ = {
@@ -369,138 +324,59 @@
 			path = "Target Support Files/Pods-TwoefayTests";
 			sourceTree = "<group>";
 		};
-		3C485A629CFE4DE1D2CFB0AAD120F884 /* iOS */ = {
+		59BA4E1362B134031279643B8146EC94 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				9A24B35EEE6CC7E842F222EA80545988 /* AVFoundation.framework */,
-				A15D4979535A8459CF4F03FAD7F335D1 /* Foundation.framework */,
-				6BAD62AE73815F38E3A9503885BA61A1 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		40BDDB6EC71FA2320B743937C50A1175 /* SwiftyJSON */ = {
-			isa = PBXGroup;
-			children = (
-				DC75913C6F143F0509B42AE5154B55B6 /* SwiftyJSON.swift */,
-				20E35A1E5694395EF64DD081BA24E719 /* Support Files */,
-			);
-			path = SwiftyJSON;
-			sourceTree = "<group>";
-		};
-		459D294332F38B06387F00F2676DCBFC /* OneTimePassword */ = {
-			isa = PBXGroup;
-			children = (
-				F651B2C921665E8E740AA8334688C108 /* Generator.swift */,
-				C25FEED26CE9461DC6EF59F4AB72549E /* Keychain.swift */,
-				D9F8BEA15EDDC1EEA834C3083F700EEB /* PersistentToken.swift */,
-				413F786124EF62ED1B1B246B01896A61 /* Token.swift */,
-				675B217835CB1D476F8E0111A3CCEB71 /* Token+URL.swift */,
-				21E7D2BDC18E33AF3DFBA83F88D6C4C1 /* Support Files */,
-			);
-			path = OneTimePassword;
-			sourceTree = "<group>";
-		};
-		6BC01BF332B23E517DC2F83098E811F4 /* Base32 */ = {
-			isa = PBXGroup;
-			children = (
-				2618F4D27A6091383AAC110D27582E4D /* MF_Base32Additions.h */,
-				DB4372253C069E5BBB1EB9A9C7E979B9 /* MF_Base32Additions.m */,
-				E0AB95ADE4D150A9FF89F60A1820A00B /* Support Files */,
-			);
-			path = Base32;
-			sourceTree = "<group>";
-		};
-		6E79D5972339AB12D859BA8036F18C94 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				8CBEF260A97DD4B0ACA59F8287F5BBF5 /* Alamofire */,
-				6BC01BF332B23E517DC2F83098E811F4 /* Base32 */,
-				459D294332F38B06387F00F2676DCBFC /* OneTimePassword */,
-				70D10B8264A8AD9E140F0D7ACBF0EA24 /* QRCodeReader.swift */,
-				379D3D78062265241DAC9170FA824853 /* SwiftSpinner */,
-				40BDDB6EC71FA2320B743937C50A1175 /* SwiftyJSON */,
+				3B0A41CB4F5DA15BD81A560791821F5A /* Alamofire */,
+				85264E75E68B28A8FFAB3280E098A1DC /* Base32 */,
+				1E0194FBBFD36697E394834F7FB724FA /* OneTimePassword */,
+				1A8F02CB6E05C6923ECA450332008D5F /* QRCodeReader.swift */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		70D10B8264A8AD9E140F0D7ACBF0EA24 /* QRCodeReader.swift */ = {
+		6BF06906ECDD671E34C8BF577C50BEDF /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				C6424BADB887C0C4488B47C42924DE90 /* QRCodeReader.swift */,
-				2E53761DBCE43849B886D50E0DB43730 /* QRCodeReaderResult.swift */,
-				1EF865DB7AA90254B8E8080F49AAD182 /* QRCodeViewController.swift */,
-				349394BE6A6CD877CC8C90C9F442C490 /* QRCodeViewControllerBuilder.swift */,
-				2566FFDA106126B79CB999DE5C46A2D3 /* ReaderOverlayView.swift */,
-				EF5F451F651F0F0C3C74F7EF66958164 /* SwitchCameraButton.swift */,
-				58354569A79F77C3343D4C0600B7C435 /* ToggleTorchButton.swift */,
-				77C750C45E8F387F5CDDA85E2A63904A /* Support Files */,
+				3D6F92E09D0F34BBCFF4CDE7B22DE578 /* AVFoundation.framework */,
+				E7F96BCD536EA073C66C5B55B18F87DF /* Foundation.framework */,
 			);
-			path = QRCodeReader.swift;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		77C750C45E8F387F5CDDA85E2A63904A /* Support Files */ = {
+		6C1F854DDC8603FA5AD00EE72AD1B4E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1F0527FFB352A6E140CE0A71565C040A /* Info.plist */,
-				29E35DACFC5D1D6E9955C51813E00D63 /* QRCodeReader.swift.modulemap */,
-				F8F8567F90724EA5024332D02865E672 /* QRCodeReader.swift.xcconfig */,
-				1E0E6043B7C8245B523C2E4F745A555A /* QRCodeReader.swift-dummy.m */,
-				503D1E36F665D82FAF94A8D006F4CE82 /* QRCodeReader.swift-prefix.pch */,
-				B65AFF3E46F503763E0EE3CB50E87BB3 /* QRCodeReader.swift-umbrella.h */,
+				1369531FBC0E2298E971C86F28F8E002 /* Info.plist */,
+				9048C603B29882FE052E21767DD3585F /* QRCodeReader.swift.modulemap */,
+				53E588D5E00048D5F130446131780660 /* QRCodeReader.swift.xcconfig */,
+				435AB56E8F5AD256EEAAE32463418914 /* QRCodeReader.swift-dummy.m */,
+				9C208ED691C8F5D7D552201172C46701 /* QRCodeReader.swift-prefix.pch */,
+				C460E257F67A476D12286B63E4A96187 /* QRCodeReader.swift-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/QRCodeReader.swift";
-			sourceTree = "<group>";
-		};
-		79C1B687C84CEE8F3CA33BD3AE7A63AF /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E2B83516DD43D1AECE7494DB4E56B439 /* Info.plist */,
-				9DCA13EA4244F06E66F236E0CDD9EED6 /* SwiftSpinner.modulemap */,
-				0D907690BB5F3C413A5C8F6E614F2F95 /* SwiftSpinner.xcconfig */,
-				52A4F3009B02A7DB26CD1A8A002E7DC8 /* SwiftSpinner-dummy.m */,
-				D514B5850399AB8D5507A06E82A4147D /* SwiftSpinner-prefix.pch */,
-				92245DEC7B36797BA7E8670E95EA1506 /* SwiftSpinner-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftSpinner";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				E892418EA7B626F45F6FEF6DC0E6439A /* Frameworks */,
-				6E79D5972339AB12D859BA8036F18C94 /* Pods */,
-				F8BC78CDF4440DAFB1296CEF53311AF6 /* Products */,
+				D16FD37CD9D2EAB9C0312A3591C5BE8E /* Frameworks */,
+				59BA4E1362B134031279643B8146EC94 /* Pods */,
+				1E1DE9D918ADD7612E0BA50C0310C9B1 /* Products */,
 				99D11CE2A571D22CE84AA9EBAC80A05F /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8CBEF260A97DD4B0ACA59F8287F5BBF5 /* Alamofire */ = {
+		85264E75E68B28A8FFAB3280E098A1DC /* Base32 */ = {
 			isa = PBXGroup;
 			children = (
-				6E6781F9E12FD40E2ED89D9FCCF16F02 /* Alamofire.swift */,
-				83EF9152B058E99FB4E5D15F5709D432 /* Download.swift */,
-				365451A984051A42BBD2DABD2E6B40B4 /* Error.swift */,
-				96904FAE2E2300880AE6EF767BC621F4 /* Manager.swift */,
-				6B7271D5D43011BE9F8F7442BE5C6962 /* MultipartFormData.swift */,
-				E1B8CC306612E8C09223F7764C2F168F /* NetworkReachabilityManager.swift */,
-				14C5A129DB74E30B860C76C90FF776D3 /* Notifications.swift */,
-				C41559BE0F6E8278667AB758FD1DADF8 /* ParameterEncoding.swift */,
-				8D4E17D9AE7C48F8C6FC2C4893FC1784 /* Request.swift */,
-				C2B926AEEBB6F92ACC74C28525BE52B8 /* Response.swift */,
-				166B58A9F2066A552B6AAE8E8D367CD1 /* ResponseSerialization.swift */,
-				FB91256002D6D9F9CEE78805EBF1B7B7 /* Result.swift */,
-				20CB56515E815377D2F598A9F1049B91 /* ServerTrustPolicy.swift */,
-				75D4D5F87F0B1BACDBCDF4C351B2BDAB /* Stream.swift */,
-				44440FBC90CEFB6D5423002DFFEAA2C3 /* Timeline.swift */,
-				E1CF1F55BFD8D906AB6DAEFE462413E7 /* Upload.swift */,
-				38EEA1EA2991C960323BD55D8462B552 /* Validation.swift */,
-				2130166332C0464F3CD8BB2FD7C9AB2A /* Support Files */,
+				21F1D37CCA7E43E4A24E0F2A439A7C63 /* MF_Base32Additions.h */,
+				342303FEDA15BF7679BE8DB4A200D633 /* MF_Base32Additions.m */,
+				9759F626BF5FE0378D65C3BC7561221E /* Support Files */,
 			);
-			path = Alamofire;
+			path = Base32;
 			sourceTree = "<group>";
 		};
 		925653DEFF523C98DFD1EB7A900C04AB /* Pods-Twoefay */ = {
@@ -521,6 +397,20 @@
 			path = "Target Support Files/Pods-Twoefay";
 			sourceTree = "<group>";
 		};
+		9759F626BF5FE0378D65C3BC7561221E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E722F5442B994D65777A57211B7215D6 /* Base32.modulemap */,
+				E88C002DBF41CBD7D3710437D102D750 /* Base32.xcconfig */,
+				C02B56334D79C7E075511921CFC422A1 /* Base32-dummy.m */,
+				A7C38E1ACD5288E08C499D5BF45BF87B /* Base32-prefix.pch */,
+				2804A700B1C5B1E8039A00147EAB595E /* Base32-umbrella.h */,
+				896A8B500B1BE8169F31E041A3AFDF90 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Base32";
+			sourceTree = "<group>";
+		};
 		99D11CE2A571D22CE84AA9EBAC80A05F /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -530,52 +420,51 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		E0AB95ADE4D150A9FF89F60A1820A00B /* Support Files */ = {
+		ACFBB229F9F8BC0DDAF84588DDED41B5 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C1B74DE997261F0C35956C327E255FF2 /* Base32.modulemap */,
-				8ABA524081F43871A5A40B0A99004AA0 /* Base32.xcconfig */,
-				E2EBA60911D3433AEDAE891B6C9D95FC /* Base32-dummy.m */,
-				BE6FC6C7BFCBA4CF47E03F2D1985C321 /* Base32-prefix.pch */,
-				91582DEE55907531435929EC734CAED9 /* Base32-umbrella.h */,
-				5D358E7FA7650D4DAB9CF09D62E15DB2 /* Info.plist */,
+				93A190FCCF8A906789A5ED7D5F89BC2D /* Info.plist */,
+				25EA6ED76D5826A866A125DDA8BD2A9B /* OneTimePassword.modulemap */,
+				331C9F705335736323DDFAF069174A57 /* OneTimePassword.xcconfig */,
+				339E650F20EECE430C97F5527D5F7745 /* OneTimePassword-dummy.m */,
+				7D7ADFC35814DC57EDC3047E6D414E0F /* OneTimePassword-prefix.pch */,
+				0B0170D23137C88B5ABFDB334058322C /* OneTimePassword-umbrella.h */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Base32";
+			path = "../Target Support Files/OneTimePassword";
 			sourceTree = "<group>";
 		};
-		E892418EA7B626F45F6FEF6DC0E6439A /* Frameworks */ = {
+		B9461F875B910DE7D6191C6B5529F4AE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				F13EAA8E24367909758259A02BEB836C /* Base32.framework */,
-				3C485A629CFE4DE1D2CFB0AAD120F884 /* iOS */,
+				00E4F86C4ACB253E0F116F8A0A1FC835 /* Alamofire.modulemap */,
+				0EC81565C36542F6CCFE45D274604D7A /* Alamofire.xcconfig */,
+				A2E2E0D2788A554282E8DBA82408B8E3 /* Alamofire-dummy.m */,
+				05420865BAEC0D22FBDD1B45B26A4738 /* Alamofire-prefix.pch */,
+				EC5D0129CB2709ECAF0A326FE73421C2 /* Alamofire-umbrella.h */,
+				3C2A4145C1A2C963327747847DE4FDB5 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Alamofire";
+			sourceTree = "<group>";
+		};
+		D16FD37CD9D2EAB9C0312A3591C5BE8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				66D6F13D54B153C475B203B5F56204F6 /* Base32.framework */,
+				6BF06906ECDD671E34C8BF577C50BEDF /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F8BC78CDF4440DAFB1296CEF53311AF6 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B184FB6F7025B0739638985B57CE4BD3 /* Alamofire.framework */,
-				50C6DA2781AF7ED36B34ACC05D5C786C /* Base32.framework */,
-				179F9707DD2F69AF917D18F129E3E3DB /* OneTimePassword.framework */,
-				9EAEF7C125E38CED6FD20180253D7F0C /* Pods_Twoefay.framework */,
-				3D87134D05C4FDA0A2C6E7F298F9EB78 /* Pods_TwoefayTests.framework */,
-				A6168FC4B7CB171BEFB922A2FD7A9A85 /* QRCodeReader.framework */,
-				741EDBE87CA7AD4DBD69D9A23DD22E37 /* SwiftSpinner.framework */,
-				27B70BE93D76B048DD17A1CFE73A4B8B /* SwiftyJSON.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		105107F0E706E4D55737A105A4C28B8A /* Headers */ = {
+		2988FD1F88F09673D570EE858E325E86 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E0F09EAD754570E5BF6E106F83EE878 /* SwiftyJSON-umbrella.h in Headers */,
+				7D20C527C1BFBA4C006F8C29AD2213A6 /* QRCodeReader.swift-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,12 +477,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		67097DD0A62CAF0B822A276E61B44AE1 /* Headers */ = {
+		5D24BFBCB9F8B723CCF285CC5042F944 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB50EC21D48E5CE6166DDD89FED2B45C /* SwiftSpinner-umbrella.h in Headers */,
-				B3FA3A1ED409D2AA2F5DBE076FFAD3C2 /* SwiftSpinner.h in Headers */,
+				CF92E19F624F15E8032CB0F331059B17 /* Pods-Twoefay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -605,27 +493,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DE9AED692D6F91CF96E06EDEC6A114DA /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6D47BAA6E71D1D73B3822899F9B041E1 /* QRCodeReader.swift-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E15881634E6D3D7E22F63AE35380764E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C5A1AB9E5B4AE384B69281F86AA00A75 /* OneTimePassword-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E63F00BCDA0C142413195C34913103E0 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				302467E3E8D7A62BEE0B8FD346707C04 /* Pods-Twoefay-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,23 +512,6 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2F56BC506CD2A48077F603DC81302B4D /* SwiftyJSON */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07DA27873D8B2AB64969AE8AC6896778 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */;
-			buildPhases = (
-				F41B5850A72C3274D95D7E0F1E1F4613 /* Sources */,
-				597E8E27994A8E99AB9C216616599C3A /* Frameworks */,
-				105107F0E706E4D55737A105A4C28B8A /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftyJSON;
-			productName = SwiftyJSON;
-			productReference = 27B70BE93D76B048DD17A1CFE73A4B8B /* SwiftyJSON.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		3084AAEB2AD406B39819C325D2D859D6 /* Base32 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AF49CC8CEBEA4A8F3902A29A9D7D1E6 /* Build configuration list for PBXNativeTarget "Base32" */;
@@ -671,30 +526,28 @@
 			);
 			name = Base32;
 			productName = Base32;
-			productReference = 50C6DA2781AF7ED36B34ACC05D5C786C /* Base32.framework */;
+			productReference = 47A93D04F2418D7A573D0B58DE127E98 /* Base32.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		687F26545F83F54F26C06318A02A62C5 /* Pods-Twoefay */ = {
+		3A4C3916E85AE252D97D82485B046D47 /* Pods-Twoefay */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37258B069B40921CF66E8BFE412BF496 /* Build configuration list for PBXNativeTarget "Pods-Twoefay" */;
+			buildConfigurationList = 257F3CEBE04B38F0BED11CEA873C2F07 /* Build configuration list for PBXNativeTarget "Pods-Twoefay" */;
 			buildPhases = (
-				A9B6800016BD293DC5FBFF982CD462F6 /* Sources */,
-				734B103BF0A1F8AB054CAC58A4174B01 /* Frameworks */,
-				E63F00BCDA0C142413195C34913103E0 /* Headers */,
+				DD51540427E3C48B864ECDEADF587AB3 /* Sources */,
+				CC895D9642527BDE4090C5AFCF599646 /* Frameworks */,
+				5D24BFBCB9F8B723CCF285CC5042F944 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				07B2C7756EA386976621B3E80FF8AA21 /* PBXTargetDependency */,
-				AF63EE061B16802F466A628497B60E70 /* PBXTargetDependency */,
-				DDF9D9C61B34F80599FA9502C90A72E5 /* PBXTargetDependency */,
-				DB084AA808E4E0E5389218C26B39E491 /* PBXTargetDependency */,
-				702D4F3E3788E85899907C23A8C6620F /* PBXTargetDependency */,
-				EC881FA69BCE5248939FFE7BDCB8DE80 /* PBXTargetDependency */,
+				2B240D46DC5A81BC3F2F6585830F0644 /* PBXTargetDependency */,
+				81C9FF57DB9E5684FF259A8F8558CE59 /* PBXTargetDependency */,
+				0B84D9C373373B03888D616F7B3AB000 /* PBXTargetDependency */,
+				8B8D6E7C9ED94BF2CD63A9CF884F885C /* PBXTargetDependency */,
 			);
 			name = "Pods-Twoefay";
 			productName = "Pods-Twoefay";
-			productReference = 9EAEF7C125E38CED6FD20180253D7F0C /* Pods_Twoefay.framework */;
+			productReference = B7537A9A000F45BB4E6735477CB3CBAD /* Pods_Twoefay.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */ = {
@@ -711,33 +564,16 @@
 			);
 			name = Alamofire;
 			productName = Alamofire;
-			productReference = B184FB6F7025B0739638985B57CE4BD3 /* Alamofire.framework */;
+			productReference = 3B2B6FD23C5F2C464FF98A34996EBFC3 /* Alamofire.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		95E8CB5377732183933AB9E1F0099D6F /* SwiftSpinner */ = {
+		A0A91CF31DA62C116BB2077EBED1D9D5 /* QRCodeReader.swift */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DE59EB4D09BDBCA09C4A24FFE68892AB /* Build configuration list for PBXNativeTarget "SwiftSpinner" */;
+			buildConfigurationList = B825E73BD145EDC4C8786F8234E4DAAC /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
 			buildPhases = (
-				450CEF8AE9EC7A88475E16D453D3C47E /* Sources */,
-				1C93E77DF327EB6CCB4922E380843C21 /* Frameworks */,
-				67097DD0A62CAF0B822A276E61B44AE1 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SwiftSpinner;
-			productName = SwiftSpinner;
-			productReference = 741EDBE87CA7AD4DBD69D9A23DD22E37 /* SwiftSpinner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		B861F6F35062B3F70D209A04E22B132D /* QRCodeReader.swift */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2EE5972AED52CCE2D282FA1A897682C3 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */;
-			buildPhases = (
-				DA03B65F54AFBCE58571C7B72C897C5D /* Sources */,
-				893B4D4BA3B0B0BD6820EC98CA0BC0EE /* Frameworks */,
-				DE9AED692D6F91CF96E06EDEC6A114DA /* Headers */,
+				6426F3EF352332AC4E2D5BDE3C726E72 /* Sources */,
+				18D8E74739D9A28266B37084262DACD3 /* Frameworks */,
+				2988FD1F88F09673D570EE858E325E86 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -745,7 +581,7 @@
 			);
 			name = QRCodeReader.swift;
 			productName = QRCodeReader.swift;
-			productReference = A6168FC4B7CB171BEFB922A2FD7A9A85 /* QRCodeReader.framework */;
+			productReference = 65B8F9AFADDAB76BEBED5B1BC02C0410 /* QRCodeReader.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		BC78F27CB5E45E03B1F7092662A4F17D /* Pods-TwoefayTests */ = {
@@ -762,7 +598,7 @@
 			);
 			name = "Pods-TwoefayTests";
 			productName = "Pods-TwoefayTests";
-			productReference = 3D87134D05C4FDA0A2C6E7F298F9EB78 /* Pods_TwoefayTests.framework */;
+			productReference = D8FEF879BCEA4FDF783DDFE3DC281A71 /* Pods_TwoefayTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E845352D7E823B896FD77248443C7548 /* OneTimePassword */ = {
@@ -780,7 +616,7 @@
 			);
 			name = OneTimePassword;
 			productName = OneTimePassword;
-			productReference = 179F9707DD2F69AF917D18F129E3E3DB /* OneTimePassword.framework */;
+			productReference = 048BDF7532859C3AD453CE12ADEEBB37 /* OneTimePassword.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -800,29 +636,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = F8BC78CDF4440DAFB1296CEF53311AF6 /* Products */;
+			productRefGroup = 1E1DE9D918ADD7612E0BA50C0310C9B1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */,
 				3084AAEB2AD406B39819C325D2D859D6 /* Base32 */,
 				E845352D7E823B896FD77248443C7548 /* OneTimePassword */,
-				687F26545F83F54F26C06318A02A62C5 /* Pods-Twoefay */,
+				3A4C3916E85AE252D97D82485B046D47 /* Pods-Twoefay */,
 				BC78F27CB5E45E03B1F7092662A4F17D /* Pods-TwoefayTests */,
-				B861F6F35062B3F70D209A04E22B132D /* QRCodeReader.swift */,
-				95E8CB5377732183933AB9E1F0099D6F /* SwiftSpinner */,
-				2F56BC506CD2A48077F603DC81302B4D /* SwiftyJSON */,
+				A0A91CF31DA62C116BB2077EBED1D9D5 /* QRCodeReader.swift */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		450CEF8AE9EC7A88475E16D453D3C47E /* Sources */ = {
+		6426F3EF352332AC4E2D5BDE3C726E72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1564EB2CE2B0F8C08D1AFB85057B076C /* SwiftSpinner-dummy.m in Sources */,
-				9B5F6CA703B8DDD2DA0B17BF8700DD62 /* SwiftSpinner.swift in Sources */,
+				169F411BD45B5A731C1316E87DDC3C92 /* QRCodeReader.swift in Sources */,
+				9B7C3D8F73954C02B7167C9BFB9D24B1 /* QRCodeReader.swift-dummy.m in Sources */,
+				E67CF18EFD10541E01984709EE004A76 /* QRCodeReaderResult.swift in Sources */,
+				7771752879C7F207A40E5386C9A1569F /* QRCodeViewController.swift in Sources */,
+				514D79E3C19C793EA552645A42A981B9 /* QRCodeViewControllerBuilder.swift in Sources */,
+				5BE005EDFA9F78B059E0C22AEDA13915 /* ReaderOverlayView.swift in Sources */,
+				CB16A32995FCDAD865B4A81529D99F03 /* SwitchCameraButton.swift in Sources */,
+				A4F984A42034B76EACFABB3C30633D59 /* ToggleTorchButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,26 +713,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9B6800016BD293DC5FBFF982CD462F6 /* Sources */ = {
+		DD51540427E3C48B864ECDEADF587AB3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				866AE33B05FBA7495A8CCAA3DCF20A2B /* Pods-Twoefay-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		DA03B65F54AFBCE58571C7B72C897C5D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC17B3CAA19DEA7B86EDDC35C446E229 /* QRCodeReader.swift in Sources */,
-				1E5CD347C9180A87332E67C655F171A9 /* QRCodeReader.swift-dummy.m in Sources */,
-				150175F0E59D73AFF68BFB87F226EE86 /* QRCodeReaderResult.swift in Sources */,
-				E25E0FCA1887E29B860C73F204DB51E9 /* QRCodeViewController.swift in Sources */,
-				B700D89683099DBBFA12E73B7B8F6BC5 /* QRCodeViewControllerBuilder.swift in Sources */,
-				AA0DD68A45EB3933C1FE16308E81DE00 /* ReaderOverlayView.swift in Sources */,
-				65607D54EB9DC94BC3C5DF93E0557CF2 /* SwitchCameraButton.swift in Sources */,
-				0E348D11E75043F76DD248C24D3025D4 /* ToggleTorchButton.swift in Sources */,
+				82E25F1CC209F5564B6BF1B47DCE14A2 /* Pods-Twoefay-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,59 +729,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F41B5850A72C3274D95D7E0F1E1F4613 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6EBDE16F1499652F31BD2DD4CEA0DC0C /* SwiftyJSON-dummy.m in Sources */,
-				CF3DBF29CAFE6A6448B1BEBFA6934941 /* SwiftyJSON.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		07B2C7756EA386976621B3E80FF8AA21 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
-			targetProxy = CA981141F77304AA7E55E31439250654 /* PBXContainerItemProxy */;
-		};
-		702D4F3E3788E85899907C23A8C6620F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftSpinner;
-			target = 95E8CB5377732183933AB9E1F0099D6F /* SwiftSpinner */;
-			targetProxy = 9415BA650FD49EB16DFFDAE6A8569D2A /* PBXContainerItemProxy */;
-		};
-		AF63EE061B16802F466A628497B60E70 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Base32;
-			target = 3084AAEB2AD406B39819C325D2D859D6 /* Base32 */;
-			targetProxy = 7314A5B8038D57F4327C1915E0238F0A /* PBXContainerItemProxy */;
-		};
-		DB084AA808E4E0E5389218C26B39E491 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = QRCodeReader.swift;
-			target = B861F6F35062B3F70D209A04E22B132D /* QRCodeReader.swift */;
-			targetProxy = F3323A0842C9A18EAB6581F57E203824 /* PBXContainerItemProxy */;
-		};
-		DDF9D9C61B34F80599FA9502C90A72E5 /* PBXTargetDependency */ = {
+		0B84D9C373373B03888D616F7B3AB000 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = OneTimePassword;
 			target = E845352D7E823B896FD77248443C7548 /* OneTimePassword */;
-			targetProxy = 9FC2572AEAD613BE529D81EC47A95A57 /* PBXContainerItemProxy */;
+			targetProxy = 24A4909C699B0B1C980B7DA70F912D5F /* PBXContainerItemProxy */;
+		};
+		2B240D46DC5A81BC3F2F6585830F0644 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			target = 79C040AFDDCE1BCBF6D8B5EB0B85887F /* Alamofire */;
+			targetProxy = FD7FCE7AEBAA03404F1E3315FD0A4D70 /* PBXContainerItemProxy */;
+		};
+		81C9FF57DB9E5684FF259A8F8558CE59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Base32;
+			target = 3084AAEB2AD406B39819C325D2D859D6 /* Base32 */;
+			targetProxy = EF780F3269144B7386434B83F68B3648 /* PBXContainerItemProxy */;
+		};
+		8B8D6E7C9ED94BF2CD63A9CF884F885C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QRCodeReader.swift;
+			target = A0A91CF31DA62C116BB2077EBED1D9D5 /* QRCodeReader.swift */;
+			targetProxy = 6268C6C15586F7CB08E576EEBCB51D2A /* PBXContainerItemProxy */;
 		};
 		E46D7302904BE9DA4176C9348076E30C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Base32;
 			target = 3084AAEB2AD406B39819C325D2D859D6 /* Base32 */;
 			targetProxy = 4A61D76E15F1AEA18F4EB4AD795E564F /* PBXContainerItemProxy */;
-		};
-		EC881FA69BCE5248939FFE7BDCB8DE80 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftyJSON;
-			target = 2F56BC506CD2A48077F603DC81302B4D /* SwiftyJSON */;
-			targetProxy = 313FAEABE5AE2ADABA4E6119D7ADC495 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -994,38 +798,9 @@
 			};
 			name = Debug;
 		};
-		0CC7DF38FD13FC02D16FB7F94C753AE3 /* Release */ = {
+		0FE0D361C5ADDED7B6F7A5731E13E9E5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D907690BB5F3C413A5C8F6E614F2F95 /* SwiftSpinner.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftSpinner;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		165FFCE436ABFB066695273A294BFFD1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B42581E54383D5150622D640F1B104C5 /* SwiftyJSON.xcconfig */;
+			baseConfigurationReference = A5C430C23B717A2DBB9B900D397F009E /* Pods-Twoefay.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1036,14 +811,18 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Twoefay/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Twoefay/Pods-Twoefay.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftyJSON;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Twoefay;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1053,9 +832,42 @@
 			};
 			name = Debug;
 		};
+		21A6FCB1D42571F60BE3B40E0E098F35 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02E81FC86A8724AD1B621E54AF838A01 /* Pods-Twoefay.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Twoefay/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Twoefay/Pods-Twoefay.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Twoefay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		32AD5F8918CA8B349E4671410FA624C9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15295F35A2F9814FBABE7ECD9855F334 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 0EC81565C36542F6CCFE45D274604D7A /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1084,7 +896,7 @@
 		};
 		374B9E1FD5828214226D914AC23F45F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ABA524081F43871A5A40B0A99004AA0 /* Base32.xcconfig */;
+			baseConfigurationReference = E88C002DBF41CBD7D3710437D102D750 /* Base32.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1113,7 +925,7 @@
 		};
 		41EAAE625C48EA562321EFAFAB1020D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8ABA524081F43871A5A40B0A99004AA0 /* Base32.xcconfig */;
+			baseConfigurationReference = E88C002DBF41CBD7D3710437D102D750 /* Base32.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1140,13 +952,13 @@
 			};
 			name = Debug;
 		};
-		55E270904A13A5B98108993DCB79394D /* Release */ = {
+		471C165FA1A7FD8C8EA3BB863C920ED5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8F8567F90724EA5024332D02865E672 /* QRCodeReader.swift.xcconfig */;
+			baseConfigurationReference = 53E588D5E00048D5F130446131780660 /* QRCodeReader.swift.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1159,19 +971,20 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = QRCodeReader;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		587C4675DE1FF99CB16A6C6BCC4689C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D49969D06FE4EB1EEFB62B51C7E39ED /* OneTimePassword.xcconfig */;
+			baseConfigurationReference = 331C9F705335736323DDFAF069174A57 /* OneTimePassword.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1199,9 +1012,38 @@
 			};
 			name = Debug;
 		};
+		621155E16E67DB8237262F88F40799BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 53E588D5E00048D5F130446131780660 /* QRCodeReader.swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = QRCodeReader;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		75218111E718FACE36F771E8ABECDB62 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15295F35A2F9814FBABE7ECD9855F334 /* Alamofire.xcconfig */;
+			baseConfigurationReference = 0EC81565C36542F6CCFE45D274604D7A /* Alamofire.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1220,36 +1062,6 @@
 				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		76A196E61BF3378124453632339869EF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D907690BB5F3C413A5C8F6E614F2F95 /* SwiftSpinner.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftSpinner/SwiftSpinner-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftSpinner/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftSpinner/SwiftSpinner.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = SwiftSpinner;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1301,103 +1113,6 @@
 			};
 			name = Debug;
 		};
-		A2E9D670E2F166C3A0E371452CC0D392 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 02E81FC86A8724AD1B621E54AF838A01 /* Pods-Twoefay.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Twoefay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Twoefay/Pods-Twoefay.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Twoefay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B6EE6BDC1DFA35AE809FD906E6084D53 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F8F8567F90724EA5024332D02865E672 /* QRCodeReader.swift.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QRCodeReader.swift/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QRCodeReader.swift/QRCodeReader.swift.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = QRCodeReader;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BD666165AC4A700B3296D3117E826336 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A5C430C23B717A2DBB9B900D397F009E /* Pods-Twoefay.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Twoefay/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Twoefay/Pods-Twoefay.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_Twoefay;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		C5FA4A1F1FDDCB2E491C816564B073C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11741E86C6962AB2AEBF0AADCC702F80 /* Pods-TwoefayTests.release.xcconfig */;
@@ -1431,38 +1146,9 @@
 			};
 			name = Release;
 		};
-		CD4C0B2F64C7F7D615FDE6389BBAC3F6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B42581E54383D5150622D640F1B104C5 /* SwiftyJSON.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyJSON/SwiftyJSON-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyJSON/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyJSON/SwiftyJSON.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SwiftyJSON;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		F2E5AF3642A7E16C416C491A61C2EB47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D49969D06FE4EB1EEFB62B51C7E39ED /* OneTimePassword.xcconfig */;
+			baseConfigurationReference = 331C9F705335736323DDFAF069174A57 /* OneTimePassword.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -1530,11 +1216,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07DA27873D8B2AB64969AE8AC6896778 /* Build configuration list for PBXNativeTarget "SwiftyJSON" */ = {
+		257F3CEBE04B38F0BED11CEA873C2F07 /* Build configuration list for PBXNativeTarget "Pods-Twoefay" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				165FFCE436ABFB066695273A294BFFD1 /* Debug */,
-				CD4C0B2F64C7F7D615FDE6389BBAC3F6 /* Release */,
+				0FE0D361C5ADDED7B6F7A5731E13E9E5 /* Debug */,
+				21A6FCB1D42571F60BE3B40E0E098F35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1544,24 +1230,6 @@
 			buildConfigurations = (
 				84FD87D359382A37B07149A12641B965 /* Debug */,
 				F594C655D48020EC34B00AA63E001773 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2EE5972AED52CCE2D282FA1A897682C3 /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B6EE6BDC1DFA35AE809FD906E6084D53 /* Debug */,
-				55E270904A13A5B98108993DCB79394D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		37258B069B40921CF66E8BFE412BF496 /* Build configuration list for PBXNativeTarget "Pods-Twoefay" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BD666165AC4A700B3296D3117E826336 /* Debug */,
-				A2E9D670E2F166C3A0E371452CC0D392 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -1602,11 +1270,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DE59EB4D09BDBCA09C4A24FFE68892AB /* Build configuration list for PBXNativeTarget "SwiftSpinner" */ = {
+		B825E73BD145EDC4C8786F8234E4DAAC /* Build configuration list for PBXNativeTarget "QRCodeReader.swift" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76A196E61BF3378124453632339869EF /* Debug */,
-				0CC7DF38FD13FC02D16FB7F94C753AE3 /* Release */,
+				471C165FA1A7FD8C8EA3BB863C920ED5 /* Debug */,
+				621155E16E67DB8237262F88F40799BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

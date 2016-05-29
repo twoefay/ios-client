@@ -4,24 +4,18 @@ PODS:
   - OneTimePassword (2.0.0):
     - Base32 (~> 1.0.2)
   - QRCodeReader.swift (6.0.0)
-  - SwiftSpinner (0.9.5)
-  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - OneTimePassword
   - QRCodeReader.swift
-  - SwiftSpinner
-  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   Base32: 4e6b6d6c344b48da363c5268f9c391d37893401f
   OneTimePassword: be1cab53803ae9db765b3eb340b73b7d5c16d2dd
   QRCodeReader.swift: 4aa8b0f88847a51312d6ffd2cafc387962da9dd8
-  SwiftSpinner: c6585a0ae5c67eb33e737695cce88f0262008cce
-  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: abbb242892b1543acaf8660b7e3bcd066a7a735a
+PODFILE CHECKSUM: 8585ff7f3428b469f900f14d2da9bb2c9ad815e7
 
 COCOAPODS: 1.0.0
