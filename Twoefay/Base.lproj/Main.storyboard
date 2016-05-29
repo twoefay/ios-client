@@ -20,18 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-DA-Cjw">
-                                <rect key="frame" x="-4" y="468" width="164" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="sAH-SG-4DW"/>
-                                </constraints>
-                                <state key="normal" title="Accept" backgroundImage="Green">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="buttonTapped:" destination="4YZ-LR-veq" eventType="touchUpInside" id="krt-ld-g5C"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pa8-hA-r03">
                                 <rect key="frame" x="160" y="468" width="164" height="100"/>
                                 <constraints>
@@ -78,6 +66,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVo-DA-Cjw">
+                                <rect key="frame" x="-4" y="468" width="164" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="sAH-SG-4DW"/>
+                                </constraints>
+                                <state key="normal" title="Accept" backgroundImage="Green">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="4YZ-LR-veq" eventType="touchUpInside" id="krt-ld-g5C"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tdH-IM-btc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="1044"/>
+            <point key="canvasLocation" x="835" y="728"/>
         </scene>
         <!--ID_Token View Controller-->
         <scene sceneID="PHA-h9-NKZ">
@@ -172,14 +172,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ybA-6W-MP6"/>
+                    <navigationItem key="navigationItem" title="REST API Test Page" id="ybA-6W-MP6"/>
                     <connections>
                         <outlet property="id_tokenLabel" destination="yPv-EE-8jp" id="1cO-Og-ai4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fKK-qC-uA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="381"/>
+            <point key="canvasLocation" x="1289" y="728"/>
         </scene>
         <!--Loading Screen View Controller-->
         <scene sceneID="QHC-Yz-nry">
@@ -238,7 +238,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i03-fc-QQp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="1044"/>
+            <point key="canvasLocation" x="263" y="728"/>
         </scene>
         <!--Generator View Controller-->
         <scene sceneID="Eqv-7p-VLX">
@@ -306,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyy-Fb-Ebb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1253" y="1800"/>
+            <point key="canvasLocation" x="835" y="1484"/>
         </scene>
         <!--Accounts-->
         <scene sceneID="hC8-lD-ZGf">
@@ -359,7 +359,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="raU-PF-tkJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="681" y="1800"/>
+            <point key="canvasLocation" x="263" y="1484"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RfK-JK-dZd">
@@ -377,7 +377,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dfs-Bg-2dy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="1044"/>
+            <point key="canvasLocation" x="-98" y="728"/>
         </scene>
     </scenes>
     <resources>

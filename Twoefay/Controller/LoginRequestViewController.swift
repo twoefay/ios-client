@@ -20,6 +20,10 @@ class LoginRequestViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var statusLabel: UILabel!
     
+    @IBOutlet weak var acceptButton: UIButton!
+    @IBOutlet weak var rejectButton: UIButton!
+    
+    
     /**
      receivedPush is true if the user navigated to this page from a current
      push notification or false if they are viewing their login request history
@@ -34,6 +38,9 @@ class LoginRequestViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        acceptButton.tag = 0
+        
         if recivedPush == true {
             // TODO - get info from push notification
             thisLoginRequest = LoginRequest()
@@ -52,27 +59,36 @@ class LoginRequestViewController: UIViewController {
     func touchIDNotAvailable(){
         statusLabel.text = "TouchID not available on this device."
         print("TouchID not on this device.")
-        
-        // this is a get
-        Alamofire.request(.GET, "https://https.test.twoefay.xyz")
-            .responseJSON { response in
-                print(response.request)  // original URL request
-                print(response.response) // URL response
-                print(response.data)     // server data
-                print(response.result)   // result of response serialization
-                
-                if let JSON = response.result.value {
-                    print("JSON: \(JSON)")
-                    print("QQQQ")
-                }
-        }
-        
-        print("QQ")
     }
     
-    func authenticationSucceeded(){
+    func authenticationSucceeded(sender: UIButton){
         dispatch_async(dispatch_get_main_queue()) {
             self.statusLabel.text = "Authentication successful"
+            
+            let prefs = NSUserDefaults.standardUserDefaults()
+            if let my_id_token = prefs.stringForKey("my_id_token") {
+                
+                var url: String
+                if sender.tag == 0 {
+                    url = "https://twoefay.xyz:8080/success"
+                }
+                else {
+                    url = "https://twoefay.xyz:8080/failure"
+                }
+                
+                Alamofire.request(.POST, url, parameters: ["id_token": my_id_token])
+                    .responseJSON { response in
+                        print(response.request)  // original URL request
+                        print(response.response) // URL response
+                        print(response.data)     // server data
+                        print(response.result)   // result of response serialization
+                        
+                        if let JSON = response.result.value {
+                            print("JSON: \(JSON)")
+                        }
+                }
+            }
+
         }
     }
     
@@ -85,7 +101,7 @@ class LoginRequestViewController: UIViewController {
     @IBAction func buttonTapped(sender: UIButton) {
         if context.canEvaluatePolicy(policy, error: error){
             context.evaluatePolicy(policy, localizedReason: "Pleace authenticate using TouchID"){ status, error in
-                status ? self.authenticationSucceeded() : self.authenticationFailed(error!)
+                status ? self.authenticationSucceeded(sender) : self.authenticationFailed(error!)
             }
         } else {
             touchIDNotAvailable()
