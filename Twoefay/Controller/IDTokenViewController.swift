@@ -49,7 +49,7 @@ class IDTokenViewController: UIViewController {
         
         
         Alamofire.request(.GET, "https://httpbin.org/get")
-        Alamofire.request(.GET, "https://twoefay.xyz:8080/user/sexy")
+        Alamofire.request(.GET, "https://twoefay.xyz:8080/user")
 
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .responseJSON { response in
@@ -63,7 +63,7 @@ class IDTokenViewController: UIViewController {
                 }
         }
 
-        Alamofire.request(.GET, "https://twoefay.xyz:8080/user/sexy", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "https://twoefay.xyz:8080/user", parameters: ["foo": "bar"])
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response

@@ -4,13 +4,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Login Request-->
         <scene sceneID="E4X-mU-byy">
             <objects>
-                <viewController id="4YZ-LR-veq" customClass="HomePageViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4YZ-LR-veq" customClass="LoginRequestViewController" customModule="Twoefay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hpZ-rG-9n3"/>
                         <viewControllerLayoutGuide type="bottom" id="0z8-8N-KlI"/>
@@ -39,6 +40,9 @@
                                 <state key="normal" title="Reject" backgroundImage="Red">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="4YZ-LR-veq" eventType="touchUpInside" id="UdU-qU-DJr"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Client Service Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGw-eQ-CTT">
                                 <rect key="frame" x="16" y="88" width="288" height="21"/>
@@ -189,37 +193,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="2fa" translatesAutoresizingMaskIntoConstraints="NO" id="rBV-wk-tYg">
-                                <rect key="frame" x="40" y="120" width="240" height="328"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-NK-qSt">
-                                <rect key="frame" x="109" y="456" width="102" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-NK-qSt">
+                                <rect key="frame" x="109" y="464" width="102" height="30"/>
                                 <state key="normal" title="View Accounts"/>
                                 <connections>
                                     <segue destination="7HO-Rt-raT" kind="push" id="DE2-eV-Qcn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b07-Ze-sEe">
-                                <rect key="frame" x="104" y="484" width="112" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b07-Ze-sEe">
+                                <rect key="frame" x="107" y="492" width="106" height="30"/>
                                 <state key="normal" title="Login Requests"/>
                                 <connections>
                                     <segue destination="4YZ-LR-veq" kind="push" id="d2L-Oc-972"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-Hj-ie3">
-                                <rect key="frame" x="71" y="513" width="178" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-Hj-ie3">
+                                <rect key="frame" x="71" y="521" width="178" height="30"/>
                                 <state key="normal" title="Accept/Decline/Verify/Get"/>
                                 <connections>
                                     <segue destination="Lv1-ai-yyf" kind="push" id="UWR-xM-eEp"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2fa" translatesAutoresizingMaskIntoConstraints="NO" id="rBV-wk-tYg">
+                                <rect key="frame" x="50" y="114" width="220" height="325"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="325" id="ZHW-HT-5c0"/>
+                                    <constraint firstAttribute="width" secondItem="rBV-wk-tYg" secondAttribute="height" multiplier="292:433" id="esO-AY-Xmj"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="iyI-NK-qSt" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="AGz-4L-Km5"/>
+                            <constraint firstItem="iyI-NK-qSt" firstAttribute="top" secondItem="rBV-wk-tYg" secondAttribute="bottom" constant="25" id="DUy-mf-Lla"/>
+                            <constraint firstItem="YXY-Hj-ie3" firstAttribute="top" secondItem="b07-Ze-sEe" secondAttribute="bottom" constant="-1" id="MaY-ao-dGx"/>
                             <constraint firstItem="YXY-Hj-ie3" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="NzE-ar-IOu"/>
                             <constraint firstItem="b07-Ze-sEe" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="SPT-7C-pgv"/>
                             <constraint firstItem="rBV-wk-tYg" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="f3W-6D-CRy"/>
+                            <constraint firstItem="b07-Ze-sEe" firstAttribute="top" secondItem="iyI-NK-qSt" secondAttribute="bottom" constant="-2" id="nmn-jV-qdi"/>
+                            <constraint firstItem="rBV-wk-tYg" firstAttribute="top" secondItem="SnQ-YN-oF5" secondAttribute="bottom" constant="50" id="rgc-vX-elM"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LWS-4o-Wvu"/>
@@ -240,40 +252,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-hW-NFk">
-                                <rect key="frame" x="20" y="90" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Uv0-hW-NFk">
+                                <rect key="frame" x="16" y="90" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Issuer" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kHE-oh-clK">
-                                <rect key="frame" x="20" y="138" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Issuer" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kHE-oh-clK">
+                                <rect key="frame" x="16" y="138" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Ya-zp-NaL">
-                                <rect key="frame" x="20" y="186" width="280" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Secret" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Ya-zp-NaL">
+                                <rect key="frame" x="16" y="186" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-zj-Xk1">
-                                <rect key="frame" x="103" y="247" width="114" height="74"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-zj-Xk1">
+                                <rect key="frame" x="99" y="269" width="122" height="30"/>
                                 <state key="normal" title="QR Code Scan"/>
                                 <connections>
                                     <action selector="scanAction:" destination="B9v-vD-OjH" eventType="touchUpInside" id="cNC-we-oK5"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4N-mW-bVk">
-                                <rect key="frame" x="144" y="231" width="32" height="30"/>
-                                <state key="normal" title="Next"/>
-                                <connections>
-                                    <action selector="submitSecret:" destination="B9v-vD-OjH" eventType="touchUpInside" id="fna-fO-Ru5"/>
-                                    <segue destination="jem-8J-53Q" kind="unwind" identifier="unwindToAccounts" unwindAction="unwindToAccounts:" id="iEu-eb-RIB"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="NVb-zj-Xk1" secondAttribute="trailing" constant="83" id="1Of-sY-cNn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uv0-hW-NFk" secondAttribute="trailing" id="4fu-m1-0dC"/>
+                            <constraint firstItem="Uv0-hW-NFk" firstAttribute="top" secondItem="f3W-21-rit" secondAttribute="bottom" constant="26" id="81A-sY-ofq"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="kHE-oh-clK" secondAttribute="leading" id="8Em-Lw-Z4w"/>
+                            <constraint firstItem="3Ya-zp-NaL" firstAttribute="top" secondItem="kHE-oh-clK" secondAttribute="bottom" constant="18" id="F8g-gM-rKV"/>
+                            <constraint firstItem="NVb-zj-Xk1" firstAttribute="top" secondItem="3Ya-zp-NaL" secondAttribute="bottom" constant="53" id="KhV-qh-4xb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kHE-oh-clK" secondAttribute="trailing" id="Md7-O9-bCy"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Uv0-hW-NFk" secondAttribute="leading" id="RAR-j0-sju"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3Ya-zp-NaL" secondAttribute="trailing" id="WmC-HO-03q"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="3Ya-zp-NaL" secondAttribute="leading" id="fAO-rF-aRx"/>
+                            <constraint firstItem="kHE-oh-clK" firstAttribute="top" secondItem="Uv0-hW-NFk" secondAttribute="bottom" constant="18" id="ioS-Cz-jsj"/>
+                            <constraint firstItem="NVb-zj-Xk1" firstAttribute="leading" secondItem="itb-1F-kMM" secondAttribute="leadingMargin" constant="83" id="s3r-OB-tVe"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Service" id="r5C-tA-uY6"/>
+                    <navigationItem key="navigationItem" title="Add Service" id="r5C-tA-uY6">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="mY1-8B-lEB">
+                            <connections>
+                                <action selector="submitSecret:" destination="B9v-vD-OjH" id="4dh-l7-vsn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="issuerField" destination="kHE-oh-clK" id="voy-aR-hT7"/>
                         <outlet property="nameField" destination="Uv0-hW-NFk" id="4Lt-8J-aVK"/>
@@ -281,7 +305,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nyy-Fb-Ebb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="jem-8J-53Q" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1253" y="1800"/>
         </scene>
