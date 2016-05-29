@@ -35,7 +35,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("dev_token: \(deviceToken)")
         
         // send token to Twoefay server for registration
-        Alamofire.request(.POST, "https://twoefay.xyz:8080/verify", parameters: ["id_token": my_id_token, "dev_token": deviceToken])
+        Alamofire.request(.POST, "https://twoefay.xyz/verify", parameters: ["id_token": my_id_token, "dev_token": String(deviceToken)], encoding: .JSON)
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response

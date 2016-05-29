@@ -40,6 +40,7 @@ class LoginRequestViewController: UIViewController {
         super.viewDidLoad()
         
         acceptButton.tag = 0
+        rejectButton.tag = 1
         
         if recivedPush == true {
             // TODO - get info from push notification
