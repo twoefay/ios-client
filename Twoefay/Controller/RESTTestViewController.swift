@@ -1,5 +1,5 @@
 //
-//  IDTokenViewController.swift
+//  RESTTestViewController.swift
 //  Twoefay
 //
 //  Created by Jonathan Woong on 5/22/16.
@@ -10,7 +10,7 @@ import SwiftyJSON
 import UIKit
 import Alamofire
 
-class IDTokenViewController: UIViewController {
+class RESTTestViewController: UIViewController {
     
     // Label
     @IBOutlet weak var id_tokenLabel: UILabel!
@@ -49,7 +49,7 @@ class IDTokenViewController: UIViewController {
         
         
         Alamofire.request(.GET, "https://httpbin.org/get")
-        Alamofire.request(.GET, "https://twoefay.xyz:8080/user")
+        Alamofire.request(.GET, "https://twoefay.xyz/user/ross")
 
         Alamofire.request(.GET, "https://httpbin.org/get", parameters: ["foo": "bar"])
             .responseJSON { response in
@@ -63,7 +63,7 @@ class IDTokenViewController: UIViewController {
                 }
         }
 
-        Alamofire.request(.GET, "https://twoefay.xyz:8080/user", parameters: ["foo": "bar"])
+        Alamofire.request(.GET, "https://twoefay.xyz/user/ross")
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response
