@@ -51,7 +51,7 @@ class TokenTableViewController: UITableViewController {
         }
         
         // Refresh the table every 30 seconds
-        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(TokenViewController.updateLabels), userInfo: nil, repeats: true)
+        _ = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: #selector(TokenTableViewController.updateLabels), userInfo: nil, repeats: true)
     }
 
     // MARK: - Table view data source

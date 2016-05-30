@@ -13,13 +13,14 @@
 		2E8B78B81CC803700043686A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E8B78B61CC803700043686A /* LaunchScreen.storyboard */; };
 		2E8B78C31CC803700043686A /* TwoefayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E8B78C21CC803700043686A /* TwoefayTests.swift */; };
 		9D68E3681CEEDF1B0004975C /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D68E3671CEEDF1B0004975C /* Alerts.swift */; };
-		9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */; };
-		9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */; };
-		9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */; };
+		9DD15D721CDC2A6600683EF9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D711CDC2A6600683EF9 /* HomeViewController.swift */; };
+		9DD15D761CDC2A8600683EF9 /* LoginRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD15D751CDC2A8600683EF9 /* LoginRequestViewController.swift */; };
 		A2367DB11CE547FA008EDD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2367DAF1CE547FA008EDD25 /* Main.storyboard */; };
-		A25DDC8C1CED9A130009114D /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DDC8B1CED9A130009114D /* GeneratorViewController.swift */; };
-		A25DDC8E1CEDA2000009114D /* TokenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DDC8D1CEDA2000009114D /* TokenViewController.swift */; };
-		A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */; };
+		A25B9D7D1CF51F58003BF0EA /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25B9D7C1CF51F58003BF0EA /* NetworkManager.swift */; };
+		A25DDC8C1CED9A130009114D /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DDC8B1CED9A130009114D /* AddServiceViewController.swift */; };
+		A2CDCCC21CF25F33009F5840 /* RESTTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CDCCC11CF25F33009F5840 /* RESTTestViewController.swift */; };
+		CC1845EA1CFAC478001F056E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1845E91CFAC478001F056E /* LoginRequest.swift */; };
+		CC4162701CFB932500A2FA55 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41626F1CFB932500A2FA55 /* SetupViewController.swift */; };
 		CC4B4B141CF058BA002840F4 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4B131CF058BA002840F4 /* OTP.swift */; };
 		CC7104FD1CF1C1A400174D81 /* TokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */; };
 		CC7104FF1CF1C1FB00174D81 /* TokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */; };
@@ -49,14 +50,15 @@
 		2ED32E617C76F2B61F6B7CB3 /* Pods-TwoefayTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoefayTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoefayTests/Pods-TwoefayTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9C631C1F1794FC4B55E488BA /* Pods-Twoefay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twoefay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twoefay/Pods-Twoefay.release.xcconfig"; sourceTree = "<group>"; };
 		9D68E3671CEEDF1B0004975C /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
-		9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreenViewController.swift; sourceTree = "<group>"; };
-		9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginScreenViewController.swift; sourceTree = "<group>"; };
-		9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		9DD15D711CDC2A6600683EF9 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9DD15D751CDC2A8600683EF9 /* LoginRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestViewController.swift; sourceTree = "<group>"; };
 		A2367DB01CE547FA008EDD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A25DDC8B1CED9A130009114D /* GeneratorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
-		A25DDC8D1CEDA2000009114D /* TokenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenViewController.swift; sourceTree = "<group>"; };
-		A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationPageViewController.swift; sourceTree = "<group>"; };
+		A25B9D7C1CF51F58003BF0EA /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A25DDC8B1CED9A130009114D /* AddServiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceViewController.swift; sourceTree = "<group>"; };
+		A2CDCCC11CF25F33009F5840 /* RESTTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RESTTestViewController.swift; sourceTree = "<group>"; };
 		BB1BB76A43D3A5DFB3EB7E78 /* Pods_TwoefayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoefayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC1845E91CFAC478001F056E /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
+		CC41626F1CFB932500A2FA55 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		CC4B4B131CF058BA002840F4 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTableViewController.swift; sourceTree = "<group>"; };
 		CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenCell.swift; sourceTree = "<group>"; };
@@ -132,13 +134,12 @@
 		2E8B78CD1CC803B70043686A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				9DD15D711CDC2A6600683EF9 /* LoadingScreenViewController.swift */,
-				9DD15D731CDC2A7B00683EF9 /* LoginScreenViewController.swift */,
-				9DD15D751CDC2A8600683EF9 /* HomePageViewController.swift */,
-				A2BFC6371CE4301700652436 /* RegistrationPageViewController.swift */,
-				A25DDC8B1CED9A130009114D /* GeneratorViewController.swift */,
-				A25DDC8D1CEDA2000009114D /* TokenViewController.swift */,
+				9DD15D711CDC2A6600683EF9 /* HomeViewController.swift */,
+				9DD15D751CDC2A8600683EF9 /* LoginRequestViewController.swift */,
+				A25DDC8B1CED9A130009114D /* AddServiceViewController.swift */,
 				CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */,
+				A2CDCCC11CF25F33009F5840 /* RESTTestViewController.swift */,
+				CC41626F1CFB932500A2FA55 /* SetupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -156,6 +157,8 @@
 				CC4B4B131CF058BA002840F4 /* OTP.swift */,
 				9D68E3671CEEDF1B0004975C /* Alerts.swift */,
 				CC7104FE1CF1C1FB00174D81 /* TokenCell.swift */,
+				A25B9D7C1CF51F58003BF0EA /* NetworkManager.swift */,
+				CC1845E91CFAC478001F056E /* LoginRequest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -382,17 +385,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DD15D761CDC2A8600683EF9 /* HomePageViewController.swift in Sources */,
+				9DD15D761CDC2A8600683EF9 /* LoginRequestViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
-				A2BFC6381CE4301700652436 /* RegistrationPageViewController.swift in Sources */,
+				A25B9D7D1CF51F58003BF0EA /* NetworkManager.swift in Sources */,
+				CC1845EA1CFAC478001F056E /* LoginRequest.swift in Sources */,
+				CC4162701CFB932500A2FA55 /* SetupViewController.swift in Sources */,
+				A2CDCCC21CF25F33009F5840 /* RESTTestViewController.swift in Sources */,
 				CC7104FD1CF1C1A400174D81 /* TokenTableViewController.swift in Sources */,
 				CC4B4B141CF058BA002840F4 /* OTP.swift in Sources */,
 				CC7104FF1CF1C1FB00174D81 /* TokenCell.swift in Sources */,
-				A25DDC8E1CEDA2000009114D /* TokenViewController.swift in Sources */,
-				9DD15D721CDC2A6600683EF9 /* LoadingScreenViewController.swift in Sources */,
-				A25DDC8C1CED9A130009114D /* GeneratorViewController.swift in Sources */,
+				9DD15D721CDC2A6600683EF9 /* HomeViewController.swift in Sources */,
+				A25DDC8C1CED9A130009114D /* AddServiceViewController.swift in Sources */,
 				9D68E3681CEEDF1B0004975C /* Alerts.swift in Sources */,
-				9DD15D741CDC2A7B00683EF9 /* LoginScreenViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

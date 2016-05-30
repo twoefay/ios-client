@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,20 +21,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     //request token from APN
     UIApplication.sharedApplication().registerForRemoteNotifications()
+
+    
     return true
   }
   
-  //received token from APN
+  // receive token from APN
   func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
-    print("token: \(deviceToken)")
-
-    //TODO: send token to Twoefay server for registeration
+    
+    let prefs = NSUserDefaults.standardUserDefaults()
+    if let my_id_token = prefs.stringForKey("my_id_token") {
+        print("id_token: \(my_id_token)")
+        print("dev_token: \(deviceToken)")
+        
+        // send token to Twoefay server for registration
+        Alamofire.request(.POST, "https://twoefay.xyz/verify", parameters: ["id_token": my_id_token, "dev_token": String(deviceToken)], encoding: .JSON)
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                }
+        }
+    }
+    
   }
   
-  //token request failed
+  // token request failed
   func application(application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: NSError) {
     print("error: \(error)")
     //TODO: take appropriate error action on failure
   }
+    
 }
 

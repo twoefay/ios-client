@@ -9,8 +9,6 @@ target 'Twoefay' do
 
 
 pod 'Alamofire'
-pod 'SwiftyJSON'
-pod 'SwiftSpinner'
 pod 'OneTimePassword'
 pod 'QRCodeReader.swift'
 
