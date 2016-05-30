@@ -21,6 +21,7 @@ Open Twoefay.xcworkspace in Xcode 7.3 and compile it.
 *  [Alamofire](https://github.com/Alamofire/Alamofire)
 *  [OneTimePassword](https://github.com/mattrubin/OneTimePassword)
 *  [QRCodeReader.swift](https://github.com/yannickl/QRCodeReader.swift)
+*  [RealmSwift](https://realm.io/docs/swift/latest/)
 
 ## License 
 * This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](https://github.com/resolutedreamer/ios-client/blob/master/LICENSE) file for details
@@ -32,4 +33,4 @@ Open Twoefay.xcworkspace in Xcode 7.3 and compile it.
 #### Anthony Nguyen
 * Homepage: www.resolutedreamer.com
 
-Last Updated 2016-05-21
+Last Updated 2016-05-29
