@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -35,7 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         print("dev_token: \(deviceToken)")
         
         // send token to Twoefay server for registration
-        Alamofire.request(.POST, "https://twoefay.xyz/verify", parameters: ["id_token": my_id_token, "dev_token": String(deviceToken)], encoding: .JSON)
+        Alamofire.request(.POST, "https://twoefay.xyz/verify",
+            parameters: ["id_token": my_id_token, "dev_token": String(deviceToken)],
+            encoding: .JSON)
             .responseJSON { response in
                 print(response.request)  // original URL request
                 print(response.response) // URL response
@@ -56,5 +59,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     //TODO: take appropriate error action on failure
   }
     
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        print(userInfo)
+        LoginRequestManager.processPushNotification(userInfo)
+    }
+    
+    
+
 }
 

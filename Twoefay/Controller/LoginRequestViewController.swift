@@ -2,7 +2,7 @@
 //  LoginRequestViewController.swift
 //  Twoefay
 //
-//  Created by Bruin OnLine on 5/5/16.
+//  Created by Anthony Nguyen on 5/5/16.
 //  Copyright © 2016 Twoefay. All rights reserved.
 //
 

@@ -7,24 +7,20 @@
 //
 
 import Foundation
+import RealmSwift
 
-class LoginRequest {
+class LoginRequest: Object {
     
-    var clientText: String
-    var usernameText: String
-    var timeText: String
-    var ipText: String
-    var locationText: String
+    dynamic var clientText: String = ""
+    dynamic var usernameText: String = ""
+    dynamic var timeText: String = ""
+    dynamic var ipText: String = ""
+    dynamic var locationText: String = ""
+
     
-    init() {
-        clientText = ""
-        usernameText = ""
-        timeText = ""
-        ipText = ""
-        locationText = ""
-    }
-    
-    init(client: String, username: String, time: String, ip: String, location: String) {
+    convenience init(client: String, username: String, time: String, ip: String, location: String) {
+        self.init()
+
         clientText = client
         usernameText = username
         timeText = time

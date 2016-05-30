@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  Twoefay
 //
-//  Created by Bruin OnLine on 5/5/16.
+//  Created by Anthony Nguyen on 5/5/16.
 //  Copyright © 2016 Twoefay. All rights reserved.
 //
 
@@ -18,15 +18,12 @@ class HomeViewController: UIViewController {
         // check if there is an id_token saved
         let prefs = NSUserDefaults.standardUserDefaults()
         if let my_id_token = prefs.stringForKey("my_id_token") {
-            // we have an id_token saved
-        
+            print("HomePage Loaded, my_id_token: \(my_id_token)")
         }
         // since there is no id_token saved, need to get one
         else {
-            performSegueWithIdentifier("getTokenSegue", sender: "me")
+            performSegueWithIdentifier("getTokenSegue", sender: "")
         }
-        // uncomment this line to see the loading screen
-        //SwiftSpinner.show("Welcome to 2FA!")
     }
     
     @IBAction func logout(sender: AnyObject) {

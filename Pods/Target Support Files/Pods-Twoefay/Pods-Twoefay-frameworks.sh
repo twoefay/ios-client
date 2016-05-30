@@ -88,10 +88,14 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Base32/Base32.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OneTimePassword/OneTimePassword.framework"
   install_framework "$BUILT_PRODUCTS_DIR/QRCodeReader.swift/QRCodeReader.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/Alamofire/Alamofire.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Base32/Base32.framework"
   install_framework "$BUILT_PRODUCTS_DIR/OneTimePassword/OneTimePassword.framework"
   install_framework "$BUILT_PRODUCTS_DIR/QRCodeReader.swift/QRCodeReader.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Realm/Realm.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/RealmSwift/RealmSwift.framework"
 fi
