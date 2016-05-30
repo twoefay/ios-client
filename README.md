@@ -19,10 +19,8 @@ Open Twoefay.xcworkspace in Xcode 7.3 and compile it.
 
 ### Third party libraries
 *  [Alamofire](https://github.com/Alamofire/Alamofire)
-*  [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 *  [OneTimePassword](https://github.com/mattrubin/OneTimePassword)
 *  [QRCodeReader.swift](https://github.com/yannickl/QRCodeReader.swift)
-*  [SwiftSpinner](https://github.com/icanzilb/SwiftSpinner)
 
 ## License 
 * This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](https://github.com/resolutedreamer/ios-client/blob/master/LICENSE) file for details
