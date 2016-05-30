@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SetupViewController: UIViewController {
+class SetupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var idTokenField: UITextField!
     @IBOutlet weak var statusLabel: UILabel!
@@ -16,7 +16,14 @@ class SetupViewController: UIViewController {
     let prefs = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         statusLabel.text = ""
+        idTokenField.delegate = self
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     @IBAction func saveIdToken(sender: AnyObject) {

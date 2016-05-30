@@ -134,12 +134,11 @@
 		2E8B78CD1CC803B70043686A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CCD6B0E51CFCEEBD0089457F /* TableViews */,
 				9DD15D711CDC2A6600683EF9 /* HomeViewController.swift */,
 				9DD15D751CDC2A8600683EF9 /* LoginRequestViewController.swift */,
 				A25DDC8B1CED9A130009114D /* AddServiceViewController.swift */,
-				CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */,
 				CC41626F1CFB932500A2FA55 /* SetupViewController.swift */,
-				CC7BBFE01CFBF308008EEB28 /* LoginRequestTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -182,6 +181,15 @@
 				DB185966A8608FFB84FCA682 /* Pods-TwoefayTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		CCD6B0E51CFCEEBD0089457F /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */,
+				CC7BBFE01CFBF308008EEB28 /* LoginRequestTableViewController.swift */,
+			);
+			name = TableViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

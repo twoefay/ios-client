@@ -28,9 +28,10 @@ class LoginRequestViewController: UIViewController {
      receivedPush is true if the user navigated to this page from a current
      push notification or false if they are viewing their login request history
      */
-    var recivedPush = false
+    var receivedPush = false
     
     var thisLoginRequest: LoginRequest = LoginRequest()
+    var loginRequestId: Int?
     
     let context = LAContext()
     let policy = LAPolicy.DeviceOwnerAuthenticationWithBiometrics
@@ -42,13 +43,18 @@ class LoginRequestViewController: UIViewController {
         acceptButton.tag = 0
         rejectButton.tag = 1
         
-        if recivedPush == true {
-            // TODO - get info from push notification
-            thisLoginRequest = LoginRequest()
+        thisLoginRequest =
+            LoginRequestManager.getLoginRequestForId(loginRequestId!)!
+        
+        if receivedPush == false {
+            // Display either Accept or Reject Button depending whether the
+            // user had accepted or rejected the request in the past?
+            
+            // Alternately, just hide the buttons altogether
+            acceptButton.hidden = true
+            rejectButton.hidden = true
         }
-        else {
-            // TODO - get info from history
-        }
+        
         statusLabel.text = ""
         clientLabel.text = thisLoginRequest.clientText
         usernameLabel.text = thisLoginRequest.usernameText

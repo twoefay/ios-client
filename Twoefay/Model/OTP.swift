@@ -94,9 +94,9 @@ class OTP {
     
     class func clearOTPData() {
         let keychain = Keychain.sharedInstance
-        let allTokens = keychain.allPersistentTokens()
+        let allTokens = try! keychain.allPersistentTokens()
         for token in allTokens {
-            keychain.deletePersistentToken(token)
+            try! keychain.deletePersistentToken(token)
         }
     }
 		
