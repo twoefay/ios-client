@@ -82,6 +82,23 @@ class OTP {
 		}
 	}
 
+    class func loadSampleData() {
+        storeToken("jill@ucla.edu", issuer: "Netflix", secretString: "asdf qwer uipq ewry")
+        storeToken("jane@ucla.edu", issuer: "Microsoft", secretString: "aodf q4er uipq ewry")
+        storeToken("joe@ucla.edu", issuer: "Netflix", secretString: "as2f qwer u4pq ewry")
+        storeToken("jack4@ucla.edu", issuer: "Netflix", secretString: "a5df qwer urpq ewry")
+        storeToken("jon1@ucla.edu", issuer: "Dropbox", secretString: "as7f qwer ui8q ewry")
+        storeToken("joseph6@ucla.edu", issuer: "Amazon", secretString: "a8df qwer uipq ewry")
+        storeToken("jimmy1@ucla.edu", issuer: "Google", secretString: "as2f qwer uipq ewry")
+    }
+    
+    class func clearOTPData() {
+        let keychain = Keychain.sharedInstance
+        let allTokens = keychain.allPersistentTokens()
+        for token in allTokens {
+            keychain.deletePersistentToken(token)
+        }
+    }
 		
 }
 

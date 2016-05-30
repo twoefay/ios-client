@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class HomeViewController: UIViewController {
     
@@ -23,6 +24,20 @@ class HomeViewController: UIViewController {
         // since there is no id_token saved, need to get one
         else {
             performSegueWithIdentifier("getTokenSegue", sender: "")
+        }
+        
+        
+        /**
+         DEV ONLY
+         */
+        let dev_mode = true
+        if dev_mode == true {
+            // Sample Login Requests
+            LoginRequestManager.clearRealmData()
+            LoginRequestManager.loadSampleData()
+            // Sample Secret TOTP Accounts
+            OTP.clearOTPData()
+            OTP.loadSampleData()
         }
     }
     
