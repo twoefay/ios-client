@@ -125,64 +125,6 @@
             </objects>
             <point key="canvasLocation" x="835" y="728"/>
         </scene>
-        <!--ID_Token View Controller-->
-        <scene sceneID="PHA-h9-NKZ">
-            <objects>
-                <viewController title="ID_Token View Controller" id="Lv1-ai-yyf" customClass="RESTTestViewController" customModule="Twoefay" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yo2-r6-Y53"/>
-                        <viewControllerLayoutGuide type="bottom" id="IYo-aQ-O6A"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="W80-Qz-Wfp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4v-X1-Ydf">
-                                <rect key="frame" x="134" y="197" width="52" height="30"/>
-                                <state key="normal" title="Decline"/>
-                                <connections>
-                                    <action selector="pressDecline:" destination="Lv1-ai-yyf" eventType="touchUpInside" id="Ht2-Ls-12d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZO-1L-37U">
-                                <rect key="frame" x="136" y="135" width="49" height="30"/>
-                                <state key="normal" title="Accept"/>
-                                <connections>
-                                    <action selector="pressAccept:" destination="Lv1-ai-yyf" eventType="touchUpInside" id="Tcc-pL-6f1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PeE-QG-x3a">
-                                <rect key="frame" x="140" y="258" width="40" height="30"/>
-                                <state key="normal" title="Verify"/>
-                                <connections>
-                                    <action selector="pressVerify:" destination="Lv1-ai-yyf" eventType="touchUpInside" id="YMQ-aa-u5i"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkV-0u-Jhr">
-                                <rect key="frame" x="145" y="339" width="30" height="30"/>
-                                <state key="normal" title="Get"/>
-                                <connections>
-                                    <action selector="pressGet:" destination="Lv1-ai-yyf" eventType="touchUpInside" id="Uq3-Lz-l7P"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Display id_token" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPv-EE-8jp">
-                                <rect key="frame" x="98" y="106" width="124" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="REST API Test Page" id="ybA-6W-MP6"/>
-                    <connections>
-                        <outlet property="id_tokenLabel" destination="yPv-EE-8jp" id="1cO-Og-ai4"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fKK-qC-uA2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1289" y="728"/>
-        </scene>
         <!--Home View Controller-->
         <scene sceneID="QHC-Yz-nry">
             <objects>
@@ -219,9 +161,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXY-Hj-ie3">
                                 <rect key="frame" x="71" y="479" width="178" height="30"/>
                                 <state key="normal" title="Accept/Decline/Verify/Get"/>
-                                <connections>
-                                    <segue destination="Lv1-ai-yyf" kind="push" id="UWR-xM-eEp"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-Vn-tYq">
                                 <rect key="frame" x="136" y="509" width="48" height="30"/>
