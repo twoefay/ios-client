@@ -43,8 +43,17 @@ class LoginRequestViewController: UIViewController {
         acceptButton.tag = 0
         rejectButton.tag = 1
         
-        thisLoginRequest =
-            LoginRequestManager.getLoginRequestForId(loginRequestId!)!
+        // thisLoginRequest =
+        //    LoginRequestManager.getLoginRequestForId(loginRequestId!)!
+        if let historicalLoginRequest = loginRequestId {
+            thisLoginRequest =
+                LoginRequestManager.getLoginRequestForId(historicalLoginRequest)!
+        }
+        else
+        {
+            receivedPush = true;
+        }
+        
         
         if receivedPush == false {
             // Display either Accept or Reject Button depending whether the
