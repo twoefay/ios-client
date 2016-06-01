@@ -1,0 +1,35 @@
+//
+//  AlamoManager.swift
+//  Twoefay
+//
+//  Created by cbolids on 5/31/16.
+//  Copyright © 2016 Twoefay. All rights reserved.
+//
+
+import Foundation
+
+class AlamoManager {
+    class func verifyTwoTokens () {
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        
+        if let my_id_token = prefs.stringForKey("my_id_token"), let my_dev_token = prefs.stringForKey("my_dev_token") {
+            // send token to Twoefay server for registration
+            Alamofire.request(.POST, "https://twoefay.xyz/verify",
+                parameters: ["id_token": my_id_token, "dev_token": String(my_dev_token)],
+                encoding: .JSON)
+                .responseJSON { response in
+                    print(response.request)  // original URL request
+                    print(response.response) // URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
+                    
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+            }
+        }
+        
+    }
+
+}

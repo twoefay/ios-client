@@ -37,6 +37,7 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         }
         
         prefs.setValue(idToken, forKey: "my_id_token")
+        AlamoManager.verifyTwoTokens()
         performSegueWithIdentifier("unwindToHome", sender: "")
     }
 
