@@ -7,8 +7,10 @@
 //
 
 import Foundation
+import Alamofire
 
 class AlamoManager {
+    
     class func verifyTwoTokens () {
         
         let prefs = NSUserDefaults.standardUserDefaults()
@@ -30,6 +32,34 @@ class AlamoManager {
             }
         }
         
+    }
+    
+    class func confirmSuccess(success: Bool) {
+        
+        var url: String
+        if success {
+            url = "https://twoefay.xyz/success"
+        }
+        else {
+            url = "https://twoefay.xyz/failure"
+        }
+        
+        let prefs = NSUserDefaults.standardUserDefaults()
+        if let my_id_token = prefs.stringForKey("my_id_token") {
+            print(my_id_token)
+            
+            Alamofire.request(.POST, url, parameters: ["token": my_id_token], encoding: .JSON)
+                .responseJSON { response in
+                    print(response.request)  // original URL request
+                    print(response.response) // URL response
+                    print(response.data)     // server data
+                    print(response.result)   // result of response serialization
+                    
+                    if let JSON = response.result.value {
+                        print("JSON: \(JSON)")
+                    }
+            }
+        }
     }
 
 }

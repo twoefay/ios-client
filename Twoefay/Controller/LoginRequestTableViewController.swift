@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class LoginRequestTableViewController: UITableViewController {
     
     var loginRequests: [LoginRequest] = []

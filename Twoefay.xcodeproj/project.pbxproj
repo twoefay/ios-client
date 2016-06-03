@@ -19,6 +19,7 @@
 		A25DDC8C1CED9A130009114D /* AddServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A25DDC8B1CED9A130009114D /* AddServiceViewController.swift */; };
 		CC1845EA1CFAC478001F056E /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1845E91CFAC478001F056E /* LoginRequest.swift */; };
 		CC2B12A11CFC0BB100AB739F /* LoginRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2B12A01CFC0BB100AB739F /* LoginRequestManager.swift */; };
+		CC38B4E71D01ACB000D24CE4 /* AlamoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC38B4E61D01ACB000D24CE4 /* AlamoManager.swift */; };
 		CC4162701CFB932500A2FA55 /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC41626F1CFB932500A2FA55 /* SetupViewController.swift */; };
 		CC4B4B141CF058BA002840F4 /* OTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC4B4B131CF058BA002840F4 /* OTP.swift */; };
 		CC7104FD1CF1C1A400174D81 /* TokenTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */; };
@@ -57,6 +58,7 @@
 		BB1BB76A43D3A5DFB3EB7E78 /* Pods_TwoefayTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoefayTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC1845E91CFAC478001F056E /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		CC2B12A01CFC0BB100AB739F /* LoginRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequestManager.swift; sourceTree = "<group>"; };
+		CC38B4E61D01ACB000D24CE4 /* AlamoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamoManager.swift; sourceTree = "<group>"; };
 		CC41626F1CFB932500A2FA55 /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
 		CC4B4B131CF058BA002840F4 /* OTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTP.swift; sourceTree = "<group>"; };
 		CC7104FC1CF1C1A400174D81 /* TokenTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenTableViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 		2E8B78D01CC803B70043686A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CC38B4E61D01ACB000D24CE4 /* AlamoManager.swift */,
 				CC4B4B131CF058BA002840F4 /* OTP.swift */,
 				9D68E3671CEEDF1B0004975C /* Alerts.swift */,
 				CC1845E91CFAC478001F056E /* LoginRequest.swift */,
@@ -393,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CC38B4E71D01ACB000D24CE4 /* AlamoManager.swift in Sources */,
 				9DD15D761CDC2A8600683EF9 /* LoginRequestViewController.swift in Sources */,
 				2E8B78AE1CC8036F0043686A /* AppDelegate.swift in Sources */,
 				CC2B12A11CFC0BB100AB739F /* LoginRequestManager.swift in Sources */,
