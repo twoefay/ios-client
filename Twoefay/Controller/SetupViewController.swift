@@ -11,13 +11,11 @@ import UIKit
 class SetupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var idTokenField: UITextField!
-    @IBOutlet weak var statusLabel: UILabel!
     
     let prefs = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        statusLabel.text = ""
         idTokenField.delegate = self
     }
     
@@ -29,17 +27,24 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
     @IBAction func saveIdToken(sender: AnyObject) {
         // Get textfield data
         let idToken = idTokenField.text;
+        var Alert: UIAlertController
         
         // Check for empty fields
         if (idToken!.isEmpty) {
-            statusLabel.text = "Please Enter a Token"
-            return;
+            Alert = Alerts.alertPopup(AlertTitles.Error, alertMessage: AlertMessage.MissingField, alertActionTitle: AlertActionTitles.TryAgain, custom_handler: nil);
         }
-        
-        prefs.setValue(idToken, forKey: "my_id_token")
-        AlamoManager.verifyTwoTokens()
-        performSegueWithIdentifier("unwindToHome", sender: "")
+        else {
+            prefs.setValue(idToken, forKey: "my_id_token")
+            AlamoManager.verifyTwoTokens()
+            Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.TokenSaved, alertActionTitle: AlertActionTitles.OK, custom_handler: alertActionHandler);
+        }
+        self.presentViewController(Alert, animated:true, completion:nil);
     }
 
 
+    func alertActionHandler(alertAction: UIAlertAction!) -> Void {
+        print("User Pressed OK. Can now Segue.")
+        performSegueWithIdentifier("unwindToHome", sender: "")
+    }
+    
 }

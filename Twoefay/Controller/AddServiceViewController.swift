@@ -102,19 +102,24 @@ class AddServiceViewController: UIViewController, QRCodeReaderViewControllerDele
         let issuer = issuerField.text;
         let secret = secretField.text;
         
+        var Alert: UIAlertController
+        
         // Check for empty fields
         if (name!.isEmpty || issuer!.isEmpty || secret!.isEmpty) {
-            displayAlert("All fields required")
+            Alert = Alerts.alertPopup(AlertTitles.Error, alertMessage: AlertMessage.MissingField, alertActionTitle: AlertActionTitles.OK, custom_handler: nil);
             return;
         }
 
         tokenIdentifier = OTP.storeToken(name!,issuer: issuer!,secretString: secret!)
-        if (tokenIdentifier == nil) {
-            displayAlert("Token generation failed")
+        
+        if (tokenIdentifier != nil) {
+            Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.TokenSuccess, alertActionTitle: AlertActionTitles.OK, custom_handler: alertActionHandler);
+        }
+        else { // Failure
+            Alert = Alerts.alertPopup(AlertTitles.Error, alertMessage: AlertMessage.TokenFailed, alertActionTitle: AlertActionTitles.TryAgain, custom_handler: nil);
         }
         
-        // Confirm submission
-        displayHandleAlert("Token Generation Successful", custom_handler: alertActionHandler);
+        self.presentViewController(Alert, animated:true, completion:nil);
     }
     
     func alertActionHandler(alertAction: UIAlertAction!) -> Void {
@@ -138,19 +143,9 @@ class AddServiceViewController: UIViewController, QRCodeReaderViewControllerDele
         
         self.presentViewController(Alert, animated:true, completion:nil);
     }
-    // Display alert with message userMessage and handler
-    func displayHandleAlert(userMessage:String, custom_handler: (alertAction: UIAlertAction!) -> Void ) {
-        let Alert = UIAlertController(title:"Alert", message:userMessage, preferredStyle: UIAlertControllerStyle.Alert);
-        
-        let OK = UIAlertAction(title:"OK", style:UIAlertActionStyle.Default, handler: alertActionHandler);
-        
-        Alert.addAction(OK);
-        
-        self.presentViewController(Alert, animated:true, completion:nil);
-    }
     
     // Parse QRstring
-    func parseQR(QRstring:String) {
+    func parseQR(QRstring: String) {
         // $0 == DELIMITER
         // QRstring format: %3Aemail%40gmail.com?secret=s3cr3t&issuer=Google (of type org.iso.QRCode)
         

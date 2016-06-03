@@ -76,15 +76,26 @@ class LoginRequestViewController: UIViewController {
         print("TouchID not on this device.")
     }
     
+    func alertActionHandler(alertAction: UIAlertAction!) -> Void {
+        print("User Pressed OK. Can now Segue.")
+        //performSegueWithIdentifier("unwindToAccounts", sender: "");
+    }
+    
     func authenticationSucceeded(sender: UIButton){
         dispatch_async(dispatch_get_main_queue()) {
             self.statusLabel.text = "Authentication successful"
+            var Alert: UIAlertController    
             if sender.tag == 0 {
                 AlamoManager.confirmSuccess(true)
+                Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.POSTSuccess, alertActionTitle: AlertActionTitles.OK, custom_handler: nil);
             }
             else {
                 AlamoManager.confirmSuccess(false)
+                Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.POSTFailure, alertActionTitle: AlertActionTitles.OK, custom_handler: nil);
             }
+            
+            // Strictly Speaking, the Alert should not be presented until AlamoManager is done, but it's easier to just display the alert immediately
+            self.presentViewController(Alert, animated:true, completion:nil);
         }
     }
     

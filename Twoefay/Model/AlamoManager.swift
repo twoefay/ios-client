@@ -58,6 +58,8 @@ class AlamoManager {
                     if let JSON = response.result.value {
                         print("JSON: \(JSON)")
                     }
+                    
+                    
             }
         }
     }
