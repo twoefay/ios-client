@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // receive token from APN
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
         let prefs = NSUserDefaults.standardUserDefaults()
-        prefs.setObject(deviceToken, forKey: "my_dev_token")
+        let deviceTokenString = String(deviceToken)
+        prefs.setObject(deviceTokenString, forKey: "my_dev_token")
     }
   
     // token request failed
