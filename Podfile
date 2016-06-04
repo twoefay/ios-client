@@ -12,6 +12,7 @@ pod 'Alamofire'
 pod 'OneTimePassword'
 pod 'QRCodeReader.swift'
 pod 'RealmSwift'
+pod 'SwiftyJSON'
 	
 
   target 'TwoefayTests' do
