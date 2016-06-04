@@ -60,6 +60,18 @@ class HomeViewController: UIViewController {
         performSegueWithIdentifier("getTokenSegue", sender: "")
     }
     
+    @IBAction func testLocation(sender: AnyObject) {
+        let ip = "208.80.152.201"
+        var location = "Los Angeles"
+        AlamoManager.locationFromIP(ip, completionHandler: { stringy in
+            if let foundLocation = stringy {
+                location = foundLocation
+            }
+            print("Location from Call: \(location)")
+            
+        })
+    }
+    
     @IBAction func unwindToHome(segue:UIStoryboardSegue) {
         AlamoManager.verifyTwoTokens()
     }

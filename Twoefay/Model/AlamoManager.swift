@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 
 class AlamoManager {
     
@@ -70,5 +71,26 @@ class AlamoManager {
             }
         }
     }
+    
+    class func locationFromIP(ip: String, completionHandler: ((String?) -> Void) ) {
+        let url = "http://ip-api.com/json/\(ip)"
+        Alamofire.request(.GET, url)
+            .responseJSON { response in
+                print(response.request)  // original URL request
+                print(response.response) // URL response
+                print(response.data)     // server data
+                print(response.result)   // result of response serialization
+                
+                if let resultjson = response.result.value {
+                    print("JSON: \(resultjson)")
+                    let mySwiftyJson = JSON(resultjson)
+                    let city = mySwiftyJson["city"]
+                    let country = mySwiftyJson["country"]
+                    let location = "\(city), \(country)"
+                    completionHandler(location)
+                }
+        }
+    }
+
 
 }

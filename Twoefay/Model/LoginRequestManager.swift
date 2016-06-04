@@ -35,20 +35,29 @@ class LoginRequestManager {
         let usernameText: String = "" // userInfo["username"]
         let timeText: String = "" // userInfo["time"]
         let ipText: String = "" // userInfo["ip"]
-        let locationText: String = "" // userInfo["location"]
+        var locationText: String = "" // userInfo["location"]
         
-        
-        let realm = try! Realm()
-        let id = getNewId()
-        let myLoginRequest = LoginRequest(newId: id,
-                                          client: clientText,
-                                          username: usernameText,
-                                          time: timeText,
-                                          ip: ipText,
-                                          location: locationText)
-        try! realm.write {
-            realm.add(myLoginRequest)
-        }
+        AlamoManager.locationFromIP(ipText, completionHandler: { stringy in
+            
+            if let foundLocation = stringy {
+                locationText = foundLocation
+            }
+            print("Location from Call: \(locationText)")
+            
+            let realm = try! Realm()
+            let id = getNewId()
+            
+            let myLoginRequest = LoginRequest(newId: id,
+                client: clientText,
+                username: usernameText,
+                time: timeText,
+                ip: ipText,
+                location: locationText)
+            
+            try! realm.write {
+                realm.add(myLoginRequest)
+            }
+        })
     }
     
     class func numHistoricalLoginRequests () -> Int {

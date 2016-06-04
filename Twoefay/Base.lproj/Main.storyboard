@@ -172,6 +172,13 @@
                                     <segue destination="4YZ-LR-veq" kind="push" id="0x9-BY-4WI"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gbw-KE-Ux7">
+                                <rect key="frame" x="35" y="393" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="testLocation:" destination="boP-PD-eNO" eventType="touchUpInside" id="j5Y-bH-0ip"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
