@@ -35,10 +35,9 @@ class SetupViewController: UIViewController, UITextFieldDelegate {
         }
         else {
             prefs.setValue(idToken, forKey: "my_id_token")
-            AlamoManager.verifyTwoTokens()
             Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.TokenSaved, alertActionTitle: AlertActionTitles.OK, custom_handler: alertActionHandler);
         }
-        self.presentViewController(Alert, animated:true, completion:nil);
+        self.presentViewController(Alert, animated:true, completion: nil);
     }
 
 

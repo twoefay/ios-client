@@ -12,6 +12,7 @@ import UIKit
 enum AlertTitles: String {
     case Success = "Success"
     case Error = "Error"
+    case Warning = "Warning"
 }
 
 
@@ -23,6 +24,7 @@ enum AlertMessage: String {
     case MissingField = "All fields required"
     case POSTSuccess = "Website Access Allowed!"
     case POSTFailure = "Website Access Blocked!"
+    case LogoutWarning = "Are you sure you want to logout? All data will be deleted!"
 }
 
 enum AlertActionTitles: String {
@@ -36,7 +38,7 @@ class Alerts {
     class func alertPopup(alertTitle: AlertTitles, alertMessage: AlertMessage, alertActionTitle: AlertActionTitles, custom_handler: ((alertAction: UIAlertAction!) -> Void)? ) -> UIAlertController {
         
         let alert = UIAlertController(title: alertTitle.rawValue, message: alertMessage.rawValue, preferredStyle: UIAlertControllerStyle.Alert)
-        let action = UIAlertAction(title: alertActionTitle.rawValue, style: UIAlertActionStyle.Cancel, handler: custom_handler)
+        let action = UIAlertAction(title: alertActionTitle.rawValue, style: .Default, handler: custom_handler)
         alert.addAction(action)
         
         return alert

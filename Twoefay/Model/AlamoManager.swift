@@ -12,23 +12,30 @@ import Alamofire
 class AlamoManager {
     
     class func verifyTwoTokens () {
-        
+        print("verifyTwoTokens called")
         let prefs = NSUserDefaults.standardUserDefaults()
         
-        if let my_id_token = prefs.stringForKey("my_id_token"), let my_dev_token = prefs.stringForKey("my_dev_token") {
-            // send token to Twoefay server for registration
-            Alamofire.request(.POST, "https://twoefay.xyz/verify",
-                parameters: ["id_token": my_id_token, "dev_token": String(my_dev_token)],
-                encoding: .JSON)
-                .responseJSON { response in
-                    print(response.request)  // original URL request
-                    print(response.response) // URL response
-                    print(response.data)     // server data
-                    print(response.result)   // result of response serialization
-                    
-                    if let JSON = response.result.value {
-                        print("JSON: \(JSON)")
-                    }
+        if let my_id_token = prefs.stringForKey("my_id_token") {
+            print("my_id_token was saved: \(my_id_token)")
+            if let my_dev_token = prefs.stringForKey("my_dev_token") {
+                print("my_dev_token was saved: \(my_dev_token)")
+                // send token to Twoefay server for registration
+                Alamofire.request(.POST, "https://twoefay.xyz/verify",
+                    parameters: ["id_token": my_id_token, "dev_token": String(my_dev_token)],
+                    encoding: .JSON)
+                    .responseJSON { response in
+                        print(response.request)  // original URL request
+                        print(response.response) // URL response
+                        print(response.data)     // server data
+                        print(response.result)   // result of response serialization
+                        
+                        if let JSON = response.result.value {
+                            print("JSON: \(JSON)")
+                        }
+                }
+            }
+            else {
+                print("my_id_token was not saved")
             }
         }
         
