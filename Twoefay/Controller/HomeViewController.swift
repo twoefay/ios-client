@@ -26,7 +26,9 @@ class HomeViewController: UIViewController {
         }
         // since there is no id_token saved, need to get one
         else {
-            performSegueWithIdentifier("getTokenSegue", sender: "")
+            dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                self.performSegueWithIdentifier("getTokenSegue", sender: "")
+            })
         }
         
         
