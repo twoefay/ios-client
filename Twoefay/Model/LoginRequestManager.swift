@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import SwiftyJSON
 
 class LoginRequestManager {
     
@@ -28,21 +29,28 @@ class LoginRequestManager {
         return index
     }
     
+    class func getTimeString() -> String {
+        let today = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+        return "\(dateFormatter.stringFromDate(today))"
+    }
+    
     class func processPushNotification (userInfo: [NSObject : AnyObject])                                                                                                                                                                                                                                                    {
-        
+        let userInfoJSON = JSON(userInfo)
         // TODO - Figure out how to extract the data from the push notification
-        let clientText: String = "" //userInfo["client"]
-        let usernameText: String = "" // userInfo["username"]
-        let timeText: String = "" // userInfo["time"]
-        let ipText: String = "" // userInfo["ip"]
-        var locationText: String = "" // userInfo["location"]
+        let clientText: String = "" //userInfoJSON["service"]
+        let usernameText: String = "" //userInfoJSON["string"]
+        let timeText: String = getTimeString()
+        let ipText: String = "" //userInfoJSON["string"]
+        var locationText: String = ""
         
         AlamoManager.locationFromIP(ipText, completionHandler: { stringy in
             
             if let foundLocation = stringy {
                 locationText = foundLocation
+                print("Location from Call: \(locationText)")
             }
-            print("Location from Call: \(locationText)")
             
             let realm = try! Realm()
             let id = getNewId()
