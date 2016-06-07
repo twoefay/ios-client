@@ -4,18 +4,29 @@ PODS:
   - OneTimePassword (2.0.0):
     - Base32 (~> 1.0.2)
   - QRCodeReader.swift (6.0.0)
+  - Realm (0.103.0):
+    - Realm/Headers (= 0.103.0)
+  - Realm/Headers (0.103.0)
+  - RealmSwift (0.103.0):
+    - Realm (= 0.103.0)
+  - SwiftyJSON (2.3.2)
 
 DEPENDENCIES:
   - Alamofire
   - OneTimePassword
   - QRCodeReader.swift
+  - RealmSwift
+  - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
   Base32: 4e6b6d6c344b48da363c5268f9c391d37893401f
   OneTimePassword: be1cab53803ae9db765b3eb340b73b7d5c16d2dd
   QRCodeReader.swift: 4aa8b0f88847a51312d6ffd2cafc387962da9dd8
+  Realm: 99c44c3a9e075638478d4134e28d9026a6de07c4
+  RealmSwift: daaa1789eb581f2f8c2a05a25f463a6f70df5a5f
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
 
-PODFILE CHECKSUM: 8585ff7f3428b469f900f14d2da9bb2c9ad815e7
+PODFILE CHECKSUM: b2800a21d13e69f8fc52d1ec452c0a95fbfa4742
 
 COCOAPODS: 1.0.0

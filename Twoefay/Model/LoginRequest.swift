@@ -7,24 +7,25 @@
 //
 
 import Foundation
+import RealmSwift
 
-class LoginRequest {
+class LoginRequest: Object {
     
-    var clientText: String
-    var usernameText: String
-    var timeText: String
-    var ipText: String
-    var locationText: String
-    
-    init() {
-        clientText = ""
-        usernameText = ""
-        timeText = ""
-        ipText = ""
-        locationText = ""
+    dynamic var id = 0
+    dynamic var clientText: String = ""
+    dynamic var usernameText: String = ""
+    dynamic var timeText: String = ""
+    dynamic var ipText: String = ""
+    dynamic var locationText: String = ""
+
+    override static func primaryKey() -> String? {
+        return "id"
     }
     
-    init(client: String, username: String, time: String, ip: String, location: String) {
+    convenience init(newId: Int, client: String, username: String, time: String, ip: String, location: String) {
+        self.init()
+
+        id = newId
         clientText = client
         usernameText = username
         timeText = time

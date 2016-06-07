@@ -2,16 +2,14 @@
 //  LoginRequestViewController.swift
 //  Twoefay
 //
-//  Created by Bruin OnLine on 5/5/16.
+//  Created by Anthony Nguyen on 5/5/16.
 //  Copyright © 2016 Twoefay. All rights reserved.
 //
 
 import UIKit
 import LocalAuthentication
-import Alamofire
 
 class LoginRequestViewController: UIViewController {
-
     
     @IBOutlet weak var clientLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -23,14 +21,20 @@ class LoginRequestViewController: UIViewController {
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var rejectButton: UIButton!
     
+    /**
+     receivedPush is true if the user navigated to this page from a current push notification
+     receivedPush is false if they are viewing their login request history
+     */
+    var receivedPush = false
     
     /**
-     receivedPush is true if the user navigated to this page from a current
-     push notification or false if they are viewing their login request history
+     manualLoginRequest is true if the user navigated to this page manually from the HomeViewController
+     manualLoginRequest is false if they are viewing their login request history
      */
-    var recivedPush = false
+    var manualLoginRequest = false
     
     var thisLoginRequest: LoginRequest = LoginRequest()
+    var loginRequestId: Int?
     
     let context = LAContext()
     let policy = LAPolicy.DeviceOwnerAuthenticationWithBiometrics
@@ -39,17 +43,29 @@ class LoginRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Opening Login Request Page")
+        print("Received Push: \(receivedPush)")
+        print("loginRequestId: \(loginRequestId)")
+        
         acceptButton.tag = 0
         rejectButton.tag = 1
         
-        if recivedPush == true {
-            // TODO - get info from push notification
-            thisLoginRequest = LoginRequest()
+        if manualLoginRequest == true {
+            thisLoginRequest = LoginRequestManager.getNewestLoginRequest()!
+            statusLabel.text = "This request may be outdated"
+        }
+        else if receivedPush == true {
+            thisLoginRequest = LoginRequestManager.getNewestLoginRequest()!
         }
         else {
-            // TODO - get info from history
+            if let historicalLoginRequestId = loginRequestId {
+                thisLoginRequest =
+                    LoginRequestManager.getLoginRequestForId(historicalLoginRequestId)!
+                // Hide the buttons if viewing a historical request
+                acceptButton.hidden = true
+                rejectButton.hidden = true
+            }
         }
-        statusLabel.text = ""
         clientLabel.text = thisLoginRequest.clientText
         usernameLabel.text = thisLoginRequest.usernameText
         timeLabel.text = thisLoginRequest.timeText
@@ -60,41 +76,29 @@ class LoginRequestViewController: UIViewController {
     func touchIDNotAvailable(){
         statusLabel.text = "TouchID not available on this device."
         print("TouchID not on this device.")
-        completeServerRequest("https://twoefay.xyz/failure")
+    }
+    
+    func alertActionHandler(alertAction: UIAlertAction!) -> Void {
+        print("User Pressed OK. Can now Segue.")
+        //performSegueWithIdentifier("unwindToAccounts", sender: "");
     }
     
     func authenticationSucceeded(sender: UIButton){
         dispatch_async(dispatch_get_main_queue()) {
             self.statusLabel.text = "Authentication successful"
-            var url: String
+            var Alert: UIAlertController    
             if sender.tag == 0 {
-                url = "https://twoefay.xyz/success"
+                AlamoManager.confirmSuccess(true)
+                Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.POSTSuccess, alertActionTitle: AlertActionTitles.OK, custom_handler: nil);
             }
             else {
-                url = "https://twoefay.xyz/failure"
+                AlamoManager.confirmSuccess(false)
+                Alert = Alerts.alertPopup(AlertTitles.Success, alertMessage: AlertMessage.POSTFailure, alertActionTitle: AlertActionTitles.OK, custom_handler: nil);
             }
-            self.completeServerRequest(url)
-        }
-    }
-    
-    func completeServerRequest(url: String) {
-        let prefs = NSUserDefaults.standardUserDefaults()
-        if let my_id_token = prefs.stringForKey("my_id_token") {
-            print(my_id_token)
             
-            Alamofire.request(.POST, url, parameters: ["token": my_id_token], encoding: .JSON)
-                .responseJSON { response in
-                    print(response.request)  // original URL request
-                    print(response.response) // URL response
-                    print(response.data)     // server data
-                    print(response.result)   // result of response serialization
-                    
-                    if let JSON = response.result.value {
-                        print("JSON: \(JSON)")
-                    }
-            }
+            // Strictly Speaking, the Alert should not be presented until AlamoManager is done, but it's easier to just display the alert immediately
+            self.presentViewController(Alert, animated:true, completion:nil);
         }
-
     }
     
     func authenticationFailed(error: NSError){
