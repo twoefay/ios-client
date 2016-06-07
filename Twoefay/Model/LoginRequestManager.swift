@@ -42,7 +42,7 @@ class LoginRequestManager {
         return "\(dateFormatter.stringFromDate(today))"
     }
     
-    class func processPushNotification(userInfo: [NSObject : AnyObject])                                                                                                                                                                                                                                                    {
+    class func processPushNotification(userInfo: [NSObject : AnyObject], completionHandler: (Bool, Int) -> Void )                                                                                                                                                                                                                                                    {
         let userInfoJSON = JSON(userInfo)
         // TODO - Figure out how to extract the data from the push notification
         let clientText: String = "" //userInfoJSON["service"]
@@ -71,6 +71,7 @@ class LoginRequestManager {
             try! realm.write {
                 realm.add(myLoginRequest)
             }
+            completionHandler(true, id)
         })
     }
     

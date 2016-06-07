@@ -55,7 +55,11 @@ class LoginRequestViewController: UIViewController {
             statusLabel.text = "This request may be outdated"
         }
         else if receivedPush == true {
-            thisLoginRequest = LoginRequestManager.getNewestLoginRequest()!
+            if let newLoginRequestId = loginRequestId {
+                thisLoginRequest =
+                    LoginRequestManager.getLoginRequestForId(newLoginRequestId)!
+            }
+
         }
         else {
             if let historicalLoginRequestId = loginRequestId {
