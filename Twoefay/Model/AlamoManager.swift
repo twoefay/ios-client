@@ -36,8 +36,11 @@ class AlamoManager {
                 }
             }
             else {
-                print("my_id_token was not saved")
+                print("my_dev_token was not saved. Will not /verify with Server")
             }
+        }
+        else {
+            print("my_id_token was not saved. Will not /verify with Server")
         }
         
     }

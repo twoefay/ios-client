@@ -34,6 +34,18 @@ class TwoefayTests: XCTestCase {
         XCTAssert(dateString.characters.count == 19)
     }
     
+    func testLocation() {
+        let ip = "208.80.152.201"
+        var location = "Los Angeles"
+        AlamoManager.locationFromIP(ip, completionHandler: { stringy in
+            if let foundLocation = stringy {
+                location = foundLocation
+            }
+            print("Location from Call: \(location)")
+            XCTAssert(location == "San Francisco, United States")
+        })
+    }
+    
     
     
 }

@@ -36,7 +36,7 @@ class LoginRequestManager {
         return "\(dateFormatter.stringFromDate(today))"
     }
     
-    class func processPushNotification (userInfo: [NSObject : AnyObject])                                                                                                                                                                                                                                                    {
+    class func processPushNotification(userInfo: [NSObject : AnyObject])                                                                                                                                                                                                                                                    {
         let userInfoJSON = JSON(userInfo)
         // TODO - Figure out how to extract the data from the push notification
         let clientText: String = "" //userInfoJSON["service"]
