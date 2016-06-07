@@ -111,7 +111,7 @@ class LoginRequestViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonTapped(sender: UIButton) {
+    @IBAction func acceptButtonTapped(sender: UIButton) {
         if context.canEvaluatePolicy(policy, error: error){
             context.evaluatePolicy(policy, localizedReason: "Pleace authenticate using TouchID"){ status, error in
                 status ? self.authenticationSucceeded(sender) : self.authenticationFailed(error!)
@@ -120,4 +120,9 @@ class LoginRequestViewController: UIViewController {
             touchIDNotAvailable()
         }
     }
+    
+    @IBAction func rejectButtonTapped(sender: UIButton) {
+        authenticationSucceeded(sender)
+    }
+    
 }
