@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     let prefs = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad() {
+        addGradient()
         super.viewDidLoad()
         
         
@@ -44,7 +45,31 @@ class HomeViewController: UIViewController {
             OTP.clearOTPData()
             OTP.loadSampleData()
         }
+        
     }
+    
+     func addGradient() {
+        let gradient: CAGradientLayer = CAGradientLayer()
+        
+        gradient.frame.size = self.view.frame.size
+        gradient.colors = [UIColor.whiteColor().CGColor,UIColor.blackColor().CGColor] //Or any colors
+        
+        //gradient.opacity = 0.5
+        
+        //self.view.layer.addSublayer(gradient)
+        self.view.layer.insertSublayer(gradient, below: self.view.layer.sublayers?.first)
+        
+        /*
+        let gradientView = UIView()
+        gradientView.layer.addSublayer(gradient)
+        print( self.view.subviews.count)
+        self.view.superview?.addSubview(gradientView)
+        */
+        
+    }
+
+    
+    
     
     @IBAction func logout(sender: AnyObject) {
         let Alert = Alerts.alertPopup(AlertTitles.Warning, alertMessage: AlertMessage.LogoutWarning, alertActionTitle: AlertActionTitles.OK, custom_handler: confirmLogoutHandler)

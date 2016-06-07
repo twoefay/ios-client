@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -136,38 +137,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon-60" translatesAutoresizingMaskIntoConstraints="NO" id="AMW-Nm-r8R">
+                                <rect key="frame" x="130" y="139" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="AMW-Nm-r8R" secondAttribute="height" multiplier="64:63" id="fyn-C4-fvL"/>
+                                </constraints>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome To Twoefay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AlF-ce-BNW">
-                                <rect key="frame" x="16" y="155" width="288" height="33"/>
+                                <rect key="frame" x="16" y="249" width="288" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-NK-qSt">
+                                <rect key="frame" x="109" y="357" width="102" height="30"/>
+                                <state key="normal" title="View Accounts">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="7HO-Rt-raT" kind="push" id="DE2-eV-Qcn"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufG-T5-AYg">
-                                <rect key="frame" x="82" y="318" width="157" height="30"/>
-                                <state key="normal" title="Accept/Reject Request"/>
+                                <rect key="frame" x="82" y="387" width="157" height="30"/>
+                                <state key="normal" title="Accept/Reject Request">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="4YZ-LR-veq" kind="push" id="0x9-BY-4WI"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b07-Ze-sEe">
-                                <rect key="frame" x="85" y="348" width="151" height="30"/>
-                                <state key="normal" title="Login Request History"/>
+                                <rect key="frame" x="85" y="417" width="151" height="30"/>
+                                <state key="normal" title="Login Request History">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="tjk-Qm-RER" kind="push" id="2kt-RQ-3TQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ObI-Vn-tYq">
                                 <rect key="frame" x="136" y="538" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="logout:" destination="boP-PD-eNO" eventType="touchUpInside" id="FBs-F9-6yS"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iyI-NK-qSt">
-                                <rect key="frame" x="109" y="288" width="102" height="30"/>
-                                <state key="normal" title="View Accounts"/>
-                                <connections>
-                                    <segue destination="7HO-Rt-raT" kind="push" id="DE2-eV-Qcn"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -176,13 +191,15 @@
                             <constraint firstAttribute="leadingMargin" secondItem="AlF-ce-BNW" secondAttribute="leading" id="0Bb-tu-8tE"/>
                             <constraint firstItem="ObI-Vn-tYq" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="0bd-ct-bH5"/>
                             <constraint firstItem="ufG-T5-AYg" firstAttribute="top" secondItem="iyI-NK-qSt" secondAttribute="bottom" id="4zd-tP-ePn"/>
+                            <constraint firstItem="AMW-Nm-r8R" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="9ln-KH-fRV"/>
                             <constraint firstItem="iyI-NK-qSt" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="AGz-4L-Km5"/>
+                            <constraint firstItem="AlF-ce-BNW" firstAttribute="top" secondItem="AMW-Nm-r8R" secondAttribute="bottom" constant="50" id="Is3-rY-OwK"/>
                             <constraint firstItem="b07-Ze-sEe" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="SPT-7C-pgv"/>
                             <constraint firstItem="7s3-G7-3rv" firstAttribute="top" secondItem="ObI-Vn-tYq" secondAttribute="bottom" id="U26-3Z-7zv"/>
                             <constraint firstItem="ufG-T5-AYg" firstAttribute="centerX" secondItem="QKV-Nt-Dmf" secondAttribute="centerX" id="aSZ-rF-NGg"/>
-                            <constraint firstItem="AlF-ce-BNW" firstAttribute="top" secondItem="SnQ-YN-oF5" secondAttribute="bottom" constant="91" id="bJq-DL-7H1"/>
-                            <constraint firstItem="iyI-NK-qSt" firstAttribute="top" secondItem="AlF-ce-BNW" secondAttribute="bottom" constant="100" id="eY8-su-32E"/>
+                            <constraint firstItem="iyI-NK-qSt" firstAttribute="top" secondItem="AlF-ce-BNW" secondAttribute="bottom" constant="75" id="eY8-su-32E"/>
                             <constraint firstItem="b07-Ze-sEe" firstAttribute="top" secondItem="ufG-T5-AYg" secondAttribute="bottom" id="lAi-0v-xkp"/>
+                            <constraint firstItem="AMW-Nm-r8R" firstAttribute="top" secondItem="SnQ-YN-oF5" secondAttribute="bottom" constant="75" id="tlX-ss-sdF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="AlF-ce-BNW" secondAttribute="trailing" id="vWJ-yC-w10"/>
                         </constraints>
                     </view>
