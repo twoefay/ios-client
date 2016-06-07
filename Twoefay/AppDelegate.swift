@@ -41,8 +41,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         print("didReceiveRemoteNotification")
         print("Attemping to save payload data")
+        print("userInfo received: \(userInfo)")
+        
+        
         LoginRequestManager.processPushNotification(userInfo, completionHandler: { success, id in
             if success == true {
+                print("processPushNotificationCompleted, got success: \(success) with id: \(id)")
                 print("Attemping to navigate to Login Request page")
                 self.navigateToLoginRequest(id)
             }
@@ -54,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func navigateToLoginRequest(id: Int) {
+        print("Attempting navigateToLoginRequest")
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
         let navigationController = self.window?.rootViewController as! UINavigationController

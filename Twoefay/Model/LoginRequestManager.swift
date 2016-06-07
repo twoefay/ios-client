@@ -45,11 +45,12 @@ class LoginRequestManager {
     class func processPushNotification(userInfo: [NSObject : AnyObject], completionHandler: (Bool, Int) -> Void )                                                                                                                                                                                                                                                    {
         let userInfoJSON = JSON(userInfo)
         // TODO - Figure out how to extract the data from the push notification
-        let clientText: String = "" //userInfoJSON["service"]
-        let usernameText: String = "" //userInfoJSON["string"]
+        
+        let clientText: String = "Twoefay"//userInfoJSON["data"]["service"]
+        let usernameText: String = "chrisorcutt" //userInfoJSON["data"]["username"]
         let timeText: String = getTimeString()
-        let ipText: String = "" //userInfoJSON["string"]
-        var locationText: String = ""
+        let ipText: String = "131.179.36.64" //userInfoJSON["data"]["ip"]
+        var locationText: String = "Los Angeles, California"
         
         AlamoManager.locationFromIP(ipText, completionHandler: { stringy in
             
@@ -91,8 +92,10 @@ class LoginRequestManager {
     }
     
     class func getLoginRequestForId(id: Int) -> LoginRequest? {
+        print("getLoginRequestForId: \(id)")
         let realm = try! Realm()
         let result = realm.objects(LoginRequest).filter("id=\(id)")
+        print("result: \(result)")
         return result.first
     }
     
