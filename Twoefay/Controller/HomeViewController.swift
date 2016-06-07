@@ -55,21 +55,20 @@ class HomeViewController: UIViewController {
         gradient.colors = [UIColor.whiteColor().CGColor,UIColor.blackColor().CGColor] //Or any colors
         
         //gradient.opacity = 0.5
-        
-        //self.view.layer.addSublayer(gradient)
         self.view.layer.insertSublayer(gradient, below: self.view.layer.sublayers?.first)
-        
-        /*
-        let gradientView = UIView()
-        gradientView.layer.addSublayer(gradient)
-        print( self.view.subviews.count)
-        self.view.superview?.addSubview(gradientView)
-        */
-        
     }
 
-    
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "automaticLoginRequest" {
+            let destinationViewController = segue.destinationViewController as! LoginRequestViewController
+            destinationViewController.receivedPush = true
+        }
+        if segue.identifier == "manualLoginRequest" {
+            let destinationViewController = segue.destinationViewController as! LoginRequestViewController
+            destinationViewController.receivedPush = false
+            destinationViewController.manualLoginRequest = true
+        }
+    }
     
     @IBAction func logout(sender: AnyObject) {
         let Alert = Alerts.alertPopup(AlertTitles.Warning, alertMessage: AlertMessage.LogoutWarning, alertActionTitle: AlertActionTitles.OK, custom_handler: confirmLogoutHandler)

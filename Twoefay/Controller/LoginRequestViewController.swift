@@ -10,7 +10,6 @@ import UIKit
 import LocalAuthentication
 
 class LoginRequestViewController: UIViewController {
-
     
     @IBOutlet weak var clientLabel: UILabel!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -22,12 +21,17 @@ class LoginRequestViewController: UIViewController {
     @IBOutlet weak var acceptButton: UIButton!
     @IBOutlet weak var rejectButton: UIButton!
     
-    
     /**
-     receivedPush is true if the user navigated to this page from a current
-     push notification or false if they are viewing their login request history
+     receivedPush is true if the user navigated to this page from a current push notification
+     receivedPush is false if they are viewing their login request history
      */
     var receivedPush = false
+    
+    /**
+     manualLoginRequest is true if the user navigated to this page manually from the HomeViewController
+     manualLoginRequest is false if they are viewing their login request history
+     */
+    var manualLoginRequest = false
     
     var thisLoginRequest: LoginRequest = LoginRequest()
     var loginRequestId: Int?
@@ -39,31 +43,29 @@ class LoginRequestViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("Opening Login Request Page")
+        print("Received Push: \(receivedPush)")
+        print("loginRequestId: \(loginRequestId)")
+        
         acceptButton.tag = 0
         rejectButton.tag = 1
         
-        // thisLoginRequest =
-        //    LoginRequestManager.getLoginRequestForId(loginRequestId!)!
-        if let historicalLoginRequest = loginRequestId {
-            thisLoginRequest =
-                LoginRequestManager.getLoginRequestForId(historicalLoginRequest)!
+        if manualLoginRequest == true {
+            thisLoginRequest = LoginRequestManager.getNewestLoginRequest()!
+            statusLabel.text = "This request may be outdated"
         }
-        else
-        {
-            receivedPush = true;
+        else if receivedPush == true {
+            thisLoginRequest = LoginRequestManager.getNewestLoginRequest()!
         }
-        
-        
-        if receivedPush == false {
-            // Display either Accept or Reject Button depending whether the
-            // user had accepted or rejected the request in the past?
-            
-            // Alternately, just hide the buttons altogether
-            acceptButton.hidden = true
-            rejectButton.hidden = true
+        else {
+            if let historicalLoginRequestId = loginRequestId {
+                thisLoginRequest =
+                    LoginRequestManager.getLoginRequestForId(historicalLoginRequestId)!
+                // Hide the buttons if viewing a historical request
+                acceptButton.hidden = true
+                rejectButton.hidden = true
+            }
         }
-        
-        statusLabel.text = ""
         clientLabel.text = thisLoginRequest.clientText
         usernameLabel.text = thisLoginRequest.usernameText
         timeLabel.text = thisLoginRequest.timeText

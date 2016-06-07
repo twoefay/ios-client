@@ -29,6 +29,12 @@ class LoginRequestManager {
         return index
     }
     
+    private class func getNewestId() -> Int {
+        let defaults = NSUserDefaults.standardUserDefaults()
+        let index = defaults.integerForKey("currentIndex")
+        return index
+    }
+    
     class func getTimeString() -> String {
         let today = NSDate()
         let dateFormatter = NSDateFormatter()
@@ -84,6 +90,13 @@ class LoginRequestManager {
     }
     
     class func getLoginRequestForId(id: Int) -> LoginRequest? {
+        let realm = try! Realm()
+        let result = realm.objects(LoginRequest).filter("id=\(id)")
+        return result.first
+    }
+    
+    class func getNewestLoginRequest() -> LoginRequest? {
+        let id = getNewestId()
         let realm = try! Realm()
         let result = realm.objects(LoginRequest).filter("id=\(id)")
         return result.first
