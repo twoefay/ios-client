@@ -21,16 +21,31 @@ class TwoefayTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measureBlock {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testDateFunction () {
+        let dateString = LoginRequestManager.getTimeString()
+        print(dateString)
+        XCTAssert(dateString.characters.count == 19)
+    }
+    
+    func testLocation() {
+        let ip = "208.80.152.201"
+        var location = "Los Angeles"
+        AlamoManager.locationFromIP(ip, completionHandler: { stringy in
+            if let foundLocation = stringy {
+                location = foundLocation
+            }
+            print("Location from Call: \(location)")
+            XCTAssert(location == "San Francisco, United States")
+        })
+    }
+    
+    
     
 }
