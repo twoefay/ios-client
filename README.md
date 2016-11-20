@@ -1,8 +1,9 @@
-Twoefay
+Twoefay iOS Client
 ======
-An open-source platform for easy two factor authentication using iOS TouchID.
+Twoefay is an open-source platform for easy two factor authentication using iOS TouchID. This repository contains the iOS client which receives push notifications from the Twoefay server.
 
 #### Screenshot
+![screenshot](TwoefayAssets/screenshots/smallss.png)
 
 ## Getting Started
 
