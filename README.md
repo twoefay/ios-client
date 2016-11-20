@@ -28,10 +28,10 @@ Open Twoefay.xcworkspace in Xcode 7.3 and compile it.
 * This project is licensed under the GNU GENERAL PUBLIC LICENSE - see the [LICENSE](https://github.com/resolutedreamer/ios-client/blob/master/LICENSE) file for details
 
 ## Version 
-* Version 0.1
+* Version 0.9
 
 ## Contact
 #### Anthony Nguyen
 * Homepage: www.resolutedreamer.com
 
-Last Updated 2016-05-29
+Last Updated 2016/05/29
