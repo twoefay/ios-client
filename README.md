@@ -1,5 +1,8 @@
 Twoefay iOS Client
 ======
+## Part of Twoefay 2-Factor Authentication Platform
+[![Build Status](https://travis-ci.org/resolutedreamer/ios-client.svg?branch=master)](https://travis-ci.org/resolutedreamer/ios-client)
+
 Twoefay is an open-source platform for easy two factor authentication using iOS TouchID. This repository contains the iOS client which receives push notifications from the Twoefay server.
 
 #### Screenshot
